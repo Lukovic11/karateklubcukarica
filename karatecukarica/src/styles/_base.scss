@@ -1,0 +1,22 @@
+// Base
+html,
+body {
+  margin: 0;
+  font-size: $text-base;
+  font-family: $font-paragraph-regular;
+  color: $color-font-dark;
+  background-color: $color-light-primary;
+}
+
+* {
+  font-weight: 100;
+  margin: 0;
+}
+
+button,
+input,
+optgroup,
+select,
+textarea {
+  font: inherit;
+}

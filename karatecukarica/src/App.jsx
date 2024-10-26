@@ -1,8 +1,8 @@
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import Root from "./pages/Root";
-import Homepage from "./pages/Homepage";
-import SchedulesAndLocations from "./pages/SchedulesAndLocations";
-import SummerCamp from "./pages/SummerCamp";
+import Homepage from "./pages/Homepage/Homepage";
+import SchedulesAndLocations from "./pages/SchedulesAndLocations/SchedulesAndLocations";
+import SummerCamp from "./pages/SummerCamp/SummerCamp";
 
 const router = createBrowserRouter([
   {
