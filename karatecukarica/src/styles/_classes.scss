@@ -1,0 +1,45 @@
+@use "./variables.scss" as v;
+
+.button {
+  font-family: $font-title-strong;
+  letter-spacing: 0.5px;
+  margin: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  max-width: fit-content;
+  padding: 10px 30px;
+  border: none;
+  border-radius: 5px;
+  background-color: $color-accent-red;
+  cursor: pointer;
+  text-decoration: none;
+  font-size: $text-xl;
+  color: $color-light-primary;
+  &:hover {
+    background-color: darken($color: $color-accent-red, $amount: 15%);
+  }
+
+  &__transparent {
+    font-family: $font-title-strong;
+    letter-spacing: 0.5px;
+    font-weight: 100;
+    margin: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: fit-content;
+    padding: 7px 27px;
+    border-radius: 5px;
+    background-color: transparent;
+    cursor: pointer;
+    text-decoration: none;
+    font-size: $text-xl;
+    color: $color-accent-red;
+    border: 3px solid $color-accent-red;
+    &:hover {
+      background-color: $color-accent-red;
+      color: $color-light-primary;
+    }
+  }
+}
