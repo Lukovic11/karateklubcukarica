@@ -1,0 +1,46 @@
+@use "../../styles/variables" as *;
+@use "../../styles/mixins";
+
+.test_component {
+  .karate_klub {
+    font-family: $font-title-strong;
+    font-size: $text-3xl;
+    @include mixins.responsive(sm) {
+      font-size: $text-4xl;
+    }
+    @include mixins.responsive(md) {
+      font-size: $text-5xl;
+    }
+    @include mixins.responsive(lg) {
+      font-size: $text-6xl;
+    }
+    @include mixins.responsive(xl) {
+      font-size: $text-7xl;
+    }
+  }
+  .cukarica {
+    font-family: $font-title-light;
+    color: $color-accent-red;
+    font-size: $text-5xl;
+    @include mixins.responsive(sm) {
+      font-size: $text-6xl;
+    }
+    @include mixins.responsive(md) {
+      font-size: $text-7xl;
+    }
+    @include mixins.responsive(lg) {
+      font-size: $text-8xl;
+    }
+    @include mixins.responsive(xl) {
+      font-size: $text-9xl;
+    }
+  }
+  p {
+    background-color: $color-dark-primary;
+    color: $color-font-light;
+    font-size: $text-sm;
+    @include mixins.responsive(sm) {
+      font-size: $text-base;
+    }
+  }
+}
