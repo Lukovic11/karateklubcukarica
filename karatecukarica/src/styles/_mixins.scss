@@ -1,0 +1,25 @@
+// We should follow mobile first approach
+// What does that mean?
+// The default class should first have styles for mobile devices, any other media queries are for bigger devices.
+
+@use "./variables" as v;
+
+@mixin responsive($breakpoint) {
+  @if $breakpoint == sm {
+    @media (min-width: v.$screen-sm) {
+      @content;
+    }
+  } @else if $breakpoint == md {
+    @media (min-width: v.$screen-md) {
+      @content;
+    }
+  } @else if $breakpoint == lg {
+    @media (min-width: v.$screen-lg) {
+      @content;
+    }
+  } @else if $breakpoint == xl {
+    @media (min-width: v.$screen-xl) {
+      @content;
+    }
+  }
+}

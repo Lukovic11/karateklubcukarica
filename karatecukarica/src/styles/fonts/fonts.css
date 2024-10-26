@@ -1,0 +1,90 @@
+/* Helvetica */
+@font-face {
+  font-family: "Helvetica";
+  font-style: normal;
+  font-weight: normal;
+  src: local("Helvetica"),
+    url("/src/styles/fonts/Helvetica/Helvetica.woff") format("woff");
+}
+
+@font-face {
+  font-family: "Helvetica Compressed";
+  font-style: normal;
+  font-weight: normal;
+  src: local("Helvetica Compressed"),
+    url("/src/styles/fonts/Helvetica/helvetica-compressed-5871d14b6903a.woff")
+      format("woff");
+}
+
+@font-face {
+  font-family: "Helvetica Bold";
+  font-style: normal;
+  font-weight: 900;
+  src: local("Helvetica"),
+    url("/src/styles/fonts/Helvetica/Helvetica-Bold.woff") format("woff");
+}
+
+/* Kanit */
+@font-face {
+  font-family: "Kanit Regular";
+  font-style: normal;
+  font-weight: normal;
+  src: local("Kanit Regular"),
+    url("/src/styles/fonts/Kanit/Kanit-Regular.woff") format("woff");
+}
+
+@font-face {
+  font-family: "Kanit Italic";
+  font-style: normal;
+  font-weight: normal;
+  src: local("Kanit Italic"),
+    url("/src/styles/fonts/Kanit/Kanit-Italic.woff") format("woff");
+}
+
+@font-face {
+  font-family: "Kanit Light";
+  font-style: normal;
+  font-weight: normal;
+  src: local("Kanit Light"),
+    url("/src/styles/fonts/Kanit/Kanit-Light.woff") format("woff");
+}
+
+@font-face {
+  font-family: "Kanit Light Italic";
+  font-style: normal;
+  font-weight: normal;
+  src: local("Kanit Light Italic"),
+    url("/src/styles/fonts/Kanit/Kanit-LightItalic.woff") format("woff");
+}
+
+@font-face {
+  font-family: "Kanit Medium";
+  font-style: normal;
+  font-weight: normal;
+  src: local("Kanit Medium"),
+    url("/src/styles/fonts/Kanit/Kanit-Medium.woff") format("woff");
+}
+
+@font-face {
+  font-family: "Kanit Medium Italic";
+  font-style: normal;
+  font-weight: normal;
+  src: local("Kanit Medium Italic"),
+    url("/src/styles/fonts/Kanit/Kanit-MediumItalic.woff") format("woff");
+}
+
+@font-face {
+  font-family: "Kanit Bold";
+  font-style: normal;
+  font-weight: normal;
+  src: local("Kanit SemiBold"),
+    url("/src/styles/fonts/Kanit/Kanit-SemiBold.woff") format("woff");
+}
+
+@font-face {
+  font-family: "Marcellus SC Regular";
+  font-style: normal;
+  font-weight: normal;
+  src: local("Marcellus SC Regular"),
+    url("/src/styles/fonts/MarcellusSC/MarcellusSC-Regular.woff") format("woff");
+}
