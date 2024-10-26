@@ -15,7 +15,7 @@ const Button = (props) => {
 };
 Button.propTypes = {
   linkURL: PropTypes.string.isRequired,
-  variation: PropTypes.string,
+  variation: PropTypes.string.isRequired,
   text: PropTypes.string.isRequired,
 };
 
