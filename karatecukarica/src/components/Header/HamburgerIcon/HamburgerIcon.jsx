@@ -1,7 +1,7 @@
 import styles from "./HamburgerIcon.module.scss";
 import PropTypes from "prop-types";
 
-const HamburgerIcon = ({ isActive, toggleMenu }) => {
+const HamburgerIcon = ({ isActive = false, toggleMenu = () => {} }) => {
   return (
     <button
       className={`${styles.hamburgerIcon} ${isActive ? styles.active : ""}`}
@@ -14,13 +14,8 @@ const HamburgerIcon = ({ isActive, toggleMenu }) => {
 };
 
 HamburgerIcon.propTypes = {
-  isActive: PropTypes.bool.isRequired,
-  toggleMenu: PropTypes.func.isRequired,
-};
-
-HamburgerIcon.defaultProps = {
-  isActive: false,
-  toggleMenu: () => {},
+  isActive: PropTypes.bool,
+  toggleMenu: PropTypes.func,
 };
 
 export default HamburgerIcon;
