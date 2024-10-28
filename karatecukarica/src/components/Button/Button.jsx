@@ -11,7 +11,7 @@ const Button = (props) => {
   return (
     <motion.button
       onClick={handleClick}
-      className={`button${props.variation}`}
+      className={`button${props.variation} ${props.className}`}
       whileHover={{ scale: 1.1 }}
       whileTap={{ scale: 0.95 }}
     >
@@ -22,6 +22,7 @@ const Button = (props) => {
 Button.propTypes = {
   linkURL: PropTypes.string.isRequired,
   variation: PropTypes.string.isRequired,
+  className: PropTypes.string,
   text: PropTypes.string.isRequired,
 };
 
