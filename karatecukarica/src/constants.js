@@ -6,10 +6,17 @@ export const P_TEXT =
 //App.jsx
 export const SCHEDULES_AND_LOCATIONS_URL = "/terminiilokacije";
 export const SUMMER_CAMP_URL = "/letnjikamp";
+//BUTTON VARIATIONS
+export const BUTTON_VARIATION_TRANSPARENT = "__transparent";
 //Herobanner.jsx
 export const HEROBANNER_IMG_ALT = "Herobanner image";
 export const HEROBANNER_TEXT_1 = "KARATE KLUB";
 export const HEROBANNER_TEXT_2 = "ČUKARICA";
 export const HEROBANNER_BUTTON_TEXT = "UPIŠI SE";
-//BUTTON VARIATIONS
-export const BUTTON_VARIATION_TRANSPARENT = "__transparent";
+//Header.jsx
+export const HEADER_PAGE_LIST = [
+  "Termini I Lokacije",
+  "Letnji Kamp",
+  "Uslovi",
+  "Kontakt",
+];
