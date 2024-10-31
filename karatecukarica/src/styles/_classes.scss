@@ -61,11 +61,7 @@
     gap: 1em;
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1),
       0px 8px 16px rgba(0, 0, 0.1, 0.1);
-
-    background-image: url("../img/Simple\ Texture\ Traditional\ Martial\ Arts\ Source\ File\ H5\ Background\ Wallpaper\ Image\ For\ Free\ Download\ -\ Pngtree.jpg");
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
+    background-color: $color-dark-primary-semi-transparent;
 
     .form-field {
       display: flex;
@@ -74,33 +70,41 @@
       .form-label {
         margin-bottom: 0.1em;
         align-self: flex-start;
-        font-family: $font-paragraph-medium !important;
-        font-size: $text-base;
+        font-family: $font-paragraph-light;
+        font-size: $text-lg;
         text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.6);
-        color: $color-font-dark;
+        color: $color-font-light;
       }
 
       .form-input,
       .form-textarea {
         width: 20em;
-        height: auto;
         padding: 5px;
-        transition: border-color 0.2s ease-in-out;
-        border: 0.1px solid $shadow-color;
-        box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1),
-          4px 4px 10px rgba(0, 0, 0, 0.1);
         font-size: $text-sm;
-        background-color: $color-light-primary;
-        color:$color-font-dark;
-
+        background-color: transparent;
+        color: $color-font-light;
+        border: none;
+        border-bottom: 2px solid $color-light-primary;
+        // transition: border-color 0.2s ease-in-out;
+        outline: none;
         &:focus {
-          outline-color: transparent;
+          border-bottom-color: $color-accent-red;
         }
+      }
+
+      input:-webkit-autofill,
+      input:-webkit-autofill:focus,
+      textarea:-webkit-autofill,
+      textarea:-webkit-autofill:focus {
+        -webkit-box-shadow: 0 0 0px 1000px #00000000 inset;
+        transition: background-color 5000s ease-in-out 0s;
+        -webkit-text-fill-color: $color-font-light;
+        font-size: $text-sm;
       }
 
       .form-textarea {
         resize: vertical;
-        height: 4em;
+        height: 2em;
       }
     }
   }

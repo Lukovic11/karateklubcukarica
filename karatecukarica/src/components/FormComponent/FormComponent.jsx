@@ -9,6 +9,7 @@ import {
 } from "../../constants";
 import Button from "../Button/Button";
 import { motion } from "framer-motion";
+import styles from "./FormComponent.module.scss";
 
 const FormComponent = () => {
   const [focusedField, setFocusedField] = useState("");
@@ -35,42 +36,55 @@ const FormComponent = () => {
   };
 
   const fields = [
-    { label: FORM_FIRSTNAME, name: "firstName", type: "text" },
-    { label: FORM_LASTNAME, name: "lastName", type: "text" },
-    { label: FORM_EMAIL, name: "email", type: "email" },
-    { label: FORM_SUBJECT, name: "subject", type: "text" },
-    { label: FORM_QUESTION, name: "question", type: "textarea" },
+    { label: FORM_FIRSTNAME, name: FORM_FIRSTNAME, type: "text" },
+    { label: FORM_LASTNAME, name: FORM_LASTNAME, type: "text" },
+    { label: FORM_EMAIL, name: FORM_EMAIL, type: "email" },
+    { label: FORM_SUBJECT, name: FORM_SUBJECT, type: "text" },
+    { label: FORM_QUESTION, name: FORM_QUESTION, type: "textarea" },
   ];
 
   return (
-    <div className="form-container">
-      <form className="contact-form" onSubmit={handleSubmit}>
+    <div className={styles.formContainer}>
+      <form
+        className={styles.formField}
+        onSubmit={handleSubmit}
+        autocomplete="off"
+      >
         {fields.map(({ label, name, type }) => (
           <motion.div
-            className="form-field"
+            className={styles.formField}
             key={name}
             onFocus={() => setFocusedField(name)}
             onBlur={() => setFocusedField("")}
-            animate={{ scale: focusedField === name ? 1.05 : 1 }}
-            transition={{ type: "spring", stiffness: 100 }}
+            // animate={{ scale: focusedField === name ? 1.05 : 1 }}
+            // transition={{ type: "spring", stiffness: 100 }}
           >
-            <label className="form-label">{label}:</label>
+            <label className={formLabel}>{label}:</label>
             {type === "textarea" ? (
               <textarea
                 name={name}
                 value={formData[name]}
                 onChange={handleChange}
                 required
-                className="form-textarea"
+                className={styles.formTextarea}
+                autoComplete="off"
               />
             ) : (
-              <input
+              <motion.input
                 type={type}
                 name={name}
                 value={formData[name]}
                 onChange={handleChange}
                 required
-                className="form-input"
+                className={formInput}
+                animate={{
+                  borderBottomColor:
+                    focusedField === name ? "#b20000" : "#f9f9f9",
+                }}
+                transition={{
+                  duration: 0.4,
+                  ease: "circInOut",
+                }}
               />
             )}
           </motion.div>

@@ -1,6 +1,6 @@
-export const FORM_FIRSTNAME = "Име";
-export const FORM_LASTNAME = "Презиме";
-export const FORM_EMAIL = "Имејл";
-export const FORM_SUBJECT = "Предмет";
-export const FORM_QUESTION = "Питање";
-export const FORM_SEND = "Пошаљи"
+export const FORM_FIRSTNAME = "Ime";
+export const FORM_LASTNAME = "Prezime";
+export const FORM_EMAIL = "Email";
+export const FORM_SUBJECT = "Predmet";
+export const FORM_QUESTION = "Pitanje";
+export const FORM_SEND = "Pošalji";
