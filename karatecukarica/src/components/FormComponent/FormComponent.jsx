@@ -59,7 +59,7 @@ const FormComponent = () => {
             // animate={{ scale: focusedField === name ? 1.05 : 1 }}
             // transition={{ type: "spring", stiffness: 100 }}
           >
-            <label className={formLabel}>{label}:</label>
+            <label className={styles.formLabel}>{label}:</label>
             {type === "textarea" ? (
               <textarea
                 name={name}
@@ -76,7 +76,7 @@ const FormComponent = () => {
                 value={formData[name]}
                 onChange={handleChange}
                 required
-                className={formInput}
+                className={styles.formInput}
                 animate={{
                   borderBottomColor:
                     focusedField === name ? "#b20000" : "#f9f9f9",
