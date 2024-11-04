@@ -6,6 +6,15 @@ import HamburgerIcon from "./HamburgerIcon/HamburgerIcon";
 const Header = () => {
   const [menuActive, setMenuActive] = useState(false);
   const [currentPage, setCurrentPage] = useState("");
+  const [isScrolled, setIsScrolled] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setIsScrolled(window.scrollY > 200);
+    };
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
 
   useEffect(() => {
     const setActivePage = () => {
@@ -27,7 +36,9 @@ const Header = () => {
 
   return (
     <div className="top-navigation">
-      <div className="top-navigation-container">
+      <div
+        className={`top-navigation-container ${isScrolled ? "scrolled" : ""}`}
+      >
         <div className="hamburger-wrapper">
           <HamburgerIcon isActive={menuActive} toggleMenu={toggleMenu} />
         </div>
