@@ -9,7 +9,7 @@ import {
 } from "../../constants";
 import Button from "../Button/Button";
 import { motion } from "framer-motion";
-import styles from "./FormComponent.module.scss";
+import "./FormComponent.module.scss";
 
 const FormComponent = () => {
   const [focusedField, setFocusedField] = useState("");
@@ -44,29 +44,25 @@ const FormComponent = () => {
   ];
 
   return (
-    <div className={styles.formContainer}>
-      <form
-        className={styles.formField}
-        onSubmit={handleSubmit}
-        autocomplete="off"
-      >
+    <div className="form-container">
+      <form className="form-field" onSubmit={handleSubmit} autoComplete="off">
         {fields.map(({ label, name, type }) => (
           <motion.div
-            className={styles.formField}
+            className="form-field"
             key={name}
             onFocus={() => setFocusedField(name)}
             onBlur={() => setFocusedField("")}
             // animate={{ scale: focusedField === name ? 1.05 : 1 }}
             // transition={{ type: "spring", stiffness: 100 }}
           >
-            <label className={styles.formLabel}>{label}:</label>
+            <label className="form-label">{label}:</label>
             {type === "textarea" ? (
               <textarea
                 name={name}
                 value={formData[name]}
                 onChange={handleChange}
                 required
-                className={styles.formTextarea}
+                className="form-textarea"
                 autoComplete="off"
               />
             ) : (
@@ -76,7 +72,7 @@ const FormComponent = () => {
                 value={formData[name]}
                 onChange={handleChange}
                 required
-                className={styles.formInput}
+                className="form-input"
                 animate={{
                   borderBottomColor:
                     focusedField === name ? "#b20000" : "#f9f9f9",

@@ -1,13 +1,13 @@
 @use "../../styles/variables.scss" as *;
 @use "../../styles/mixins.scss" as *;
 
-.formContainer {
+.form-container {
     display: flex;
     flex-direction: column;
     align-items: center;
     padding: 1em;
   
-    .contactForm {
+    .contact-form {
       width: 100%;
       height: auto;
       display: flex;
@@ -20,12 +20,12 @@
         0px 8px 16px rgba(0, 0, 0.1, 0.1);
       background-color: $color-dark-primary-semi-transparent;
   
-      .formField {
+      .form-field {
         display: flex;
         flex-direction: column;
         color: red !important;
   
-        .formLabel {
+        .form-label {
           margin-bottom: 0.1em;
           align-self: flex-start;
           font-family: $font-paragraph-light;
@@ -34,8 +34,8 @@
           color: $color-font-light;
         }
   
-        .formInput,
-        .formTextarea {
+        .form-input,
+        .form-textarea {
           width: 20em;
           padding: 5px;
           font-size: $text-sm;
@@ -60,7 +60,7 @@
           font-size: $text-sm;
         }
   
-        .formTextarea {
+        .form-textarea {
           resize: vertical;
           height: 2em;
         }
