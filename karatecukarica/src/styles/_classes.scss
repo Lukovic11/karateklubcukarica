@@ -3,7 +3,6 @@
 .button {
   font-family: $font-title-strong;
   letter-spacing: 0.5px;
-  margin: 30px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -17,7 +16,7 @@
   font-size: $text-xl;
   color: $color-light-primary;
   &:hover {
-    background-color: darken($color: $color-accent-red, $amount: 15%);
+    background-color: adjust-color($color-accent-red, $lightness: -15%);
   }
 
   &__transparent {
