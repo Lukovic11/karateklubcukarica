@@ -3,6 +3,7 @@ import Root from "./pages/Root";
 import Homepage from "./pages/Homepage/Homepage";
 import SchedulesAndLocations from "./pages/SchedulesAndLocations/SchedulesAndLocations";
 import SummerCamp from "./pages/SummerCamp/SummerCamp";
+import { SCHEDULES_AND_LOCATIONS_URL, SUMMER_CAMP_URL } from "./constants";
 
 const router = createBrowserRouter([
   {
@@ -13,8 +14,11 @@ const router = createBrowserRouter([
         index: true,
         element: <Homepage />,
       },
-      { path: "/terminiilokacije", element: <SchedulesAndLocations /> },
-      { path: "/letnjikamp", element: <SummerCamp /> },
+      {
+        path: `'/${SCHEDULES_AND_LOCATIONS_URL}'`,
+        element: <SchedulesAndLocations />,
+      },
+      { path: `'/${SUMMER_CAMP_URL}'`, element: <SummerCamp /> },
     ],
   },
 ]);
