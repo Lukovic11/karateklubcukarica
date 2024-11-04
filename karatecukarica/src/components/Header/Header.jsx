@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import { HEADER_PAGE_LIST } from "../../constants";
-import styles from "./Header.module.scss";
+import "./Header.scss";
 import HamburgerIcon from "./HamburgerIcon/HamburgerIcon";
 
 const Header = () => {
@@ -26,14 +26,14 @@ const Header = () => {
   };
 
   return (
-    <div className={styles.topNavigation}>
-      <div className={styles.topNavigationContainer}>
-        <div className={styles.hamburgerWrapper}>
+    <div className="top-navigation">
+      <div className="top-navigation-container">
+        <div className="hamburger-wrapper">
           <HamburgerIcon isActive={menuActive} toggleMenu={toggleMenu} />
         </div>
         <div
-          className={`${styles.topNavigationListContainer} ${
-            menuActive ? styles.active : ""
+          className={`top-navigation-list-container ${
+            menuActive ? "active" : ""
           }`}
         >
           <ul>
@@ -44,7 +44,7 @@ const Header = () => {
                   href={item.toLowerCase().replace(/\s/g, "")}
                   className={
                     currentPage === item.toLowerCase().replace(/\s/g, "")
-                      ? styles.activeLink
+                      ? "active-link"
                       : ""
                   }
                 >

@@ -1,7 +1,7 @@
-@use "../../styles/variables" as *;
-@use "../../styles/mixins" as *;
+@use "../../styles/_variables" as *;
+@use "../../styles/_mixins" as *;
 
-.topNavigation {
+.top-navigation {
   position: relative;
   width: 100%;
   overflow: hidden;
@@ -10,25 +10,24 @@
   z-index: 1;
 }
 
-.topNavigationContainer {
+.top-navigation-container {
   position: fixed;
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 1rem;
-  background-color: $color-dark-primary;
-  opacity: 0.7;
+  background-color: transparent;
   position: relative;
   z-index: 1000;
   height: 100%;
 }
 
-.hamburgerWrapper {
+.hamburger-wrapper {
   position: relative;
   z-index: 1001;
 }
 
-.topNavigationListContainer {
+.top-navigation-list-container {
   position: fixed;
   top: 0;
   left: 0;
@@ -66,11 +65,15 @@
 
         &:hover,
         &:focus {
-          color: $color-light-primary;
+          color: $color-accent-red;
+          font-weight: 900;
+          opacity: 1;
         }
 
-        &.activeLink {
-          color: $color-light-primary;
+        &.active-link {
+          color: $color-accent-red;
+          font-weight: 900;
+          opacity: 1;
         }
       }
     }
@@ -78,11 +81,16 @@
 }
 
 @include responsive(md) {
-  .hamburgerWrapper {
+  .hamburger-wrapper {
     display: none;
   }
 
-  .topNavigationListContainer {
+  .top-navigation-container {
+    background-color: lighten($color: $color-dark-primary, $amount: 5);
+    opacity: 0.7;
+  }
+
+  .top-navigation-list-container {
     position: static;
     transform: none;
     background-color: transparent;
