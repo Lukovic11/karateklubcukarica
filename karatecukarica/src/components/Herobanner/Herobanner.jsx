@@ -1,4 +1,4 @@
-import styles from "./Herobanner.module.scss";
+import "./Herobanner.scss";
 import Button from "../Button/Button";
 import herobanner_img from "../../assets/herobanner_img.jpg";
 import {
@@ -12,16 +12,16 @@ import {
 //TODO: Change herobanner image and alt text
 const HeroBanner = () => {
   return (
-    <div className={styles.herobanner_container}>
-      <div className={styles.herobanner}>
+    <div className="herobanner-container">
+      <div className="herobanner">
         <img src={herobanner_img} alt={HEROBANNER_IMG_ALT} />
-        <div className={styles.overlay}>
-          <div className={styles.content}>
+        <div className="overlay">
+          <div className="content">
             <h1>
               {HEROBANNER_TEXT_1} <div>{HEROBANNER_TEXT_2}</div>
             </h1>
             <Button
-            className={styles.buttonHeroBanner}
+              className="button-herobanner"
               linkURL={`/${SCHEDULES_AND_LOCATIONS_URL}`}
               text={HEROBANNER_BUTTON_TEXT}
               variation=""

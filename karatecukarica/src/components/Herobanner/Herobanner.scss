@@ -1,7 +1,7 @@
 @use "../../styles/variables.scss" as *;
 @use "../../styles/mixins.scss" as *;
 
-.herobanner_container {
+.herobanner-container {
   width: 100%;
   height: 100vh;
 
@@ -78,7 +78,7 @@
             }
           }
         }
-        .buttonHeroBanner {
+        .button-herobanner {
           margin-top: 20px !important;
         }
       }
