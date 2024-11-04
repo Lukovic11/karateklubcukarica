@@ -4,8 +4,7 @@ import HeroBanner from "../../components/Herobanner/Herobanner";
 const Homepage = () => {
   return (
     <div>
-      {/* <HeroBanner /> */}
-      <FormComponent />
+      <HeroBanner />
     </div>
   );
 };
