@@ -9,7 +9,7 @@ import {
 } from "../../constants";
 import Button from "../Button/Button";
 import { motion } from "framer-motion";
-import "./FormComponent.module.scss";
+import "./FormComponent.scss";
 
 const FormComponent = () => {
   const [focusedField, setFocusedField] = useState("");
