@@ -1,0 +1,24 @@
+@use "../../styles/variables" as *;
+@use "../../styles/mixins" as *;
+
+.split-container {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  height: auto;
+  img {
+    width: 50%;
+    height: 50%;
+  }
+  .inner-content {
+    margin: 50px;
+  }
+  .button-split {
+    margin: 50px 0 0 0;
+  }
+}
+.image-right {
+  img {
+    order: 2;
+  }
+}
