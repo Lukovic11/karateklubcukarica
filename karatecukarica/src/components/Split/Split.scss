@@ -6,6 +6,8 @@
   flex-direction: row;
   width: 100%;
   height: auto;
+  background-color: $color-dark-primary;
+  color: $color-font-light;
   img {
     width: 50%;
     height: 50%;
@@ -15,6 +17,12 @@
   }
   .button-split {
     margin: 50px 0 0 0;
+    &hover {
+      color: $color-font-dark !important;
+    }
+  }
+  h3 {
+    font-size: $text-6xl;
   }
 }
 .image-right {
