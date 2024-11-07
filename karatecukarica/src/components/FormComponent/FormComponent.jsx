@@ -44,25 +44,21 @@ const FormComponent = () => {
   ];
 
   return (
-    <div className="form-container">
-      <form className="form-field" onSubmit={handleSubmit} autoComplete="off">
+    <div className="formContainer">
+      <form className="formField" onSubmit={handleSubmit} autoComplete="off">
         {fields.map(({ label, name, type }) => (
           <motion.div
-            className="form-field"
+            className="formField"
             key={name}
-            onFocus={() => setFocusedField(name)}
-            onBlur={() => setFocusedField("")}
-            // animate={{ scale: focusedField === name ? 1.05 : 1 }}
-            // transition={{ type: "spring", stiffness: 100 }}
           >
-            <label className="form-label">{label}:</label>
+            <label className="formLabel">{label}:</label>
             {type === "textarea" ? (
               <textarea
                 name={name}
                 value={formData[name]}
                 onChange={handleChange}
                 required
-                className="form-textarea"
+                className="formTextarea"
                 autoComplete="off"
               />
             ) : (
@@ -72,7 +68,9 @@ const FormComponent = () => {
                 value={formData[name]}
                 onChange={handleChange}
                 required
-                className="form-input"
+                className="formInput"
+                onFocus={() => setFocusedField(name)}
+                onBlur={() => setFocusedField("")}
                 animate={{
                   borderBottomColor:
                     focusedField === name ? "#b20000" : "#f9f9f9",
