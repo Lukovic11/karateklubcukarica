@@ -10,16 +10,17 @@ import {
 import Button from "../Button/Button";
 import { motion } from "framer-motion";
 import "./FormComponent.scss";
+import PropTypes from "prop-types";
 
-const FormComponent = () => {
+const FormComponent = ({handleSubmit}) => {
   const [focusedField, setFocusedField] = useState("");
 
   const [formData, setFormData] = useState({
-    firstName: "",
-    lastName: "",
-    email: "",
-    subject: "",
-    question: "",
+    [FORM_FIRSTNAME]: "",  
+    [FORM_LASTNAME]: "",
+    [FORM_EMAIL]: "",
+    [FORM_SUBJECT]: "",
+    [FORM_QUESTION]: "",
   });
 
   const handleChange = (e) => {
@@ -30,11 +31,6 @@ const FormComponent = () => {
     }));
   };
 
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    console.log("Form submitted:", formData);
-  };
-
   const fields = [
     { label: FORM_FIRSTNAME, name: FORM_FIRSTNAME, type: "text" },
     { label: FORM_LASTNAME, name: FORM_LASTNAME, type: "text" },
@@ -43,9 +39,14 @@ const FormComponent = () => {
     { label: FORM_QUESTION, name: FORM_QUESTION, type: "textarea" },
   ];
 
+  const onSubmit = (e) => {
+    e.preventDefault();
+    handleSubmit(formData);
+  };
+
   return (
     <div className="formContainer">
-      <form className="formContact" onSubmit={handleSubmit} autoComplete="off">
+      <form className="formContact" onSubmit={onSubmit} autoComplete="off">
           {fields.map(({ label, name, type }) => (
             <motion.div className="formField" key={name}>
               <label className="formLabel">{label}:</label>
@@ -85,5 +86,10 @@ const FormComponent = () => {
     </div>
   );
 };
+
+FormComponent.propTypes = {
+  onSubmit: PropTypes.func
+};
+
 
 export default FormComponent;
