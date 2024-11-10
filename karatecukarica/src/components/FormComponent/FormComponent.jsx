@@ -45,44 +45,41 @@ const FormComponent = () => {
 
   return (
     <div className="formContainer">
-      <form className="formField" onSubmit={handleSubmit} autoComplete="off">
-        {fields.map(({ label, name, type }) => (
-          <motion.div
-            className="formField"
-            key={name}
-          >
-            <label className="formLabel">{label}:</label>
-            {type === "textarea" ? (
-              <textarea
-                name={name}
-                value={formData[name]}
-                onChange={handleChange}
-                required
-                className="formTextarea"
-                autoComplete="off"
-              />
-            ) : (
-              <motion.input
-                type={type}
-                name={name}
-                value={formData[name]}
-                onChange={handleChange}
-                required
-                className="formInput"
-                onFocus={() => setFocusedField(name)}
-                onBlur={() => setFocusedField("")}
-                animate={{
-                  borderBottomColor:
-                    focusedField === name ? "#b20000" : "#f9f9f9",
-                }}
-                transition={{
-                  duration: 0.4,
-                  ease: "circInOut",
-                }}
-              />
-            )}
-          </motion.div>
-        ))}
+      <form className="formContact" onSubmit={handleSubmit} autoComplete="off">
+          {fields.map(({ label, name, type }) => (
+            <motion.div className="formField" key={name}>
+              <label className="formLabel">{label}:</label>
+              {type === "textarea" ? (
+                <textarea
+                  name={name}
+                  value={formData[name]}
+                  onChange={handleChange}
+                  required
+                  className="formTextarea"
+                  autoComplete="off"
+                />
+              ) : (
+                <motion.input
+                  type={type}
+                  name={name}
+                  value={formData[name]}
+                  onChange={handleChange}
+                  required
+                  className="formInput"
+                  onFocus={() => setFocusedField(name)}
+                  onBlur={() => setFocusedField("")}
+                  animate={{
+                    borderBottomColor:
+                      focusedField === name ? "#b20000" : "#f9f9f9",
+                  }}
+                  transition={{
+                    duration: 0.4,
+                    ease: "circInOut",
+                  }}
+                />
+              )}
+            </motion.div>
+          ))}
         <Button linkURL={"/"} variation={""} text={FORM_SEND} />
       </form>
     </div>
