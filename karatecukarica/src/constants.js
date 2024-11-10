@@ -15,7 +15,7 @@ export const HEROBANNER_TEXT_2 = "ČUKARICA";
 export const HEROBANNER_BUTTON_TEXT = "UPIŠI SE";
 //Header.jsx
 export const HEADER_PAGE_LIST = [
-  "Termini I Lokacije",
+  "Termini i Lokacije",
   "Letnji Kamp",
   "Uslovi",
   "Kontakt",
@@ -27,3 +27,8 @@ export const FORM_EMAIL = "Email";
 export const FORM_SUBJECT = "Predmet";
 export const FORM_QUESTION = "Pitanje";
 export const FORM_SEND = "Pošalji";
+//Split.jsx
+export const SPLIT_IMG_ALT = "Image for split component";
+export const SPLIT_TITLE = "Title";
+export const SPLIT_TEXT =
+  "Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam alias nesciunt possimus, ipsum nobis eos dolorum, est adipisci numquam libero architecto esse explicabo deserunt illo! Architecto repudiandae adipisci eveniet amet pariatur vel quidem incidunt accusamus iure dolores laborum doloribus consequatur nostrum, possimus sunt quae ducimus optio quam odio non! Eligendi?";

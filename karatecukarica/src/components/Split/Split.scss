@@ -1,0 +1,50 @@
+@use "../../styles/variables" as *;
+@use "../../styles/mixins" as *;
+
+.split-container {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: auto;
+  background-color: $color-dark-primary;
+  color: $color-font-light;
+  @include responsive(md) {
+    flex-direction: row;
+  }
+  img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    @include responsive(md) {
+      width: 50%;
+    }
+  }
+  .inner-content {
+    margin: 50px;
+  }
+  .button-split {
+    margin: 50px 0 0 0;
+  }
+  h3 {
+    font-size: $text-4xl;
+    @include responsive(md) {
+      font-size: $text-5xl;
+    }
+    @include responsive(lg) {
+      font-size: $text-6xl;
+    }
+  }
+  p {
+    font-size: $text-sm;
+    @include responsive(md) {
+      font-size: $text-base;
+    }
+  }
+}
+.image-right {
+  @include responsive(md) {
+    img {
+      order: 2;
+    }
+  }
+}

@@ -15,10 +15,10 @@ const router = createBrowserRouter([
         element: <Homepage />,
       },
       {
-        path: `'/${SCHEDULES_AND_LOCATIONS_URL}'`,
+        path: `${SCHEDULES_AND_LOCATIONS_URL}`,
         element: <SchedulesAndLocations />,
       },
-      { path: `'/${SUMMER_CAMP_URL}'`, element: <SummerCamp /> },
+      { path: `${SUMMER_CAMP_URL}`, element: <SummerCamp /> },
     ],
   },
 ]);

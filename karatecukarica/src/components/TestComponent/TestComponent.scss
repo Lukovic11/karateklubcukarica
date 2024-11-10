@@ -1,8 +1,8 @@
-@use "../../styles/variables" as *;
-@use "../../styles/mixins";
+@use "../../styles/_variables" as *;
+@use "../../styles/_mixins";
 
-.test_component {
-  .karate_klub {
+.test-component {
+  .karate-klub {
     font-family: $font-title-strong;
     font-size: $text-3xl;
     @include mixins.responsive(sm) {
