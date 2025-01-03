@@ -88,7 +88,7 @@ const FormComponent = ({handleSubmit}) => {
 };
 
 FormComponent.propTypes = {
-  onSubmit: PropTypes.func
+  handleSubmit: PropTypes.func.isRequired
 };
 
 

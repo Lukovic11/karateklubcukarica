@@ -2,8 +2,10 @@
 @use "../../styles/mixins.scss" as *;
 
 .formContainer {
-  width: 80%;
-  height: auto;
+  // width: 80%;
+  // height: auto;
+  width: 100vw;
+  height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -14,6 +16,7 @@
   padding-bottom: 1em;
   @include responsive(sm) {
     width: fit-content;
+    height: auto;
   }
 
   .formContact {
@@ -34,24 +37,23 @@
     .formField {
       display: flex;
       flex-direction: column;
-      margin-bottom: 1em;
+      margin-bottom: 2em;
 
       .formLabel {
         margin-bottom: 0.1em;
         @include responsive(sm) {
           margin-bottom: 0em;
-          font-size: $text-xs;
+          font-size: $text-sm;
         }
         align-self: flex-start;
         font-family: $font-paragraph-light;
         font-size: $text-sm;
-        text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.6);
         color: $color-font-light;
       }
 
       .formInput,
       .formTextarea {
-        width: 15em;
+        width: 20em;
         padding: 2px;
         font-size: $text-sm;
         background-color: transparent;
@@ -63,7 +65,8 @@
           border-bottom-color: $color-accent-red;
         }
         @include responsive(sm) {
-          font-size: $text-xs;
+          font-size: $text-sm;
+          width: 15em;
         }
       }
 
@@ -80,12 +83,16 @@
       .formTextarea {
         resize: vertical;
         height: 2em;
-        scrollbar-color: red;
       }
     }
   }
   .button {
-    justify-self: flex-end;
-    margin-bottom: 0.8em;
+    justify-self: center;
+    margin-top: 1em;
+    @include responsive(sm){
+      justify-self: flex-end;
+      margin-bottom: 1.5em;
+      margin-top: 0;
+    }
   }
 }
