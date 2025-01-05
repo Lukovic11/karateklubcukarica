@@ -9,7 +9,7 @@ export const SUMMER_CAMP_URL = "/letnjikamp";
 //BUTTON VARIATIONS
 export const BUTTON_VARIATION_TRANSPARENT = "__transparent";
 //Herobanner.jsx
-export const HEROBANNER_IMG_ALT = "Herobanner image";
+export const HEROBANNER_IMG_ALT = "Kids doing kata";
 export const HEROBANNER_TEXT_1 = "KARATE KLUB";
 export const HEROBANNER_TEXT_2 = "ČUKARICA";
 export const HEROBANNER_BUTTON_TEXT = "UPIŠI SE";

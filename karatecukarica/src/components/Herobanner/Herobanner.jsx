@@ -2,23 +2,23 @@ import "./Herobanner.scss";
 import Button from "../Button/Button";
 import herobanner_img from "../../assets/herobanner_img.jpg";
 import {
-  SCHEDULES_AND_LOCATIONS_URL,
+  HEROBANNER_BUTTON_TEXT,
   HEROBANNER_IMG_ALT,
   HEROBANNER_TEXT_1,
   HEROBANNER_TEXT_2,
-  HEROBANNER_BUTTON_TEXT,
+  SCHEDULES_AND_LOCATIONS_URL,
 } from "../../constants";
 
-//TODO: Change herobanner image and alt text
 const HeroBanner = () => {
   return (
     <div className="herobanner-container">
       <div className="herobanner">
-        <img src={herobanner_img} alt={HEROBANNER_IMG_ALT} />
+        <img src={herobanner_img} alt={HEROBANNER_IMG_ALT}/>
         <div className="overlay">
           <div className="content">
             <h1>
-              {HEROBANNER_TEXT_1} <div>{HEROBANNER_TEXT_2}</div>
+              {HEROBANNER_TEXT_1}
+              <div>{HEROBANNER_TEXT_2}</div>
             </h1>
             <Button
               className="button-herobanner"
