@@ -1,7 +1,7 @@
 @use "../../styles/variables.scss" as *;
 @use "../../styles/mixins.scss" as *;
 
-.formContainer {
+.form_container {
   width: 100vw;
   height: 100vh;
   display: flex;
@@ -17,7 +17,7 @@
     height: auto;
   }
 
-  .formContact {
+  .form_contact {
     align-items: center;
     justify-content: center;
     padding-top: 1em;
@@ -32,13 +32,13 @@
       padding: 0 2em 0 2em;
     }
 
-    .formField {
+    .form_field {
       display: flex;
       flex-direction: column;
       margin-top: 2em;
       position: relative;
 
-      .formLabel {
+      .form_label {
         @include responsive(sm) {
           margin-bottom: 0em;
           font-size: $text-sm;
@@ -49,8 +49,8 @@
         color: $color-font-light;
       }
 
-      .formInput,
-      .formTextarea {
+      .form_input,
+      .form_textarea {
         width: 20em;
         padding: 2px;
         font-size: $text-sm;
@@ -68,7 +68,7 @@
         }
       }
 
-      .formError {
+      .form_error {
         position: absolute;
         top: 100%;
         left: 0;
@@ -95,7 +95,7 @@
         font-size: $text-sm;
       }
 
-      .formTextarea {
+      .form_textarea {
         resize: vertical;
         height: 2em;
       }

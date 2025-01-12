@@ -77,7 +77,7 @@ const FormComponent = ({ handleSubmit }) => {
       }
 
       if (error) {
-        currentErrors[key] = error; 
+        currentErrors[key] = error;
         formIsValid = false;
       }
     });
@@ -103,18 +103,18 @@ const FormComponent = ({ handleSubmit }) => {
   };
 
   return (
-    <div className="formContainer">
-      <form className="formContact" onSubmit={onSubmit} autoComplete="off">
+    <div className="form_container">
+      <form className="form_contact" onSubmit={onSubmit} autoComplete="off">
         {fields.map(({ label, name, type }) => (
-          <motion.div className="formField" key={name}>
-            <label className="formLabel">{label}:</label>
+          <motion.div className="form_field" key={name}>
+            <label className="form_label">{label}:</label>
             {type === "textarea" ? (
               <textarea
                 name={name}
                 value={formData[name]}
                 onChange={handleChange}
                 required
-                className="formTextarea"
+                className="form_textarea"
                 autoComplete="off"
               />
             ) : (
@@ -124,7 +124,7 @@ const FormComponent = ({ handleSubmit }) => {
                 value={formData[name]}
                 onChange={handleChange}
                 required
-                className="formInput"
+                className="form_input"
                 onFocus={() => setFocusedField(name)}
                 onBlur={() => setFocusedField("")}
                 animate={{
@@ -138,10 +138,9 @@ const FormComponent = ({ handleSubmit }) => {
               />
             )}
 
-            {/* Error message */}
             {errors[name] && (
               <motion.span
-                className="formError"
+                className="form_error"
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
                 transition={{ duration: 0.3 }}

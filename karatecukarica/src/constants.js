@@ -20,7 +20,7 @@ export const HEADER_PAGE_LIST = [
   "Uslovi",
   "Kontakt",
 ];
-//From.jsx
+//Form.jsx
 export const FORM_FIRSTNAME = "Ime";
 export const FORM_LASTNAME = "Prezime";
 export const FORM_EMAIL = "Email";
