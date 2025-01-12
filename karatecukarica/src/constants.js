@@ -25,3 +25,5 @@ export const SPLIT_IMG_ALT = "Image for split component";
 export const SPLIT_TITLE = "Title";
 export const SPLIT_TEXT =
   "Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam alias nesciunt possimus, ipsum nobis eos dolorum, est adipisci numquam libero architecto esse explicabo deserunt illo! Architecto repudiandae adipisci eveniet amet pariatur vel quidem incidunt accusamus iure dolores laborum doloribus consequatur nostrum, possimus sunt quae ducimus optio quam odio non! Eligendi?";
+//Enroll
+export const ENROLL_TITLE = ""
