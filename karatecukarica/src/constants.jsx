@@ -26,4 +26,14 @@ export const SPLIT_TITLE = "Title";
 export const SPLIT_TEXT =
   "Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam alias nesciunt possimus, ipsum nobis eos dolorum, est adipisci numquam libero architecto esse explicabo deserunt illo! Architecto repudiandae adipisci eveniet amet pariatur vel quidem incidunt accusamus iure dolores laborum doloribus consequatur nostrum, possimus sunt quae ducimus optio quam odio non! Eligendi?";
 //Enroll
-export const ENROLL_TITLE = ""
+export const ENROLL_TITLE = "Upis je u toku!";
+export const ENROLL_SUBTITLE = "POSTANI ČLAN";
+export const ENROLL_TEXT = (
+  <>
+    <p>Karate je uvek pravi izbor!</p>
+    <p>Naš klub okuplja sve generacije – od najmlađih do odraslih, takmičare i rekreativce.</p>
+    <p>Isprobajte probni trening na lokaciji koja vam najviše odgovara.</p>
+  </>
+);
+export const ENROLL_BUTTON_TEXT = "POGLEDAJ LOKACIJE";
+

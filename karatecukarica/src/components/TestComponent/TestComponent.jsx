@@ -3,7 +3,7 @@
 //To see the component on the page, import it in Homepage.jsx
 
 import "./TestComponent.scss";
-import { H2_TEXT, H1_TEXT, P_TEXT } from "../../constants";
+import { H2_TEXT, H1_TEXT, P_TEXT } from "../../constants.jsx";
 
 const TestComponent = () => {
   return (

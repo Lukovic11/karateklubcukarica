@@ -7,7 +7,7 @@ import {
   HEROBANNER_TEXT_1,
   HEROBANNER_TEXT_2,
   SCHEDULES_AND_LOCATIONS_URL,
-} from "../../constants";
+} from "../../constants.jsx";
 
 const HeroBanner = () => {
   return (
