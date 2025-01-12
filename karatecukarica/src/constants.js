@@ -27,6 +27,12 @@ export const FORM_EMAIL = "Email";
 export const FORM_SUBJECT = "Predmet";
 export const FORM_QUESTION = "Pitanje";
 export const FORM_SEND = "Pošalji";
+export const FIRSTNAME_NUMBER_ERROR = 'Ime ne sme da sadrži brojeve';
+export const LASTNAME_NUMBER_ERROR = 'Prezime ne sme da sadrži brojeve';
+export const FIRSTNAME_EMPTY_ERROR = 'Ime ne sme da bude prazno';
+export const LASTNAME_EMPTY_ERROR = 'Prezime ne sme da bude prazno';
+export const SUBJECT_EMPTY_ERROR = 'Predmet ne sme da bude prazan';
+export const QUESTION_EMPTY_ERROR = 'Pitanje ne sme da bude prazno';
 //Split.jsx
 export const SPLIT_IMG_ALT = "Image for split component";
 export const SPLIT_TITLE = "Title";

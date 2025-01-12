@@ -35,10 +35,10 @@
     .formField {
       display: flex;
       flex-direction: column;
-      margin-bottom: 2em;
+      margin-top: 2em;
+      position: relative;
 
       .formLabel {
-        margin-bottom: 0.1em;
         @include responsive(sm) {
           margin-bottom: 0em;
           font-size: $text-sm;
@@ -68,6 +68,23 @@
         }
       }
 
+      .formError {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        margin-top: 0.2em;
+        bottom: -1.5em; 
+        transform: translateY(0.5em);
+        @include responsive(sm) {
+          margin-bottom: 0em;
+          font-size: $text-xs;
+        }
+        align-self: flex-start;
+        font-family: $font-paragraph-light;
+        font-size: $text-sm;
+        color: $color-accent-red;
+      }
+
       input:-webkit-autofill,
       input:-webkit-autofill:focus,
       textarea:-webkit-autofill,
@@ -87,7 +104,7 @@
   .button {
     justify-self: center;
     margin-top: 1em;
-    @include responsive(sm){
+    @include responsive(sm) {
       justify-self: flex-end;
       margin-bottom: 1.5em;
       margin-top: 0;

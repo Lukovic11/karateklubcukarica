@@ -6,17 +6,24 @@ import {
   FORM_SUBJECT,
   FORM_QUESTION,
   FORM_SEND,
+  FIRSTNAME_NUMBER_ERROR,
+  FIRSTNAME_EMPTY_ERROR,
+  LASTNAME_NUMBER_ERROR,
+  LASTNAME_EMPTY_ERROR,
+  SUBJECT_EMPTY_ERROR,
+  QUESTION_EMPTY_ERROR,
 } from "../../constants";
 import Button from "../Button/Button";
 import { motion } from "framer-motion";
 import "./FormComponent.scss";
 import PropTypes from "prop-types";
 
-const FormComponent = ({handleSubmit}) => {
+const FormComponent = ({ handleSubmit }) => {
   const [focusedField, setFocusedField] = useState("");
+  const [errors, setErrors] = useState({});
 
   const [formData, setFormData] = useState({
-    [FORM_FIRSTNAME]: "",  
+    [FORM_FIRSTNAME]: "",
     [FORM_LASTNAME]: "",
     [FORM_EMAIL]: "",
     [FORM_SUBJECT]: "",
@@ -25,10 +32,58 @@ const FormComponent = ({handleSubmit}) => {
 
   const handleChange = (e) => {
     const { name, value } = e.target;
+
     setFormData((prevData) => ({
       ...prevData,
       [name]: value,
     }));
+  };
+
+  const validateForm = () => {
+    let formIsValid = true;
+    let currentErrors = {};
+
+    Object.entries(formData).forEach(([key, value]) => {
+      const trimmedValue = value.trim();
+      let error = "";
+      let error_type = "";
+
+      if (key === FORM_FIRSTNAME) {
+        if (/\d/.test(trimmedValue)) {
+          error = FIRSTNAME_NUMBER_ERROR;
+          error_type = key;
+        } else if (trimmedValue === "") {
+          error = FIRSTNAME_EMPTY_ERROR;
+          error_type = key;
+        }
+      } else if (key === FORM_LASTNAME) {
+        if (/\d/.test(trimmedValue)) {
+          error = LASTNAME_NUMBER_ERROR;
+          error_type = key;
+        } else if (trimmedValue === "") {
+          error = LASTNAME_EMPTY_ERROR;
+          error_type = key;
+        }
+      } else if (key === FORM_SUBJECT) {
+        if (trimmedValue === "") {
+          error = SUBJECT_EMPTY_ERROR;
+          error_type = key;
+        }
+      } else if (key === FORM_QUESTION) {
+        if (trimmedValue === "") {
+          error = QUESTION_EMPTY_ERROR;
+          error_type = key;
+        }
+      }
+
+      if (error) {
+        currentErrors[key] = error; 
+        formIsValid = false;
+      }
+    });
+
+    setErrors(currentErrors);
+    return formIsValid;
   };
 
   const fields = [
@@ -41,46 +96,61 @@ const FormComponent = ({handleSubmit}) => {
 
   const onSubmit = (e) => {
     e.preventDefault();
-    handleSubmit(formData);
+    const isValid = validateForm();
+    if (isValid) {
+      handleSubmit(formData);
+    }
   };
 
   return (
     <div className="formContainer">
       <form className="formContact" onSubmit={onSubmit} autoComplete="off">
-          {fields.map(({ label, name, type }) => (
-            <motion.div className="formField" key={name}>
-              <label className="formLabel">{label}:</label>
-              {type === "textarea" ? (
-                <textarea
-                  name={name}
-                  value={formData[name]}
-                  onChange={handleChange}
-                  required
-                  className="formTextarea"
-                  autoComplete="off"
-                />
-              ) : (
-                <motion.input
-                  type={type}
-                  name={name}
-                  value={formData[name]}
-                  onChange={handleChange}
-                  required
-                  className="formInput"
-                  onFocus={() => setFocusedField(name)}
-                  onBlur={() => setFocusedField("")}
-                  animate={{
-                    borderBottomColor:
-                      focusedField === name ? "#b20000" : "#f9f9f9",
-                  }}
-                  transition={{
-                    duration: 0.4,
-                    ease: "circInOut",
-                  }}
-                />
-              )}
-            </motion.div>
-          ))}
+        {fields.map(({ label, name, type }) => (
+          <motion.div className="formField" key={name}>
+            <label className="formLabel">{label}:</label>
+            {type === "textarea" ? (
+              <textarea
+                name={name}
+                value={formData[name]}
+                onChange={handleChange}
+                required
+                className="formTextarea"
+                autoComplete="off"
+              />
+            ) : (
+              <motion.input
+                type={type}
+                name={name}
+                value={formData[name]}
+                onChange={handleChange}
+                required
+                className="formInput"
+                onFocus={() => setFocusedField(name)}
+                onBlur={() => setFocusedField("")}
+                animate={{
+                  borderBottomColor:
+                    focusedField === name ? "#b20000" : "#f9f9f9",
+                }}
+                transition={{
+                  duration: 0.4,
+                  ease: "circInOut",
+                }}
+              />
+            )}
+
+            {/* Error message */}
+            {errors[name] && (
+              <motion.span
+                className="formError"
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                transition={{ duration: 0.3 }}
+              >
+                {errors[name]}
+              </motion.span>
+            )}
+          </motion.div>
+        ))}
         <Button linkURL={"/"} variation={""} text={FORM_SEND} />
       </form>
     </div>
@@ -88,8 +158,7 @@ const FormComponent = ({handleSubmit}) => {
 };
 
 FormComponent.propTypes = {
-  handleSubmit: PropTypes.func.isRequired
+  handleSubmit: PropTypes.func.isRequired,
 };
-
 
 export default FormComponent;
