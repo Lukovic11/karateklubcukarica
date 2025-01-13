@@ -1,4 +1,3 @@
-import FormComponent from "../../components/FormComponent/FormComponent";
 import HeroBanner from "../../components/Herobanner/Herobanner";
 
 const Homepage = () => {
