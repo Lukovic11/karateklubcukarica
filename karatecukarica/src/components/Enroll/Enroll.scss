@@ -61,9 +61,9 @@
   }
 
   .button {
-    font-size: $text-sm;
+    font-size: $text-lg;
     @include responsive(sm) {
-      font-size: $text-base;
+      font-size: $text-xl;
     }
   }
 }
