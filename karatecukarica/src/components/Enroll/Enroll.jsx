@@ -14,12 +14,12 @@ const Enroll = () => {
     <div className="enroll">
       <div className="title-segment">
         <h2>{ENROLL_TITLE}</h2>
-        <p className="">{ENROLL_SUBTITLE}</p>
+        <p>{ENROLL_SUBTITLE}</p>
       </div>
       <div className="paragraph-segment">
         {ENROLL_TEXT}
       </div>
-      <Button linkURL={SCHEDULES_AND_LOCATIONS_URL} variation={BUTTON_VARIATION_TRANSPARENT}
+      <Button className="button" linkURL={SCHEDULES_AND_LOCATIONS_URL} variation={BUTTON_VARIATION_TRANSPARENT}
               text={ENROLL_BUTTON_TEXT}/>
     </div>
   );
