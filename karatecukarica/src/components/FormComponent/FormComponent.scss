@@ -1,0 +1,113 @@
+@use "../../styles/variables.scss" as *;
+@use "../../styles/mixins.scss" as *;
+
+.form-container {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  justify-self: center;
+  background-color: $color-dark-primary;
+  padding-top: 1em;
+  padding-bottom: 1em;
+  @include responsive(sm) {
+    width: fit-content;
+    height: auto;
+  }
+
+  .form-contact {
+    align-items: center;
+    justify-content: center;
+    padding-top: 1em;
+    padding-bottom: 1em;
+
+    @include responsive(sm) {
+      width: fit-content;
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 2em;
+      align-items: flex-end;
+      padding: 0 2em 0 2em;
+    }
+
+    .form-field {
+      display: flex;
+      flex-direction: column;
+      margin-top: 2em;
+      position: relative;
+
+      .form-label {
+        @include responsive(sm) {
+          margin-bottom: 0em;
+          font-size: $text-sm;
+        }
+        align-self: flex-start;
+        font-family: $font-paragraph-light;
+        font-size: $text-sm;
+        color: $color-font-light;
+      }
+
+      .form-input,
+      .form-textarea {
+        width: 20em;
+        padding: 2px;
+        font-size: $text-sm;
+        background-color: transparent;
+        color: $color-font-light;
+        border: none;
+        border-bottom: 2px solid $color-light-primary;
+        outline: none;
+        &:focus {
+          border-bottom-color: $color-accent-red;
+        }
+        @include responsive(sm) {
+          font-size: $text-sm;
+          width: 15em;
+        }
+      }
+
+      .form-error {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        margin-top: 0.2em;
+        bottom: -1.5em; 
+        transform: translateY(0.5em);
+        @include responsive(sm) {
+          margin-bottom: 0em;
+          font-size: $text-xs;
+        }
+        align-self: flex-start;
+        font-family: $font-paragraph-light;
+        font-size: $text-sm;
+        color: $color-accent-red;
+      }
+
+      input:-webkit-autofill,
+      input:-webkit-autofill:focus,
+      textarea:-webkit-autofill,
+      textarea:-webkit-autofill:focus {
+        -webkit-box-shadow: 0 0 0px 1000px #00000000 inset;
+        transition: background-color 5000s ease-in-out 0s;
+        -webkit-text-fill-color: $color-font-light;
+        font-size: $text-sm;
+      }
+
+      .form-textarea {
+        resize: vertical;
+        height: 2em;
+      }
+    }
+  }
+  .button {
+    justify-self: center;
+    margin-top: 1em;
+    @include responsive(sm) {
+      justify-self: flex-end;
+      margin-bottom: 1.5em;
+      margin-top: 0;
+    }
+  }
+}
