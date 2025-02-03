@@ -1,3 +1,3 @@
 BUTTON:
 - za prvu varijaciju je potrebno staviti variation=""
-- za drugu varijaciju je potrebno staviti variation="__transparent" (u constants.js je stavljena konstanta za __transparent samo importuj i koristi nju)
+- za drugu varijaciju je potrebno staviti variation="__transparent" (u constants.jsx je stavljena konstanta za __transparent samo importuj i koristi nju)

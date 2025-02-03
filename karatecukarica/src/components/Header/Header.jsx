@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { HEADER_PAGE_LIST } from "../../constants";
+import { HEADER_PAGE_LIST } from "../../constants.jsx";
 import "./Header.scss";
 import HamburgerIcon from "./HamburgerIcon/HamburgerIcon";
 

@@ -3,7 +3,7 @@ import Root from "./pages/Root";
 import Homepage from "./pages/Homepage/Homepage";
 import SchedulesAndLocations from "./pages/SchedulesAndLocations/SchedulesAndLocations";
 import SummerCamp from "./pages/SummerCamp/SummerCamp";
-import { SCHEDULES_AND_LOCATIONS_URL, SUMMER_CAMP_URL } from "./constants";
+import { SCHEDULES_AND_LOCATIONS_URL, SUMMER_CAMP_URL } from "./constants.jsx";
 
 const router = createBrowserRouter([
   {
