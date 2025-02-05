@@ -6,10 +6,8 @@ const Homepage = () => {
   return (
     <div>
       <HeroBanner/>
-      <div className="page-content">
-        <Enroll/>
-        <History/>
-      </div>
+      <Enroll/>
+      <History/>
     </div>
   )
     ;
