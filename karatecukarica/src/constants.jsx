@@ -2,7 +2,7 @@
 export const H2_TEXT = "KARATE KLUB";
 export const H1_TEXT = "ČUKARICA";
 export const P_TEXT =
-"Lorem ipsum dolor sit amet consectetur, adipisicing elit. Tempore dolorem vitae tenetur rerum, ratione velit. Facilis rem commodi quasi ullam, perferendis recusandae. Ab unde rem quia pariatur hic tempora accusantium vitae modi tempore totam laboriosam deleniti debitis asperiores, minus ex temporibus cupiditate, fugiat sunt corporis nam non beatae, perspiciatis dolorem magnam. Adipisci reiciendis quibusdam laboriosam amet repudiandae facere iure tenetur esse, cumque, ipsum ullam culpa eligendi voluptatibus, quae earum quidem fugiat asperiores? Obcaecati aut ducimus ad. Fugit, ullam officiis natus at sunt reprehenderit doloribus. Sunt quo possimus voluptatem fuga voluptate, harum sed deserunt error obcaecati pariatur animi odit eaque eum impedit assumenda numquam nesciunt unde tempora enim perferendis ut iste! Dolorem officia cum optio autem iste iure, sequi a eius vel est assumenda error quo illum veniam cupiditate itaque necessitatibus ipsam qui hic eaque ducimus? Quod atque minus unde excepturi quam facere, modi autem perspiciatis, harum numquam nostrum placeat consequuntur porro magni nulla eum sint facilis cupiditate ex doloremque obcaecati vel ducimus itaque. Natus consequatur hic repellendus magni nihil optio possimus recusandae neque, voluptatum sunt atque obcaecati culpa ullam ipsam, nisi quae non eum fugit ducimus nesciunt debitis beatae similique quidem asperiores. Maxime, distinctio ut molestias repellat aspernatur vero optio quia, sapiente totam sequi aliquid? Corporis hic accusamus facere odit repudiandae earum, dolor mollitia placeat non amet maiores obcaecati pariatur necessitatibus nam quaerat recusandae aut ipsam ratione vel eum. Sapiente dolores necessitatibus veniam repudiandae at ";
+  "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Tempore dolorem vitae tenetur rerum, ratione velit. Facilis rem commodi quasi ullam, perferendis recusandae. Ab unde rem quia pariatur hic tempora accusantium vitae modi tempore totam laboriosam deleniti debitis asperiores, minus ex temporibus cupiditate, fugiat sunt corporis nam non beatae, perspiciatis dolorem magnam. Adipisci reiciendis quibusdam laboriosam amet repudiandae facere iure tenetur esse, cumque, ipsum ullam culpa eligendi voluptatibus, quae earum quidem fugiat asperiores? Obcaecati aut ducimus ad. Fugit, ullam officiis natus at sunt reprehenderit doloribus. Sunt quo possimus voluptatem fuga voluptate, harum sed deserunt error obcaecati pariatur animi odit eaque eum impedit assumenda numquam nesciunt unde tempora enim perferendis ut iste! Dolorem officia cum optio autem iste iure, sequi a eius vel est assumenda error quo illum veniam cupiditate itaque necessitatibus ipsam qui hic eaque ducimus? Quod atque minus unde excepturi quam facere, modi autem perspiciatis, harum numquam nostrum placeat consequuntur porro magni nulla eum sint facilis cupiditate ex doloremque obcaecati vel ducimus itaque. Natus consequatur hic repellendus magni nihil optio possimus recusandae neque, voluptatum sunt atque obcaecati culpa ullam ipsam, nisi quae non eum fugit ducimus nesciunt debitis beatae similique quidem asperiores. Maxime, distinctio ut molestias repellat aspernatur vero optio quia, sapiente totam sequi aliquid? Corporis hic accusamus facere odit repudiandae earum, dolor mollitia placeat non amet maiores obcaecati pariatur necessitatibus nam quaerat recusandae aut ipsam ratione vel eum. Sapiente dolores necessitatibus veniam repudiandae at ";
 //App.jsx
 export const SCHEDULES_AND_LOCATIONS_URL = "/terminiilokacije";
 export const SUMMER_CAMP_URL = "/letnjikamp";
@@ -49,4 +49,25 @@ export const ENROLL_TEXT = (
   </>
 );
 export const ENROLL_BUTTON_TEXT = "POGLEDAJ LOKACIJE";
-
+//Staff
+export const NENAD = "Nenad Koropanovski";
+export const NENAD_TITLE = "Trener i vođa kluba";
+export const NENAD_TEXT = "Lorem ipsum";
+export const VESNA = "Vesna Vuković";
+export const VESNA_TITLE = "Trener";
+export const VESNA_TEXT = "Lorem ipsum";
+export const MIROSLAV = "Miroslav Milovanović";
+export const MIROSLAV_TITLE = "Trener";
+export const MIROSLAV_TEXT = "Lorem ipsum";
+export const DUSAN = "Dušan Jelovac";
+export const DUSAN_TITLE = "Trener";
+export const DUSAN_TEXT = "Lorem ipsum";
+export const DUNJA = "Dunja Bojičić";
+export const DUNJA_TITLE = "Trener";
+export const DUNJA_TEXT = "Lorem ipsum";
+export const KATARINA = "Katarina Koropanovski";
+export const KATARINA_TITLE = "Trener";
+export const KATARINA_TEXT = "Lorem ipsum";
+export const JASMINA = "Jasmina Jelić";
+export const JASMINA_TITLE = "Sekretarica";
+export const JASMINA_TEXT = "Lorem ipsum";

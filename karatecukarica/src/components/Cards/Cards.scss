@@ -1,0 +1,25 @@
+@use "../../styles/mixins" as *;
+
+.cards {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+  margin: 0;
+
+  @include responsive(sm) {
+    margin: 0 50px;
+    gap: 50px;
+  }
+  @include responsive(lg) {
+    margin: 0 75px;
+    gap: 50px;
+  }
+  @include responsive(xl) {
+    margin: 0 100px;
+    gap: 75px;
+  }
+  @include responsive(2xl) {
+    margin: 0 230px;
+    gap: 75px;
+  }
+}

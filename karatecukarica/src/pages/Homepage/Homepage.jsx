@@ -1,13 +1,14 @@
 import HeroBanner from "../../components/Herobanner/Herobanner";
 import Enroll from "../../components/Enroll/Enroll";
-import HoverCard from "../../components/HoverCard/HoverCard.jsx";
+import Cards from "../../components/Cards/Cards.jsx";
+
 
 const Homepage = () => {
   return (
     <div>
       <HeroBanner/>
       <Enroll/>
-      <HoverCard/>
+      <Cards/>
     </div>
   );
 };

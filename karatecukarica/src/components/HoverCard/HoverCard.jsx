@@ -1,11 +1,12 @@
 import './HoverCard.scss';
+import PropTypes from "prop-types";
 
-const HoverCard = () => {
+const HoverCard = ({name, title, image, text}) => {
   return (
     <div className="hover-card">
       <div className="image-container">
         <img
-          src="https://images.unsplash.com/photo-1583071299210-c6c113f4ac91?q=80&w=800&auto=format&fit=crop"
+          src={image}
           alt="shoes"
           className="card-image"
         />
@@ -13,24 +14,29 @@ const HoverCard = () => {
 
       <article className="hover-content">
         <div className="content-wrapper">
-          <h1>Who We are</h1>
+          <h1>{name}</h1>
           <p>
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad
-            consectetur ducimus vel nemo deserunt possimus inventore ipsum
-            nostrum. Sapiente, facilis?
+            {text}
           </p>
-          <button>
-            Learn More
-          </button>
         </div>
       </article>
 
       <article className="default-content">
-        <h1>Naymur Rahman</h1>
-        <p>CEO & Design Engineer</p>
+        <h1>{name}</h1>
+        <p>{title}</p>
       </article>
     </div>
   );
+};
+
+HoverCard.propTypes = {
+  name: PropTypes.string.isRequired,
+  title: PropTypes.string.isRequired,
+  image: PropTypes.oneOfType([
+    PropTypes.string,
+    PropTypes.object,
+  ]).isRequired,
+  text: PropTypes.string.isRequired,
 };
 
 export default HoverCard;

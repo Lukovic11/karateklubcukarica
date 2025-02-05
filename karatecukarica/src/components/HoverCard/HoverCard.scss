@@ -1,10 +1,18 @@
+@use "../../styles/variables" as *;
+@use "../../styles/mixins" as *;
+
 .hover-card {
-  width: 400px;
-  height: 450px;
+  width: 275px;
+  height: 350px;
   position: relative;
   margin: 1rem auto;
   overflow: hidden;
   border-radius: 8px;
+  @include responsive(xl) {
+    width: 275px;
+    height: 350px;
+
+  }
 
   .image-container {
     width: 100%;
@@ -42,7 +50,7 @@
   .hover-content {
     position: absolute;
     inset: 0;
-    background-color: #c34c32;
+    background-color: $color-accent-red;
     padding: 2rem;
     opacity: 0;
     visibility: hidden;
@@ -59,7 +67,8 @@
         font-size: 2rem;
         font-weight: 600;
         margin-bottom: 1rem;
-        font-family: sans-serif;
+
+
       }
 
       p {
@@ -95,7 +104,7 @@
     left: 0;
     right: 0;
     padding: 1.5rem;
-    background: linear-gradient(to top, rgba(195, 76, 50, 1), rgba(195, 76, 50, 0));
+    background: linear-gradient(to top, $color-accent-red, rgba(195, 76, 50, 0));
     color: white;
     transition: all 0.4s ease;
 
@@ -103,6 +112,8 @@
       font-size: 1.5rem;
       font-weight: 600;
       margin-bottom: 0.25rem;
+      letter-spacing: 1px;
+
     }
 
     p {
