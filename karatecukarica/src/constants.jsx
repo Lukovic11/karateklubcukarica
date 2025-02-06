@@ -69,5 +69,5 @@ export const KATARINA = "Katarina Koropanovski";
 export const KATARINA_TITLE = "Trener";
 export const KATARINA_TEXT = "Lorem ipsum";
 export const JASMINA = "Jasmina Jelić";
-export const JASMINA_TITLE = "Sekretarica";
+export const JASMINA_TITLE = "Sekretar kluba";
 export const JASMINA_TEXT = "Lorem ipsum";
