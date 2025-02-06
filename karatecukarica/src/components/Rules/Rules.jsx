@@ -4,17 +4,25 @@ import {
   ITEM1_TEXT,
   ITEM1_TITLE,
   ITEM2_TEXT,
+  ITEM2_TITLE,
   ITEM3_TEXT,
+  ITEM3_TITLE,
   ITEM4_TEXT,
+  ITEM4_TITLE,
   ITEM5_TEXT,
+  ITEM5_TITLE,
   ITEM6_TEXT,
-  ITEM7_TEXT
+  ITEM6_TITLE,
+  ITEM7_TEXT,
+  ITEM7_TITLE,
+  ITEM8_TEXT,
+  ITEM8_TITLE
 } from "../../constants";
+import "./Rules.scss"
 
 function Rules() {
   return (
-    <div className="rules"
-         style={{display: "flex", justifyContent: "center", flexDirection: "column", alignItems: "center"}}>
+    <div className="rules">
       <Accordion>
         <AccordionItem value="item-1">
           <AccordionHeader icon={<Plus/>}>
