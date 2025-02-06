@@ -81,30 +81,21 @@ export function AccordionHeader({children, icon}) {
 export function AccordionPanel({children}) {
   const {isActive} = useAccordion();
   return (
-    <AnimatePresence initial={true}>
+    <AnimatePresence initial={false}>
       {isActive && (
         <motion.div
-          initial={{height: 0, overflow: 'hidden'}}
-          animate={{height: 'auto', overflow: 'hidden'}}
-          exit={{height: 0}}
-          transition={{type: 'spring', duration: 0.3, bounce: 0}}
+          initial={{height: 0, opacity: 0}}
+          animate={{height: 'auto', opacity: 1}}
+          exit={{height: 0, opacity: 0}}
+          transition={{
+            height: { duration: 0.3, ease: "easeOut" },
+            opacity: { duration: 0.2, ease: "easeOut" }
+          }}
           className="accordion-panel"
         >
-          <motion.article
-            initial={{clipPath: 'polygon(0 0, 100% 0, 100% 0, 0 0)'}}
-            animate={{clipPath: 'polygon(0 0, 100% 0, 100% 100%, 0% 100%)'}}
-            exit={{
-              clipPath: 'polygon(0 0, 100% 0, 100% 0, 0 0)',
-            }}
-            transition={{
-              type: 'spring',
-              duration: 0.4,
-              bounce: 0,
-            }}
-            className="accordion-content"
-          >
+          <div className="accordion-content">
             {children}
-          </motion.article>
+          </div>
         </motion.div>
       )}
     </AnimatePresence>
