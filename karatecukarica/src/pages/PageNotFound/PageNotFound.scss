@@ -6,14 +6,37 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  background-color: $color-dark-primary;
 
   .background-img {
     position: absolute;
-    opacity: 0.3;
-    height: 50%;
+    opacity: 0.5;
+    height: 60%;
   }
 
-  p {
-    font-size: $text-5xl;
+  .text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    z-index: 1;
+
+    h1 {
+      font-size: $text-5xl;
+      font-family: $font-title-marcellus;
+      font-style: italic;
+      color: $color-light-primary;
+    }
+
+    a {
+      text-decoration: none;
+      color: $color-font-light;
+      font-size: $text-xl;
+      font-family: $font-paragraph-light;
+
+      &:hover {
+        color: $color-accent-red;
+      }
+    }
   }
 }
