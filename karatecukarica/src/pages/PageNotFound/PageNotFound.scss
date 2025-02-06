@@ -1,4 +1,5 @@
 @use "../../styles/variables" as *;
+@use "../../styles/mixins" as *;
 
 .pagenotfound-wrapper {
   width: 100%;
@@ -22,17 +23,34 @@
     z-index: 1;
 
     h1 {
-      font-size: $text-5xl;
+      font-size: $text-2xl;
       font-family: $font-title-marcellus;
       font-style: italic;
       color: $color-light-primary;
+
+      @include responsive(sm) {
+        font-size: $text-3xl;
+      }
+      @include responsive(md) {
+        font-size: $text-4xl;
+      }
+      @include responsive(lg) {
+        font-size: $text-5xl;
+      }
     }
 
     a {
       text-decoration: none;
       color: $color-font-light;
-      font-size: $text-xl;
+      font-size: $text-lg;
       font-family: $font-paragraph-light;
+
+      @include responsive(sm) {
+        font-size: $text-lg;
+      }
+      @include responsive(md) {
+        font-size: $text-xl;
+      }
 
       &:hover {
         color: $color-accent-red;
