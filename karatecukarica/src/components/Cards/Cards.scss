@@ -5,23 +5,24 @@
   justify-content: center;
   align-items: center;
   flex-wrap: wrap;
-  gap: 30px;
+  row-gap: 10px;
+  column-gap: 30px;
   margin: 0;
 
   @include responsive(sm) {
-    margin: 0 50px;
-    gap: 50px;
+    margin: 50px 50px;
+    column-gap: 50px;
   }
   @include responsive(lg) {
-    margin: 0 75px;
-    gap: 50px;
+    margin: 50px 75px;
+    column-gap: 50px;
   }
   @include responsive(xl) {
-    margin: 0 100px;
-    gap: 75px;
+    margin: 50px 100px;
+    column-gap: 75px;
   }
   @include responsive(2xl) {
-    margin: 0 230px;
-    gap: 75px;
+    margin: 50px 230px;
+    column-gap: 75px;
   }
 }
