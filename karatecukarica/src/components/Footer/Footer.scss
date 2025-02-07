@@ -1,0 +1,33 @@
+@use "../../styles/variables.scss" as *;
+@use "../../styles/mixins.scss" as *;
+
+.footer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background-color: $color-dark-primary;
+  color: white;
+  height: 50vh;
+  z-index: 1000;
+
+  .footer-content {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 100%;
+
+    .footer-contact {
+      color: $color-light-primary;
+      margin-left: 10em;
+
+      .footer-title {
+        font-size: $text-3xl;
+      }
+    }
+
+    .footer-form {
+
+    }
+  }
+}
