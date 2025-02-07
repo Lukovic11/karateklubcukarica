@@ -16,6 +16,7 @@ export const HEROBANNER_TEXT_2 = "ČUKARICA";
 export const HEROBANNER_BUTTON_TEXT = "UPIŠI SE";
 //Header.jsx
 export const HEADER_PAGE_LIST = [
+  "Početna",
   "Termini i Lokacije",
   "Letnji Kamp",
   "Uslovi",
