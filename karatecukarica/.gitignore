@@ -18,6 +18,8 @@ dist-ssr
 package-lock.json
 package.json
 .idea
+package.json
+package-lock.json
  ../.idea/
 .DS_Store
 *.suo

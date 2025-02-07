@@ -75,3 +75,39 @@ export const ITEM8_TITLE = "Karate zajednica";
 export const ITEM8_TEXT = " Da bismo Vas na vreme obaveštavali o svemu, koristimo Viber zajednicu. Kada Vaše dete postane član kluba, Vi\n" +
   "            ćete biti uključeni u zajednicu gde sekretar povremeno šalje važne poruke koje se odnose na funkcionisanje\n" +
   "            kluba.";
+//History
+export const HISTORY_IMG_ALT = "Club gym with logo";
+export const HISTORY_TITLE = "Preko 50 godina rada";
+export const HISTORY_TEXT = "Pre nego što je zvanično osnovan 1975. godine na osnivačkoj Skupštini opštinskog saveza Čukarice, naš klub\n" +
+  "        je\n" +
+  "        postojao od davne 1968. Tada je naša karate škola bila najmasovnija sekcija u društvu za fizičko\n" +
+  "        vaspitanje\n" +
+  "        i\n" +
+  "        rekreaciju “Partizan”.\n" +
+  "        Brojne generacije dece vaspitavane su i stasavale u našoj sali. Mnogi sportisti ostavili su značajan trag\n" +
+  "        u\n" +
+  "        svetu karatea, i izrasli u vredne i dobre Ljude.\n" +
+  "        To je ono čemu težimo.";
+export const HISTORY_BUTTON = "UPOZNAJ TIM";
+//Staff
+export const NENAD = "Nenad Koropanovski";
+export const NENAD_TITLE = "Trener i vođa kluba";
+export const NENAD_TEXT = "Lorem ipsum";
+export const VESNA = "Vesna Vuković";
+export const VESNA_TITLE = "Trener";
+export const VESNA_TEXT = "Lorem ipsum";
+export const MIROSLAV = "Miroslav Milovanović";
+export const MIROSLAV_TITLE = "Trener";
+export const MIROSLAV_TEXT = "Lorem ipsum";
+export const DUSAN = "Dušan Jelovac";
+export const DUSAN_TITLE = "Trener";
+export const DUSAN_TEXT = "Lorem ipsum";
+export const DUNJA = "Dunja Bojičić";
+export const DUNJA_TITLE = "Trener";
+export const DUNJA_TEXT = "Lorem ipsum";
+export const KATARINA = "Katarina Koropanovski";
+export const KATARINA_TITLE = "Trener";
+export const KATARINA_TEXT = "Lorem ipsum";
+export const JASMINA = "Jasmina Jelić";
+export const JASMINA_TITLE = "Sekretar kluba";
+export const JASMINA_TEXT = "Lorem ipsum";

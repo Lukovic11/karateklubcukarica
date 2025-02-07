@@ -1,0 +1,100 @@
+@use "../../styles/variables" as *;
+@use "../../styles/mixins" as *;
+
+.history {
+  display: flex;
+  width: 100%;
+  background-color: $color-light-grey-primary;
+  flex-direction: column;
+  @include responsive(lg) {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  .img-div {
+    width: 100%;
+    order: 1;
+    display: flex;
+    justify-content: center;
+    @include responsive(lg) {
+      order: 2;
+      width: 45%;
+    }
+    @include responsive(xl) {
+      width: 30%;
+
+    }
+
+    .img {
+      width: 90%;
+      height: 250px;
+      object-fit: cover;
+      opacity: 0.9;
+      margin-top: 20px;
+      @include responsive(sm) {
+        height: 300px;
+        margin-top: 30px;
+      }
+      @include responsive(md) {
+        height: 400px;
+        margin-top: 30px;
+      }
+      @include responsive(lg) {
+        height: 100%;
+        margin-top: 0;
+        width: 100%;
+      }
+    }
+  }
+
+  .history-text {
+    margin: 10px 20px;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    order: 2;
+    @include responsive(lg) {
+      order: 1;
+      width: 60%;
+      margin: 20px 100px;
+      align-items: flex-start;
+
+    }
+
+    .title {
+      color: #3A3A3AFF;
+      font-family: $font-title-strong;
+      font-size: $text-4xl;
+      width: 100%;
+      margin: 10px 0;
+      padding-bottom: 10px;
+      border-bottom: 2px solid $color-accent-red;
+      text-align: center;
+      @include responsive(lg) {
+        font-size: $text-5xl;
+        margin: 50px 0;
+        text-align: left;
+        width: 60%;
+
+      }
+    }
+
+    .text {
+      font-family: $font-paragraph-light;
+      margin: 0 5px 40px 5px;
+      text-align: justify;
+      font-size: $text-base;
+      @include responsive(lg) {
+        font-size: $text-lg;
+        text-align: left;
+        margin: 0 10px 40px 0;
+      }
+    }
+  }
+
+  .button {
+    font-size: $text-lg;
+  }
+}
