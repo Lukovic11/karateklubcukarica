@@ -96,8 +96,8 @@
     }
 
     &:hover {
-      background-color: $color-light-primary;
-      color: $color-accent-red-darker;
+      background-color: $color-accent-red-darker;
+      color: $color-font-light;
 
       &.dark {
         background-color: #1e2a78;
