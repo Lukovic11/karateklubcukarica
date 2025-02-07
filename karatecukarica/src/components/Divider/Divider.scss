@@ -1,0 +1,54 @@
+@use "../../styles/variables" as *;
+
+.divider-wrapper {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  .gradient-divider {
+    width: 100%;
+    margin: 2rem 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+
+    .line {
+      height: 1px;
+      flex: 1;
+
+      &.left {
+        background: linear-gradient(
+                        to right,
+                        transparent,
+                        rgb(0, 0, 0) 20%,
+                        rgb(0, 0, 0) 100%
+        );
+      }
+
+      &.right {
+        background: linear-gradient(
+                        to right,
+                        rgb(0, 0, 0) 0%,
+                        rgb(0, 0, 0) 80%,
+                        transparent 100%
+        );
+      }
+
+      opacity: 0.25;
+
+      @media (prefers-color-scheme: dark) {
+        opacity: 1;
+      }
+    }
+
+    .divider-text {
+      color: $color-font-dark;
+      font-family: $font-title-marcellus;
+      font-weight: 900;
+      font-size: $text-3xl;
+      padding: 0 0.5rem;
+    }
+  }
+}
