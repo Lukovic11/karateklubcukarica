@@ -8,6 +8,7 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  margin: 70px 0;
 
   .title-segment {
     display: flex;
@@ -21,7 +22,9 @@
       font-family: $font-title-strong;
       @include responsive(sm) {
         font-size: $text-4xl;
-
+      }
+      @include responsive(2xl) {
+        font-size: $text-5xl;
       }
     }
 
@@ -39,6 +42,9 @@
       @include responsive(md) {
         font-size: $text-6xl;
       }
+      @include responsive(2xl) {
+        font-size: $text-7xl;
+      }
     }
   }
 
@@ -53,6 +59,9 @@
     padding: 0 35px;
     @include responsive(sm) {
       font-size: $text-base;
+    }
+    @include responsive(2xl) {
+      font-size: $text-xl;
     }
   }
 

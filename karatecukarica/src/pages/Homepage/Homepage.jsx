@@ -6,7 +6,7 @@ import Cards from "../../components/Cards/Cards.jsx";
 
 const Homepage = () => {
   return (
-    <div>
+    <div style={{display: "flex", flexDirection: "column", justifyContent: "center", alignItems: "center"}}>
       <HeroBanner/>
       <Enroll/>
       <History/>

@@ -1,5 +1,5 @@
-import { useEffect, useState } from "react";
-import { HEADER_PAGE_LIST } from "../../constants.jsx";
+import {useEffect, useState} from "react";
+import {HEADER_PAGE_LIST} from "../../constants.jsx";
 import "./Header.scss";
 import HamburgerIcon from "./HamburgerIcon/HamburgerIcon";
 
@@ -18,14 +18,12 @@ const Header = () => {
 
   useEffect(() => {
     const setActivePage = () => {
-      const url = window.location.pathname;
-      const activePage = HEADER_PAGE_LIST.find((item) =>
-        url.includes(item.toLowerCase().replace(/\s/g, ""))
-      );
-      if (activePage) setCurrentPage(activePage);
+      const url = window.location.pathname.replace("/", ""); // Remove leading '/'
+      setCurrentPage(url || ""); // Set empty string for homepage
     };
     setActivePage();
   }, []);
+
 
   const toggleMenu = () => {
     setMenuActive((prevState) => {
@@ -40,7 +38,7 @@ const Header = () => {
         className={`top-navigation-container ${isScrolled ? "scrolled" : ""}`}
       >
         <div className="hamburger-wrapper">
-          <HamburgerIcon isActive={menuActive} toggleMenu={toggleMenu} />
+          <HamburgerIcon isActive={menuActive} toggleMenu={toggleMenu}/>
         </div>
         <div
           className={`top-navigation-list-container ${
@@ -52,9 +50,9 @@ const Header = () => {
               <li key={index + " " + item}>
                 <a
                   id={item.toLowerCase().replace(/\s/g, "")}
-                  href={item.toLowerCase().replace(/\s/g, "")}
+                  href={item === "Početna" ? "/" : `/${item.toLowerCase().replace(/\s/g, "")}`}
                   className={
-                    currentPage === item.toLowerCase().replace(/\s/g, "")
+                    currentPage === (item === "Početna" ? "" : item.toLowerCase().replace(/\s/g, ""))
                       ? "active-link"
                       : ""
                   }
