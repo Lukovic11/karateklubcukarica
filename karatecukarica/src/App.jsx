@@ -5,6 +5,8 @@ import SchedulesAndLocations from "./pages/SchedulesAndLocations/SchedulesAndLoc
 import SummerCamp from "./pages/SummerCamp/SummerCamp";
 import {SCHEDULES_AND_LOCATIONS_URL, SUMMER_CAMP_URL, TERMS_URL} from "./constants.jsx";
 import Terms from "./pages/Terms/Terms.jsx";
+import PageNotFound from "./pages/PageNotFound/PageNotFound.jsx";
+
 
 const router = createBrowserRouter([
   {
@@ -21,6 +23,8 @@ const router = createBrowserRouter([
       },
       {path: `${SUMMER_CAMP_URL}`, element: <SummerCamp/>},
       {path: `${TERMS_URL}`, element: <Terms/>},
+      {path: `*`, element: <PageNotFound/>},
+
     ],
   },
 ]);

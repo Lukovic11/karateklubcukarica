@@ -111,3 +111,7 @@ export const KATARINA_TEXT = "Lorem ipsum";
 export const JASMINA = "Jasmina Jelić";
 export const JASMINA_TITLE = "Sekretar kluba";
 export const JASMINA_TEXT = "Lorem ipsum";
+//Page not found
+export const PNF_IMG_ALT = "Karate Do in Japanese letters"
+export const PNF_TITLE = "Tražena stranica ne postoji"
+export const PNF_TEXT = "Vrati se na početnu stranicu"
