@@ -63,4 +63,48 @@ export const HISTORY_TEXT = "Pre nego što je zvanično osnovan 1975. godine na 
   "        svetu karatea, i izrasli u vredne i dobre Ljude.\n" +
   "        To je ono čemu težimo.";
 export const HISTORY_BUTTON = "UPOZNAJ TIM";
+//Staff
+export const NENAD = "Nenad Koropanovski";
+export const NENAD_TITLE = "Trener i vođa kluba";
+export const NENAD_TEXT = "Lorem ipsum";
+export const VESNA = "Vesna Vuković";
+export const VESNA_TITLE = "Trener";
+export const VESNA_TEXT = "Lorem ipsum";
+export const MIROSLAV = "Miroslav Milovanović";
+export const MIROSLAV_TITLE = "Trener";
+export const MIROSLAV_TEXT = "Lorem ipsum";
+export const DUSAN = "Dušan Jelovac";
+export const DUSAN_TITLE = "Trener";
+export const DUSAN_TEXT = "Lorem ipsum";
+export const DUNJA = "Dunja Bojičić";
+export const DUNJA_TITLE = "Trener";
+export const DUNJA_TEXT = "Lorem ipsum";
+export const KATARINA = "Katarina Koropanovski";
+export const KATARINA_TITLE = "Trener";
+export const KATARINA_TEXT = "Lorem ipsum";
+export const JASMINA = "Jasmina Jelić";
+export const JASMINA_TITLE = "Sekretar kluba";
+export const JASMINA_TEXT = "Lorem ipsum";
 
+//Staff
+export const NENAD = "Nenad Koropanovski";
+export const NENAD_TITLE = "Trener i vođa kluba";
+export const NENAD_TEXT = "Lorem ipsum";
+export const VESNA = "Vesna Vuković";
+export const VESNA_TITLE = "Trener";
+export const VESNA_TEXT = "Lorem ipsum";
+export const MIROSLAV = "Miroslav Milovanović";
+export const MIROSLAV_TITLE = "Trener";
+export const MIROSLAV_TEXT = "Lorem ipsum";
+export const DUSAN = "Dušan Jelovac";
+export const DUSAN_TITLE = "Trener";
+export const DUSAN_TEXT = "Lorem ipsum";
+export const DUNJA = "Dunja Bojičić";
+export const DUNJA_TITLE = "Trener";
+export const DUNJA_TEXT = "Lorem ipsum";
+export const KATARINA = "Katarina Koropanovski";
+export const KATARINA_TITLE = "Trener";
+export const KATARINA_TEXT = "Lorem ipsum";
+export const JASMINA = "Jasmina Jelić";
+export const JASMINA_TITLE = "Sekretar kluba";
+export const JASMINA_TEXT = "Lorem ipsum";
