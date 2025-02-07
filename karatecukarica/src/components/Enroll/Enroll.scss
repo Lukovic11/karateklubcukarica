@@ -53,8 +53,8 @@
     align-items: center;
     font-family: $font-paragraph-light;
     text-align: center;
-    font-size: $text-sm;
-    padding: 0 20px;
+    font-size: $text-base;
+    padding: 0 35px;
     @include responsive(sm) {
       font-size: $text-base;
     }
@@ -62,6 +62,7 @@
 
   .button {
     font-size: $text-lg;
+    margin: 30px;
     @include responsive(sm) {
       font-size: $text-xl;
     }
