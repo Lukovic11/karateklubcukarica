@@ -1,7 +1,7 @@
 @use "./_variables.scss" as v;
 
 .button {
-  font-family: $font-title-strong;
+  font-family: v.$font-paragraph-bold;
   letter-spacing: 1px;
   display: flex;
   justify-content: center;
@@ -21,7 +21,7 @@
   }
 
   &__transparent {
-    font-family: $font-title-strong;
+    font-family: v.$font-paragraph-bold;
     letter-spacing: 1px;
     font-weight: 100;
     display: flex;
@@ -44,3 +44,13 @@
   }
 }
 
+.title-design {
+  color: $color-font-dark;
+  font-family: v.$font-paragraph-bold;
+  display: flex;
+  letter-spacing: 40px;
+
+  .gray {
+    opacity: 0.7;
+  }
+}

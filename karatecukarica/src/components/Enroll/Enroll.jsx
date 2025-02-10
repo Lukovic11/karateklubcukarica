@@ -3,7 +3,8 @@ import Button from "../../components/Button/Button.jsx";
 import {
   BUTTON_VARIATION_TRANSPARENT,
   ENROLL_BUTTON_TEXT,
-  ENROLL_SUBTITLE,
+  ENROLL_SUBTITLE1,
+  ENROLL_SUBTITLE2,
   ENROLL_TEXT,
   ENROLL_TITLE,
   SCHEDULES_AND_LOCATIONS_URL
@@ -14,7 +15,10 @@ const Enroll = () => {
     <div className="enroll">
       <div className="title-segment">
         <h2>{ENROLL_TITLE}</h2>
-        <p>{ENROLL_SUBTITLE}</p>
+        <div className="title-design subtitle">
+          <p>{ENROLL_SUBTITLE1}</p>
+          <p className="gray">{ENROLL_SUBTITLE2}</p>
+        </div>
       </div>
       <div className="paragraph-segment">
         {ENROLL_TEXT}

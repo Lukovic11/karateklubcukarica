@@ -39,52 +39,56 @@
         @include responsive(md) {
           left: 30%;
         }
-        @include responsive(lg) {
-        }
         @include responsive(xl) {
-          left: 30%;
-          transform: translate(-50%, -50%);
+          left: 35%;
         }
 
         h1 {
-          font-family: $font-title-strong;
-          font-size: $text-3xl;
+          font-size: $text-2xl;
           color: $color-font-light;
           text-shadow: 4px 4px 4px rgba(0, 0, 0, 0.5);
+          margin-bottom: 30px;
+          letter-spacing: 5px;
           @include responsive(sm) {
-            font-size: $text-4xl;
-          }
-          @include responsive(md) {
-            font-size: $text-4xl;
+            font-size: $text-3xl;
+            letter-spacing: 7px;
           }
           @include responsive(lg) {
-            font-size: $text-5xl;
+            font-size: $text-4xl;
           }
           @include responsive(xl) {
-            font-size: $text-6xl;
+            font-size: $text-5xl;
           }
+        }
 
-          div {
-            font-family: $font-title-marcellus;
-            font-size: $text-6xl;
-            color: $color-accent-red;
-            @include responsive(sm) {
-              font-size: $text-7xl;
-            }
-            @include responsive(md) {
-              font-size: $text-7xl;
-            }
-            @include responsive(lg) {
-              font-size: $text-8xl;
-            }
-            @include responsive(xl) {
-              font-size: $text-9xl;
-            }
+        .club-name {
+          font-family: $font-title-marcellus;
+          font-size: $text-6xl;
+          color: $color-accent-red;
+          text-shadow: 4px 4px 10px rgba(16, 16, 16, 0.7);
+          @include responsive(sm) {
+            font-size: $text-7xl;
+          }
+          @include responsive(md) {
+            font-size: $text-7xl;
+          }
+          @include responsive(lg) {
+            font-size: $text-8xl;
+          }
+          @include responsive(xl) {
+            font-size: $text-9xl;
+          }
+          @include responsive(2xl) {
+            font-size: 13rem;
           }
         }
 
         .button-herobanner {
           margin-top: 20px !important;
+          @include responsive(2xl) {
+            letter-spacing: 4px;
+            padding: 10px 40px;
+          }
         }
       }
     }
