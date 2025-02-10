@@ -2,16 +2,14 @@
 @use "../../styles/_mixins" as *;
 
 .top-navigation {
-  position: relative;
   width: 100%;
   overflow: hidden;
   position: fixed;
   top: 0;
-  z-index: 1;
+  z-index: 1001;
 }
 
 .top-navigation-container {
-  position: fixed;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -61,6 +59,7 @@
         color: $color-font-light;
         font-size: $text-4xl;
         transition: color 0.3s ease;
+        text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.7);
 
         &:hover,
         &:focus {
@@ -73,6 +72,7 @@
           color: $color-accent-red;
           font-weight: 900;
           opacity: 1;
+          text-shadow: none;
         }
       }
     }
@@ -86,8 +86,9 @@
 
   .top-navigation-container {
     transition: background-color 0.3s ease-in-out;
+
     &.scrolled {
-      background-color: rgba(22, 22, 22, 0.8);
+      background-color: rgba(101, 98, 98, 0.8);
       backdrop-filter: blur(5px);
       box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
     }
@@ -108,6 +109,10 @@
 
         a {
           font-size: $text-base;
+          @include responsive(lg) {
+            font-size: $text-lg;
+
+          }
         }
       }
     }
