@@ -4,13 +4,12 @@
 .history {
   display: flex;
   width: 90%;
-  background-color: $color-light-primary;
+  background-color: rgba($color-light-primary, 0.2);
   flex-direction: column;
   border-radius: 15px;
   box-shadow: 0 15px 25px rgba(0, 0, 0, 0.2),
   0 6px 10px rgba(0, 0, 0, 0.15);
   transition: box-shadow 0.3s ease-in-out;
-  //z-index: 2;
 
   @include responsive(lg) {
     flex-direction: row;

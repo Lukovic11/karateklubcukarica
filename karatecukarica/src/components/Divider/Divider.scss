@@ -45,7 +45,8 @@
 
     .divider-text {
       color: $color-font-dark;
-      font-family: $font-title-marcellus;
+      text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.5);
+      letter-spacing: 30px;
       font-weight: 900;
       font-size: $text-3xl;
       padding: 0 0.5rem;

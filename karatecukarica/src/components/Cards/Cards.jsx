@@ -36,7 +36,7 @@ import Divider from "../Divider/Divider.jsx";
 const Homepage = () => {
   return (
     <div className="cards">
-      <Divider text="UPOZNAJ TIM"/>
+      <Divider text1="UPOZNAJ" text2="TIM"/>
       <HoverCard name={NENAD} title={NENAD_TITLE} text={NENAD_TEXT} image={nenad}/>
       <HoverCard name={VESNA} title={VESNA_TITLE} text={VESNA_TEXT} image={vesna}/>
       <HoverCard name={MIROSLAV} title={MIROSLAV_TITLE} text={MIROSLAV_TEXT} image={miki}/>
