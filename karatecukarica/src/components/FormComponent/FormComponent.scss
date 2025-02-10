@@ -2,30 +2,35 @@
 @use "../../styles/mixins.scss" as *;
 
 .form-container {
-  width: 100vw;
-  height: 100vh;
+  width: 60vw;
+  height: auto;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   justify-self: center;
   background-color: $color-dark-primary;
+
   @include responsive(sm) {
     width: fit-content;
     height: auto;
+    margin-top: 1em;
+  }
+
+  @include responsive(mg-lg) {
+    margin-top: none;
   }
 
   .form-contact {
     align-items: center;
     justify-content: center;
-    padding-top: 1em;
     padding-bottom: 1em;
 
-    @include responsive(sm) {
+    @media (min-width: 600px) {
       width: fit-content;
       display: grid;
       grid-template-columns: repeat(2, 1fr);
-      gap: 2em;
+      gap: 3em;
       align-items: flex-end;
       padding: 0 2em 0 2em;
     }
@@ -36,10 +41,35 @@
       position: relative;
 
       .form-label {
-        @include responsive(sm) {
-          margin-bottom: 0em;
+        margin-top: 0.5em;
+        margin-bottom: 0em;
+        font-size: $text-base;
+
+        @include responsive(sm){
+          font-size: $text-lg;
+        }
+
+        @media (min-width: 600px) {
+          font-size: $text-base;
+          margin-top: none;
+        }
+
+        @include responsive(md-lg) {
           font-size: $text-sm;
         }
+
+        @include responsive(lg) {
+          font-size: $text-base;
+        }
+
+        @include responsive(xl) {
+          font-size: $text-lg;
+        }
+
+        @include responsive(2xl) {
+          font-size: $text-xl;
+        }
+
         align-self: flex-start;
         font-family: $font-paragraph-light;
         font-size: $text-sm;
@@ -56,12 +86,41 @@
         border: none;
         border-bottom: 2px solid $color-light-primary;
         outline: none;
+        opacity: 0.8;
+        margin-bottom: 1.2em;
+
         &:focus {
           border-bottom-color: $color-accent-red;
         }
-        @include responsive(sm) {
+
+        @include responsive(sm){
+          font-size: $text-base;
+        }
+
+        @media (min-width: 600px) {
           font-size: $text-sm;
+          width: 16em;
+          margin-bottom: 1em;
+        }
+
+        @include responsive(md-lg) {
+          font-size: $text-xs;
+          width: 13em;
+        }
+
+        @include responsive(lg) {
+          font-size: $text-sm;
+          width: 14em;
+        }
+
+        @include responsive(xl) {
+          font-size: $text-base;
           width: 15em;
+        }
+
+        @include responsive(2xl) {
+          font-size: $text-lg;
+          width: 18em;
         }
       }
 
@@ -70,16 +129,34 @@
         top: 100%;
         left: 0;
         margin-top: 0.2em;
-        bottom: -1.5em; 
-        transform: translateY(0.5em);
-        @include responsive(sm) {
+        bottom: -0.1em;
+        transform: translateY(0.2em);
+        text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.63);
+        align-self: flex-start;
+        font-family: $font-paragraph-light;
+        font-size: $text-xs;
+        color: $color-accent-red;
+
+        @include responsive(md) {
           margin-bottom: 0em;
           font-size: $text-xs;
         }
-        align-self: flex-start;
-        font-family: $font-paragraph-light;
-        font-size: $text-sm;
-        color: $color-accent-red;
+
+        @include responsive(md-lg) {
+          transform: translateY(1.8em);
+        }
+
+        @include responsive(lg) {
+          transform: translateY(0.5em);
+        }
+
+        @include responsive(xl) {
+          font-size: $text-sm;
+        }
+
+        @include responsive(2xl) {
+          font-size: $text-base;
+        }
       }
 
       input:-webkit-autofill,
@@ -98,13 +175,47 @@
       }
     }
   }
+
   .button {
     justify-self: center;
     margin-top: 1em;
-    @include responsive(sm) {
+
+    @media(min-width: 600px) {
       justify-self: flex-end;
-      margin-bottom: 1.5em;
-      margin-top: 0;
+      margin-bottom: 1em;
+      margin-top: 2em;
+      width: 7rem;
+      font-size: $text-base;
+      min-width: none;
+    }
+
+    @include responsive(md) {
+      width: 7rem;
+      font-size: $text-lg;
+      max-width: none;
+    }
+
+    @include responsive(md-lg) {
+      width: 6rem;
+      font-size: $text-base;
+      min-width: none;
+    }
+
+    @include responsive(lg) {
+      width: 8rem;
+      font-size: $text-lg;
+    }
+
+    @include responsive(xl) {
+      width: 8rem;
+      font-size: $text-lg;
+      max-width: none;
+    }
+
+    @include responsive(2xl) {
+      width: 10rem;
+      font-size: $text-xl;
+      max-width: none;
     }
   }
 }

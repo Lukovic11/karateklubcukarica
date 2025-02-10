@@ -1,6 +1,6 @@
 import PropTypes from "prop-types";
 import "./Footer.scss";
-import { FOOTER_TITLE } from "../../constants";
+import { FOOTER_TITLE, FOOTER_TXT1, FOOTER_TXT3 } from "../../constants";
 import FormComponent from "../FormComponent/FormComponent";
 
 const Footer = () => {
@@ -9,7 +9,10 @@ const Footer = () => {
       <div className="footer-content">
         <div className="footer-contact">
           <div className="footer-title">{FOOTER_TITLE}</div>
-          <p>aaaaaa</p>
+          <div className="footer'content">
+            {FOOTER_TXT1}
+            {FOOTER_TXT3}
+          </div>
         </div>
         <div className="footer-form">
           <FormComponent />
