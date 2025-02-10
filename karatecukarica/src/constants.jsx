@@ -11,7 +11,8 @@ export const TERMS_URL = "/uslovi";
 export const BUTTON_VARIATION_TRANSPARENT = "__transparent";
 //Herobanner.jsx
 export const HEROBANNER_IMG_ALT = "Kids doing kata";
-export const HEROBANNER_TEXT_1 = "KARATE KLUB";
+export const HEROBANNER_TEXT_11 = "KARATE";
+export const HEROBANNER_TEXT_12 = "KLUB";
 export const HEROBANNER_TEXT_2 = "ČUKARICA";
 export const HEROBANNER_BUTTON_TEXT = "UPIŠI SE";
 //Header.jsx
@@ -42,7 +43,8 @@ export const SPLIT_TEXT =
   "Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam alias nesciunt possimus, ipsum nobis eos dolorum, est adipisci numquam libero architecto esse explicabo deserunt illo! Architecto repudiandae adipisci eveniet amet pariatur vel quidem incidunt accusamus iure dolores laborum doloribus consequatur nostrum, possimus sunt quae ducimus optio quam odio non! Eligendi?";
 //Enroll.jsx
 export const ENROLL_TITLE = "Upis je u toku!";
-export const ENROLL_SUBTITLE = "POSTANI ČLAN";
+export const ENROLL_SUBTITLE1 = "POSTANI";
+export const ENROLL_SUBTITLE2 = "ČLAN";
 export const ENROLL_TEXT = (
   <>
     <p>Karate je uvek pravi izbor!</p>
@@ -50,7 +52,7 @@ export const ENROLL_TEXT = (
     <p>Isprobajte probni trening na lokaciji koja vam najviše odgovara.</p>
   </>
 );
-export const ENROLL_BUTTON_TEXT = "POGLEDAJ LOKACIJE";
+export const ENROLL_BUTTON_TEXT = "LOKACIJE";
 //Rules.jsx
 export const ITEM1_TITLE = "Oprema za trening";
 export const ITEM1_TEXT = " Da bi dete počelo da vežba karate, kimono nije neophodan. Dovoljni su trenerka dugih nogavica i majica" +

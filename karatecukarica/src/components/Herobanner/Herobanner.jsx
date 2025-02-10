@@ -4,7 +4,8 @@ import herobanner_img from "../../assets/herobanner_img.jpg";
 import {
   HEROBANNER_BUTTON_TEXT,
   HEROBANNER_IMG_ALT,
-  HEROBANNER_TEXT_1,
+  HEROBANNER_TEXT_11,
+  HEROBANNER_TEXT_12,
   HEROBANNER_TEXT_2,
   SCHEDULES_AND_LOCATIONS_URL,
 } from "../../constants.jsx";
@@ -16,10 +17,13 @@ const HeroBanner = () => {
         <img src={herobanner_img} alt={HEROBANNER_IMG_ALT}/>
         <div className="overlay">
           <div className="content">
-            <h1>
-              {HEROBANNER_TEXT_1}
-              <div>{HEROBANNER_TEXT_2}</div>
+            <h1 className="title-design">
+              {HEROBANNER_TEXT_11}
+              <p className="gray">
+                {HEROBANNER_TEXT_12}
+              </p>
             </h1>
+            <div className="club-name">{HEROBANNER_TEXT_2}</div>
             <Button
               className="button-herobanner"
               linkURL={`/${SCHEDULES_AND_LOCATIONS_URL}`}

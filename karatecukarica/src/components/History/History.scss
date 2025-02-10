@@ -4,13 +4,13 @@
 .history {
   display: flex;
   width: 90%;
-  background-color: $color-light-primary;
+  background-color: rgba(227, 223, 223, 0.8);
   flex-direction: column;
   border-radius: 15px;
   box-shadow: 0 15px 25px rgba(0, 0, 0, 0.2),
   0 6px 10px rgba(0, 0, 0, 0.15);
   transition: box-shadow 0.3s ease-in-out;
-  //z-index: 2;
+  z-index: 100;
 
   @include responsive(lg) {
     flex-direction: row;
@@ -48,7 +48,7 @@
         margin-right: 0;
         height: 300px;
         margin-top: 30px;
-        scale: 1.5;
+        scale: 1;
       }
       @include responsive(md) {
         height: 400px;
@@ -82,7 +82,7 @@
 
     .title {
       color: #3A3A3AFF;
-      font-family: $font-title-strong;
+      font-family: $font-paragraph-bold;
       font-size: $text-4xl;
       width: 100%;
       border-bottom: 2px solid $color-accent-red;
@@ -91,8 +91,7 @@
         font-size: $text-5xl;
         margin-bottom: 50px;
         text-align: left;
-        width: 60%;
-
+        width: 70%;
       }
     }
 
