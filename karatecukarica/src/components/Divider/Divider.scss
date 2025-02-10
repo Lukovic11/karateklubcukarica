@@ -1,10 +1,14 @@
 @use "../../styles/variables" as *;
+@use "../../styles/mixins" as *;
 
 .divider-wrapper {
-  width: 100%;
+  width: 70%;
   display: flex;
   justify-content: center;
   align-items: center;
+  @include responsive(sm) {
+    width: 100%;
+  }
 
   .gradient-divider {
     width: 100%;
@@ -46,10 +50,14 @@
     .divider-text {
       color: $color-font-dark;
       text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.5);
-      letter-spacing: 30px;
       font-weight: 900;
-      font-size: $text-3xl;
+      font-size: $text-2xl;
       padding: 0 0.5rem;
+      letter-spacing: 10px;
+      @include responsive(md) {
+        letter-spacing: 30px;
+        font-size: $text-3xl;
+      }
     }
   }
 }

@@ -39,11 +39,8 @@
         @include responsive(md) {
           left: 30%;
         }
-        @include responsive(lg) {
-        }
         @include responsive(xl) {
           left: 35%;
-          transform: translate(-50%, -50%);
         }
 
         h1 {
@@ -51,9 +48,10 @@
           color: $color-font-light;
           text-shadow: 4px 4px 4px rgba(0, 0, 0, 0.5);
           margin-bottom: 30px;
-          letter-spacing: 2px;
+          letter-spacing: 5px;
           @include responsive(sm) {
             font-size: $text-3xl;
+            letter-spacing: 7px;
           }
           @include responsive(lg) {
             font-size: $text-4xl;
@@ -67,6 +65,7 @@
           font-family: $font-title-marcellus;
           font-size: $text-6xl;
           color: $color-accent-red;
+          text-shadow: 4px 4px 10px rgba(16, 16, 16, 0.7);
           @include responsive(sm) {
             font-size: $text-7xl;
           }
@@ -86,6 +85,10 @@
 
         .button-herobanner {
           margin-top: 20px !important;
+          @include responsive(2xl) {
+            letter-spacing: 4px;
+            padding: 10px 40px;
+          }
         }
       }
     }
