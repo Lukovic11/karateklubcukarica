@@ -2,13 +2,10 @@
 @use "../../styles/mixins.scss" as *;
 
 .footer {
-  bottom: 0;
-  left: 0;
   background-color: $color-dark-primary;
   display: flex;
   flex-direction: column;
   color: white;
-  height: 80vh;
   z-index: 1000;
   padding-bottom: 5em;
   width: 100%;
@@ -16,12 +13,15 @@
 
   @media (min-width: 600px) {
     width: 100%;
-    height: 80vh;
+    height: 65vh;
   }
 
   @include responsive(md-lg) {
-    height: 60vh;
-    padding-bottom: none;
+    height: 45vh;
+    padding-bottom: 0;
+  }
+  @include responsive(lg) {
+    height: 50vh;
   }
 
   .footer-content {
@@ -33,7 +33,7 @@
     width: 100%;
 
     @include responsive(md-lg) {
-      margin-top: none;
+      margin-top: 0;
       display: flex;
       justify-content: space-around;
       flex-direction: row;
@@ -44,7 +44,7 @@
       color: $color-light-primary;
 
       @media (min-width: 600px) {
-        margin-bottom: 1.5rem;
+        margin-bottom: 4rem;
       }
 
       .footer-title {
