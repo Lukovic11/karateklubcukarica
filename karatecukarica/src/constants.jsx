@@ -141,7 +141,7 @@ export const FOOTER_TXT1 = (
   </>
 );
 
-export const FOOTER_TXT3 = (
+export const FOOTER_TXT2 = (
   <>
     <div className="footer-text">
       <p className="p-footer">Email: karatecukarica@gmail.com</p>
