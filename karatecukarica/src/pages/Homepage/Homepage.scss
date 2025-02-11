@@ -10,23 +10,24 @@
     overflow-x: hidden;
     transform: translateX(-50%);
     position: absolute;
-    opacity: 0.2;
-    top: 150%;
-    left: 75%;
+    opacity: 0.1;
+    top: 150vh;
+    left: 75vw;
     scale: 4;
     @include m.responsive(sm) {
-      top: 150%;
-      left: 35%;
+      opacity: 0.2;
+      top: 160vh;
+      left: 35vw;
       scale: 5;
     }
     @include m.responsive(xl) {
-      top: 160%;
-      left: 35%;
+      top: 180vh;
+      left: 35vw;
       scale: 6;
     }
     @include m.responsive(2xl) {
-      top: 170%;
-      left: 20%;
+      top: 190vh;
+      left: 20vw;
       scale: 7;
     }
 

@@ -2,15 +2,15 @@ import HeroBanner from "../../components/Herobanner/Herobanner";
 import Enroll from "../../components/Enroll/Enroll";
 import History from "../../components/History/History.jsx";
 import Cards from "../../components/Cards/Cards.jsx";
-import karatedo from "../../assets/karatedo.svg";
 import "./Homepage.scss";
+import karatedo from "../../assets/karatedo.svg";
 
 const Homepage = () => {
   return (
     <div className="homepage">
+      <img className="karatedo-img" src={karatedo} alt=""/>
       <HeroBanner/>
       <Enroll/>
-      <img className="karatedo-img" src={karatedo} alt=""/>
       <History/>
       <Cards/>
     </div>

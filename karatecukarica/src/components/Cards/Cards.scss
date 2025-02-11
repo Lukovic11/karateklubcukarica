@@ -8,6 +8,7 @@
   row-gap: 10px;
   column-gap: 30px;
   margin: 0;
+  z-index: 1000;
 
   @include responsive(sm) {
     margin: 50px 50px;
