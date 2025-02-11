@@ -1,4 +1,3 @@
-import splitImage from "../../assets/split-img.jpg";
 import {SPLIT_IMG_ALT, SPLIT_TEXT} from "../../constants.jsx";
 import Button from "../Button/Button";
 import "./Split.scss";

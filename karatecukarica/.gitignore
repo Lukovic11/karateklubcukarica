@@ -27,5 +27,6 @@ package-lock.json
 *.njsproj
 *.sln
 *.sw?
+.vite
 
 package-lock.json
