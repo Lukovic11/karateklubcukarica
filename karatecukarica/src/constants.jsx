@@ -78,7 +78,7 @@ export const ITEM8_TITLE = "Karate zajednica";
 export const ITEM8_TEXT = " Da bismo Vas na vreme obaveštavali o svemu, koristimo Viber zajednicu. Kada Vaše dete postane član kluba, Vi\n" +
   "            ćete biti uključeni u zajednicu gde sekretar povremeno šalje važne poruke koje se odnose na funkcionisanje\n" +
   "            kluba.";
-//History
+//History.jsx
 export const HISTORY_IMG_ALT = "Club gym with logo";
 export const HISTORY_TITLE = "Preko 50 godina rada";
 export const HISTORY_TEXT = "Pre nego što je zvanično osnovan 1975. godine na osnivačkoj Skupštini opštinskog saveza Čukarice, naš klub\n" +
@@ -114,7 +114,19 @@ export const KATARINA_TEXT = "Lorem ipsum";
 export const JASMINA = "Jasmina Jelić";
 export const JASMINA_TITLE = "Sekretar kluba";
 export const JASMINA_TEXT = "Lorem ipsum";
-//Page not found
+//PageNotFound.jsx
 export const PNF_IMG_ALT = "Karate Do in Japanese letters"
 export const PNF_TITLE = "Tražena stranica ne postoji"
 export const PNF_TEXT = "Vrati se na početnu stranicu"
+//SchedulesAndLocations.jsx
+export const LOCATIONS_IMG_ALT = "Kids warming up";
+export const LOCATIONS_TITLE1 = "TERMINI&";
+export const LOCATIONS_TITLE2 = "LOKACIJE";
+//Terms.jsx
+export const TERMS_IMG_ALT = "Black belt";
+export const TERMS_TITLE1 = "OPŠTA";
+export const TERMS_TITLE2 = "PRAVILA";
+//SummerCamp.jsx
+export const CAMP_IMG_ALT = "Summer camp group image";
+export const CAMP_TITLE1 = "LETNJI";
+export const CAMP_TITLE2 = "KAMP";

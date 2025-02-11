@@ -17,6 +17,7 @@
   margin-bottom: 0.5rem;
   border: 2px solid transparent;
   width: 90%;
+  box-shadow: 2px 5px 5px rgba(0, 0, 0, 0.2);
   @include responsive(md) {
     width: 80%;
   }
@@ -36,7 +37,6 @@
 
   &:not(.active) {
     background-color: transparent;
-    border-color: $color-dark-primary;
 
     &.dark:hover {
       border-color: $color-accent-red;
