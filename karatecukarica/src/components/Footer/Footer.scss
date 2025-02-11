@@ -1,0 +1,112 @@
+@use "../../styles/variables.scss" as *;
+@use "../../styles/mixins.scss" as *;
+
+.footer {
+  bottom: 0;
+  left: 0;
+  background-color: $color-dark-primary;
+  display: flex;
+  flex-direction: column;
+  color: white;
+  height: 80vh;
+  z-index: 1000;
+  padding-bottom: 5em;
+  width: 100%;
+  height: 100%;
+
+  @media (min-width: 600px) {
+    width: 100%;
+    height: 80vh;
+  }
+
+  @include responsive(md-lg) {
+    height: 60vh;
+    padding-bottom: none;
+  }
+
+  .footer-content {
+    margin-top: 5em;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+
+    @include responsive(md-lg) {
+      margin-top: none;
+      display: flex;
+      justify-content: space-around;
+      flex-direction: row;
+      align-items: center;
+    }
+
+    .footer-contact {
+      color: $color-light-primary;
+
+      @media (min-width: 600px) {
+        margin-bottom: 1.5rem;
+      }
+
+      .footer-title {
+        font-size: $text-4xl;
+        justify-self: center;
+        margin-bottom: 2rem;
+
+        &:hover {
+          color: $color-accent-red;
+        }
+
+        @media (min-width: 600px) {
+          font-size: $text-5xl;
+          justify-self: center;
+        }
+
+        @include responsive(md-lg) {
+          font-size: $text-4xl;
+          justify-self: left;
+        }
+
+        @include responsive(lg) {
+          font-size: $text-5xl;
+        }
+
+        @media (min-width: 1700px) {
+          font-size: $text-6xl;
+        }
+      }
+
+      .footer-text {
+        margin-bottom: 1em;
+
+        .p-footer {
+          font-size: $text-lg;
+          font-family: $font-paragraph-light;
+          color: $color-light-primary;
+          opacity: 0.8;
+          justify-self: center;
+
+          @media (min-width: 600px) {
+            font-size: $text-lg;
+            justify-self: center;
+          }
+
+          @include responsive(md-lg) {
+            justify-self: left;
+          }
+
+          @include responsive(lg) {
+            font-size: $text-base;
+          }
+
+          @include responsive(xl) {
+            font-size: $text-lg;
+          }
+
+          @media (min-width: 1700px) {
+            font-size: $text-xl;
+          }
+        }
+      }
+    }
+  }
+}

@@ -13,7 +13,13 @@
     @media (min-width: v.$screen-md) {
       @content;
     }
-  } @else if $breakpoint == lg {
+  } 
+  @else if $breakpoint == md-lg {
+    @media (min-width: v.$screen-md-lg) {
+      @content;
+    }
+  }
+  @else if $breakpoint == lg {
     @media (min-width: v.$screen-lg) {
       @content;
     }
