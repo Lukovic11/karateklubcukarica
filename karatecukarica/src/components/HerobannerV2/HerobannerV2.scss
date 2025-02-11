@@ -3,8 +3,20 @@
 
 .herobannerv2-container {
   width: 100%;
-  height: 40vh;
   overflow: hidden;
+  height: 25vh;
+  @include responsive(sm) {
+    height: 30vh;
+  }
+  @include responsive(md) {
+    height: 35vh;
+  }
+  @include responsive(lg) {
+    height: 40vh;
+  }
+  @include responsive(xl) {
+    height: 45vh;
+  }
 
   .herobannerv2 {
     height: 100%;
@@ -12,7 +24,7 @@
     img {
       height: 100%;
       width: 100%;
-      filter: blur(4px) grayscale(50%);
+      filter: blur(4px) grayscale(80%);
       object-fit: cover;
     }
 
@@ -21,27 +33,40 @@
       top: 0;
       left: 0;
       width: 100%;
-      height: 40%;
+      height: 25%;
       background-color: rgba(0, 0, 0, 0.7);
+
+      @include responsive(sm) {
+        height: 30%;
+      }
+      @include responsive(md) {
+        height: 35%;
+      }
+      @include responsive(lg) {
+        height: 40%;
+      }
+      @include responsive(xl) {
+        height: 45%;
+      }
 
       .content {
         position: absolute;
-        top: 45%;
-        left: 20%;
+        top: 55%;
+        left: 51vw;
+        transform: translate(-50%, -50%);
         display: flex;
         flex-direction: column;
         align-items: center;
         text-align: center;
-        @include responsive(sm) {
-          align-items: flex-start;
-          text-align: left;
-          left: 40%;
-        }
+
         @include responsive(md) {
-          left: 30%;
+          top: 60%;
         }
         @include responsive(xl) {
-          left: 10%;
+          left: 35vw;
+        }
+        @include responsive(2xl) {
+          left: 27vw;
         }
 
         h1 {
@@ -61,27 +86,13 @@
           @include responsive(xl) {
             font-size: $text-6xl;
           }
-        }
-
-        .club-name {
-          font-family: $font-title-marcellus;
-          font-size: $text-6xl;
-          color: $color-accent-red;
-          text-shadow: 4px 4px 10px rgba(16, 16, 16, 0.7);
-          @include responsive(sm) {
-            font-size: $text-7xl;
-          }
-          @include responsive(md) {
-            font-size: $text-7xl;
-          }
-          @include responsive(lg) {
-            font-size: $text-8xl;
-          }
-          @include responsive(xl) {
-            font-size: $text-9xl;
-          }
           @include responsive(2xl) {
-            font-size: 13rem;
+            font-size: $text-7xl;
+          }
+
+          .gray {
+            color: $color-light-primary;
+            opacity: 0.4;
           }
         }
 
