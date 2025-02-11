@@ -30,23 +30,28 @@
       width: fit-content;
       display: grid;
       grid-template-columns: repeat(2, 1fr);
-      gap: 3em;
+      gap: 1.5em 3em;
       align-items: flex-end;
       padding: 0 2em 0 2em;
+    }
+
+    @include responsive(lg){
+      gap: 1em 3em;
     }
 
     .form-field {
       display: flex;
       flex-direction: column;
       position: relative;
+      margin-bottom: 0.5rem;
 
       .form-label {
-        margin-top: 0.5em;
+        margin-top: 0.2em;
         margin-bottom: 0em;
         font-size: $text-base;
 
-        @include responsive(sm){
-          font-size: $text-lg;
+        @include responsive(sm) {
+          font-size: $text-base;
         }
 
         @media (min-width: 600px) {
@@ -66,7 +71,7 @@
           font-size: $text-lg;
         }
 
-        @include responsive(2xl) {
+        @media (min-width: 1700px) {
           font-size: $text-xl;
         }
 
@@ -93,24 +98,26 @@
           border-bottom-color: $color-accent-red;
         }
 
-        @include responsive(sm){
-          font-size: $text-base;
+        @include responsive(sm) {
+          font-size: $text-sm;
         }
 
         @media (min-width: 600px) {
           font-size: $text-sm;
           width: 16em;
-          margin-bottom: 1em;
+          margin-bottom: 0em;
         }
 
         @include responsive(md-lg) {
           font-size: $text-xs;
-          width: 13em;
+          width: 15em;
+          margin-bottom: 0em;
         }
 
         @include responsive(lg) {
           font-size: $text-sm;
           width: 14em;
+          margin-bottom: 1em;
         }
 
         @include responsive(xl) {
@@ -118,32 +125,43 @@
           width: 15em;
         }
 
-        @include responsive(2xl) {
+        @media (min-width: 1700px) {
           font-size: $text-lg;
           width: 18em;
         }
+      }
+
+      
+      .form-textarea {
+        resize: vertical;
+        height: 4cqmin;
+
+        @include responsive(md){
+          height: 3cqmin;
+        }
+
       }
 
       .form-error {
         position: absolute;
         top: 100%;
         left: 0;
-        margin-top: 0.2em;
         bottom: -0.1em;
         transform: translateY(0.2em);
         text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.63);
         align-self: flex-start;
         font-family: $font-paragraph-light;
         font-size: $text-xs;
-        color: $color-accent-red;
+        color: rgba($color-font-light, 0.7);
 
-        @include responsive(md) {
-          margin-bottom: 0em;
-          font-size: $text-xs;
+        @media(min-width: 600px){
+          margin-bottom: -1.5rem;
         }
 
         @include responsive(md-lg) {
           transform: translateY(1.8em);
+          bottom: 0em;
+          margin-bottom: 0em;
         }
 
         @include responsive(lg) {
@@ -154,7 +172,7 @@
           font-size: $text-sm;
         }
 
-        @include responsive(2xl) {
+        @media (min-width: 1700px) {
           font-size: $text-base;
         }
       }
@@ -168,11 +186,6 @@
         -webkit-text-fill-color: $color-font-light;
         font-size: $text-sm;
       }
-
-      .form-textarea {
-        resize: vertical;
-        height: 2em;
-      }
     }
   }
 
@@ -180,9 +193,8 @@
     justify-self: center;
     margin-top: 1em;
 
-    @media(min-width: 600px) {
+    @media (min-width: 600px) {
       justify-self: flex-end;
-      margin-bottom: 1em;
       margin-top: 2em;
       width: 7rem;
       font-size: $text-base;
@@ -198,18 +210,21 @@
     @include responsive(md-lg) {
       width: 6rem;
       font-size: $text-base;
-      min-width: none;
+      margin-top: 1.2em;
     }
 
     @include responsive(lg) {
       width: 8rem;
       font-size: $text-lg;
+      margin-bottom: 1em;
+      margin-top: 1em;
     }
 
     @include responsive(xl) {
       width: 8rem;
       font-size: $text-lg;
       max-width: none;
+      margin-top: 1.5em;
     }
 
     @include responsive(2xl) {
