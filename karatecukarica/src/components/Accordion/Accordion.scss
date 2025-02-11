@@ -36,7 +36,6 @@
 
   &:not(.active) {
     background-color: transparent;
-    border-color: $color-dark-primary;
 
     &.dark:hover {
       border-color: $color-accent-red;
