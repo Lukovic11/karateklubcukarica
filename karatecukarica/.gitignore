@@ -28,5 +28,3 @@ package-lock.json
 *.sln
 *.sw?
 .vite
-
-package-lock.json

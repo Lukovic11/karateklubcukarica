@@ -141,6 +141,7 @@ export const TERMS_TITLE2 = "PRAVILA";
 //SummerCamp.jsx
 export const CAMP_IMG_ALT = "Summer camp group image";
 export const CAMP_TITLE1 = "LETNJI";
+export const CAMP_TITLE2 = "KAMP";
 //Footer.jsx
 export const FOOTER_TITLE = "Kontakt";
 export const FOOTER_TXT1 = (
