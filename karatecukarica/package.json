@@ -1,0 +1,28 @@
+{
+  "name": "karatecukarica",
+  "version": "1.0.0",
+  "description": "",
+  "main": "vite.config.js",
+  "scripts": {
+    "dev": "vite",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Lukovic11/karateklubcukarica.git"
+  },
+  "private": true,
+  "devDependencies": {
+    "@vitejs/plugin-react": "^4.3.4",
+    "sass-embedded": "^1.83.4",
+    "vite": "^6.1.0"
+  },
+  "dependencies": {
+    "framer-motion": "^12.4.2",
+    "lucide-react": "^0.475.0",
+    "prop-types": "^15.8.1",
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0",
+    "react-router-dom": "^7.1.5"
+  }
+}
