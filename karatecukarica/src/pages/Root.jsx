@@ -5,8 +5,7 @@ import Footer from "../components/Footer/Footer";
 const Root = () => {
   const location = useLocation();
 
-  // Check if the route is not defined (404)
-  const hideFooterRoutes = ["/404"]; // Add other paths if needed
+  const hideFooterRoutes = ["/404"];
   const shouldShowFooter = !hideFooterRoutes.includes(location.pathname);
 
   return (
