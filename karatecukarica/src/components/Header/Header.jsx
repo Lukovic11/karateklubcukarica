@@ -1,5 +1,5 @@
-import {useEffect, useState} from "react";
-import {HEADER_PAGE_LIST} from "../../constants.jsx";
+import { useEffect, useState } from "react";
+import { HEADER_PAGE_LIST } from "../../constants.jsx";
 import "./Header.scss";
 import HamburgerIcon from "./HamburgerIcon/HamburgerIcon";
 
@@ -36,13 +36,37 @@ const Header = () => {
     });
   };
 
+  const smoothScrollTo = (elementId, duration = 1000) => {
+    const element = document.getElementById(elementId);
+    if (!element) return;
+
+    const targetPosition = element.getBoundingClientRect().top + window.scrollY;
+    const startPosition = window.scrollY;
+    const distance = targetPosition - startPosition;
+    let startTime = null;
+
+    function animation(currentTime) {
+      if (startTime === null) startTime = currentTime;
+      const timeElapsed = currentTime - startTime;
+      const scrollProgress = Math.min(timeElapsed / duration, 1);
+
+      window.scrollTo(0, startPosition + distance * scrollProgress);
+
+      if (timeElapsed < duration) {
+        requestAnimationFrame(animation);
+      }
+    }
+
+    requestAnimationFrame(animation);
+  };
+
   return (
     <div className="top-navigation">
       <div
         className={`top-navigation-container ${isScrolled ? "scrolled" : ""}`}
       >
         <div className="hamburger-wrapper">
-          <HamburgerIcon isActive={menuActive} toggleMenu={toggleMenu}/>
+          <HamburgerIcon isActive={menuActive} toggleMenu={toggleMenu} />
         </div>
         <div
           className={`top-navigation-list-container ${
@@ -54,16 +78,24 @@ const Header = () => {
               <li key={index + " " + item}>
                 <a
                   id={item.toLowerCase().replace(/\s/g, "")}
-                  href={item === "Početna" ? "/" : `/${item.toLowerCase().replace(/\s/g, "")}`}
+                  href={
+                    item === "Početna"
+                      ? "/"
+                      : `/${item.toLowerCase().replace(/\s/g, "")}`
+                  }
                   className={
-                    item !== "Kontakt" && currentPage === (item === "Početna" ? "" : item.toLowerCase().replace(/\s/g, ""))
+                    item !== "Kontakt" &&
+                    currentPage ===
+                      (item === "Početna"
+                        ? ""
+                        : item.toLowerCase().replace(/\s/g, ""))
                       ? "active-link"
                       : ""
                   }
                   onClick={(e) => {
                     if (item === "Kontakt") {
                       e.preventDefault();
-                      document.getElementById("footer")?.scrollIntoView({ behavior: "smooth" });
+                      smoothScrollTo("footer", 1200);
                     }
                   }}
                 >
