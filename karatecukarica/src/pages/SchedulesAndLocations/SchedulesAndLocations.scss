@@ -1,7 +1,28 @@
-.map-container {
+.schedules-and-locations {
   width: 100%;
   display: flex;
-  justify-content: center;
   align-items: center;
-  margin: 50px;
+  flex-direction: column;
+
+  .location-wrapper {
+    width: 80%;
+    display: flex;
+    justify-content: space-between;
+    margin: 100px 0;
+
+    .map-container {
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      .map {
+        width: 100%;
+        height: 400px;
+        box-shadow: 0 15px 25px rgba(0, 0, 0, 0.2),
+        0 6px 10px rgba(0, 0, 0, 0.15);
+      }
+    }
+  }
 }
+
