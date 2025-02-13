@@ -19,8 +19,8 @@ export const HEROBANNER_BUTTON_TEXT = "UPIŠI SE";
 export const HEADER_PAGE_LIST = [
   "Početna",
   "Termini i Lokacije",
-  "Letnji Kamp",
   "Uslovi",
+  "Letnji Kamp",
   "Kontakt",
 ];
 //Form.jsx
@@ -127,9 +127,9 @@ export const JASMINA = "Jasmina Jelić";
 export const JASMINA_TITLE = "Sekretar kluba";
 export const JASMINA_TEXT = "Lorem ipsum";
 //PageNotFound.jsx
-export const PNF_IMG_ALT = "Karate Do in Japanese letters"
-export const PNF_TITLE = "Tražena stranica ne postoji"
-export const PNF_TEXT = "Vrati se na početnu stranicu"
+export const PNF_IMG_ALT = "Karate Do in Japanese letters";
+export const PNF_TITLE = "Tražena stranica ne postoji";
+export const PNF_TEXT = "Vrati se na početnu stranicu";
 //SchedulesAndLocations.jsx
 export const LOCATIONS_IMG_ALT = "Kids warming up";
 export const LOCATIONS_TITLE1 = "TERMINI&";
