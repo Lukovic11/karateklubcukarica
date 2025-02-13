@@ -88,7 +88,7 @@
   }
 
   &:not(.active) {
-    background-color: $color-light-primary;
+    background-color: rgba($color-light-primary, 0.3);
 
     &.dark {
       background-color: #11112b;

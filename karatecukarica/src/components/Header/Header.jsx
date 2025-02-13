@@ -24,10 +24,14 @@ const Header = () => {
     setActivePage();
   }, []);
 
-
   const toggleMenu = () => {
     setMenuActive((prevState) => {
-      document.body.style.overflow = prevState ? "auto" : "hidden";
+      const body = document.body;
+      if (!prevState) {
+        body.classList.add("no-scroll");
+      } else {
+        body.classList.remove("no-scroll");
+      }
       return !prevState;
     });
   };

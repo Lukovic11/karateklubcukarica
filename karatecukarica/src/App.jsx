@@ -23,10 +23,10 @@ const router = createBrowserRouter([
       },
       {path: `${SUMMER_CAMP_URL}`, element: <SummerCamp/>},
       {path: `${TERMS_URL}`, element: <Terms/>},
-      {path: `*`, element: <PageNotFound/>},
 
     ],
   },
+  {path: `*`, element: <PageNotFound/>},
 ]);
 
 function App() {
