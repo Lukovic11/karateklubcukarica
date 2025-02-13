@@ -56,10 +56,16 @@ const Header = () => {
                   id={item.toLowerCase().replace(/\s/g, "")}
                   href={item === "Početna" ? "/" : `/${item.toLowerCase().replace(/\s/g, "")}`}
                   className={
-                    currentPage === (item === "Početna" ? "" : item.toLowerCase().replace(/\s/g, ""))
+                    item !== "Kontakt" && currentPage === (item === "Početna" ? "" : item.toLowerCase().replace(/\s/g, ""))
                       ? "active-link"
                       : ""
                   }
+                  onClick={(e) => {
+                    if (item === "Kontakt") {
+                      e.preventDefault();
+                      document.getElementById("footer")?.scrollIntoView({ behavior: "smooth" });
+                    }
+                  }}
                 >
                   {item}
                 </a>

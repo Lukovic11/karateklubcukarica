@@ -63,8 +63,8 @@
         transition: color 0.3s ease;
         text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.7);
 
-        &:hover,
-        &:focus {
+        &:not(#kontakt):hover,
+        &:not(#kontakt):focus {
           color: $color-accent-red;
           font-weight: 900;
           opacity: 1;

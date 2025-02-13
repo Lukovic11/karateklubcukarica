@@ -4,7 +4,7 @@ import FormComponent from "../FormComponent/FormComponent";
 
 const Footer = () => {
   return (
-    <div className="footer">
+    <div className="footer" id='footer'>
       <div className="footer-content">
         <div className="footer-contact">
           <div className="footer-title">{FOOTER_TITLE}</div>
