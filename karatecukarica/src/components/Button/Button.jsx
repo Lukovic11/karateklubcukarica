@@ -4,13 +4,10 @@ import { useNavigate } from "react-router-dom";
 
 const Button = (props) => {
   const navigate = useNavigate();
-  const handleClick = () => {
-    navigate(props.linkURL);
-  };
 
   return (
     <motion.button
-      onClick={handleClick}
+      onClick={props.handleClick}
       className={`button${props.variation} ${props.className}`}
       whileHover={{ scale: 1.1 }}
       whileTap={{ scale: 0.95 }}
