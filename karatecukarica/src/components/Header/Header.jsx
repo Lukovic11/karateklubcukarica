@@ -36,6 +36,30 @@ const Header = () => {
     });
   };
 
+  const smoothScrollTo = (elementId, duration = 1000) => {
+    const element = document.getElementById(elementId);
+    if (!element) return;
+
+    const targetPosition = element.getBoundingClientRect().top + window.scrollY;
+    const startPosition = window.scrollY;
+    const distance = targetPosition - startPosition;
+    let startTime = null;
+
+    function animation(currentTime) {
+      if (startTime === null) startTime = currentTime;
+      const timeElapsed = currentTime - startTime;
+      const scrollProgress = Math.min(timeElapsed / duration, 1);
+
+      window.scrollTo(0, startPosition + distance * scrollProgress);
+
+      if (timeElapsed < duration) {
+        requestAnimationFrame(animation);
+      }
+    }
+
+    requestAnimationFrame(animation);
+  };
+
   return (
     <div className="top-navigation">
       <div
