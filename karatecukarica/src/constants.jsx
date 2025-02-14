@@ -165,11 +165,12 @@ export const FOOTER_TXT2 = (
 //Locations
 export const SCHEDULE = "Termini";
 export const GROUP = "Grupa";
-export const LOCATION_BUTTON = "Više informacija";
+export const SHOW_DETAILS_BUTTON = "Detalji";
+export const HIDE_DETAILS_BUTTON = "Sakrij detalje";
 //Location1.jsx
 export const LOCATION1 = "Banovo Brdo";
-export const LOC1_ADDRESS1 = "OŠ Miloje Pavlović";
-export const LOC1_ADDRESS2 = "Ul. Milosava Vlajića br. 1";
+export const LOC1_ADDRESS1 = "Ul. Milosava Vlajića br. 1";
+export const LOC1_ADDRESS2 = `OŠ "Miloje Pavlović"`;
 export const LOC1_DAYS = "Ponedeljak, Sreda, Petak";
 export const SCHEDULE1 = {
   group1: {
@@ -233,3 +234,24 @@ export const SCHEDULE2 = {
     weekendEnd: "13:00",
   }
 };
+//Location3.jsx
+export const LOCATION3 = `Vrtići PU "Čukarica"`;
+export const LOC3_DESC = `Treninzi se, u vrtićima Predškolske ustanove "Čukarica", održavaju u vreme boravka dece u vrtiću. Trener dolazi po decu i vraća ih u grupu.`;
+export const SCHEDULE3 = {
+  loc1: {
+    name: `"Sunce"`,
+    days: "utorak i četvrtak"
+  },
+  loc2: {
+    name: `"Bajka"`,
+    days: "utorak i četvrtak"
+  },
+  loc3: {
+    name: `"Dečiji gaj"`,
+    days: "ponedeljak i sreda"
+  },
+  loc4: {
+    name: `"Košuta"`,
+    days: "utorak i četvrtak"
+  },
+}

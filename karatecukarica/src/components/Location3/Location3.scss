@@ -1,0 +1,35 @@
+@use "../../styles/variables" as *;
+
+.desc {
+  margin: 10px 0 30px 0;
+  text-align: center;
+  width: 90%;
+}
+
+.groups {
+  &:hover {
+    cursor: pointer;
+    scale: 1.1;
+  }
+}
+
+.schedule-kg {
+  display: flex;
+  justify-content: center;
+  width: 90% !important;
+}
+
+.coor {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 20px;
+
+  .coor-title {
+    display: flex;
+
+    .coor-name {
+      color: $color-accent-red;
+    }
+  }
+}
