@@ -26,12 +26,10 @@ const Location1 = ({onSetMap}) => {
       <p className="address1">{LOC1_ADDRESS1}</p>
       <p className="address2">{LOC1_ADDRESS2}</p>
 
-      {/* Details Button (Mobile Only) */}
       <button className="details-button" onClick={toggleDetails}>
         {showDetails ? HIDE_DETAILS_BUTTON : SHOW_DETAILS_BUTTON}
       </button>
 
-      {/* Additional Information (Hidden on Mobile by Default) */}
       <div className={`additional-info ${showDetails ? "visible" : ""}`}>
         <div className="schedule-days">
           <p className="schedule-title">{SCHEDULE}</p>
