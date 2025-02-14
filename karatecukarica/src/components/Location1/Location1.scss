@@ -9,7 +9,10 @@
   align-items: center;
   margin: 0;
 
-  @include responsive(md) {
+  @include responsive(lg) {
+    margin: 0 10px;
+  }
+  @include responsive(xl) {
     margin: 0 30px;
   }
 
@@ -20,7 +23,7 @@
     border-bottom: 2px solid $color-accent-red;
     text-align: center;
 
-    @include responsive(md) {
+    @include responsive(lg) {
       font-size: $text-5xl;
     }
   }
@@ -29,13 +32,13 @@
     font-size: $text-lg;
     margin-top: 5px;
 
-    @include responsive(md) {
+    @include responsive(lg) {
       font-size: $text-xl;
     }
   }
 
   .address2 {
-    @include responsive(md) {
+    @include responsive(lg) {
       margin-bottom: 30px;
     }
   }
@@ -47,7 +50,7 @@
     cursor: pointer;
     background-color: transparent;
 
-    @include responsive(md) {
+    @include responsive(lg) {
       display: none;
     }
   }
@@ -56,7 +59,7 @@
     width: 100%;
     display: none;
 
-    @include responsive(md) {
+    @include responsive(lg) {
       display: block;
     }
 
@@ -72,7 +75,7 @@
     flex-direction: column;
     width: 100%;
 
-    @include responsive(md) {
+    @include responsive(lg) {
       justify-content: space-between;
       flex-direction: row;
     }
@@ -90,7 +93,7 @@
     justify-content: space-between;
     margin: 5px 0;
 
-    @include responsive(md) {
+    @include responsive(lg) {
       margin: 0;
     }
 
@@ -101,7 +104,7 @@
       margin: 10px 0;
       align-items: center;
 
-      @include responsive(md) {
+      @include responsive(lg) {
         flex-direction: row;
         margin: 0;
       }
@@ -117,12 +120,13 @@
 
       .time {
         min-width: 40%;
-        text-align: right;
+        text-align: center;
         display: flex;
         flex-direction: column;
 
-        @include responsive(md) {
+        @include responsive(lg) {
           margin: 10px 0;
+          text-align: right;
         }
       }
     }

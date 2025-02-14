@@ -24,7 +24,7 @@ const Location3 = ({onSelectKg, onSetMap}) => {
         <div className="schedule schedule-kg">
           {Object.entries(SCHEDULE3).map(([locKey, locData]) => (
             <div key={locKey} className="schedule-item">
-              <div className="groups" onClick={() => onSelectKg(locData.name)}>
+              <div className="groups kg-groups" onClick={() => onSelectKg(locData.name)}>
                 {KINDERGARTEN}
                 <p className="group-name">
                   &nbsp;{locData.name}

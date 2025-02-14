@@ -9,7 +9,6 @@ import {
   SCHEDULE2,
   SHOW_DETAILS_BUTTON
 } from "../../constants";
-import "./Location2.scss";
 import {useState} from "react";
 
 const Location2 = ({onSetMap}) => {
