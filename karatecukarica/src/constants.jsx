@@ -89,6 +89,23 @@ export const ITEM8_TEXT =
   " Da bismo Vas na vreme obaveštavali o svemu, koristimo Viber zajednicu. Kada Vaše dete postane član kluba, Vi\n" +
   "            ćete biti uključeni u zajednicu gde sekretar povremeno šalje važne poruke koje se odnose na funkcionisanje\n" +
   "            kluba.";
+
+//RulesHeading.jsx
+
+export const RULES_TITLE = "Važno je znati";
+export const RULES_SUBTITLE1 = "PRAVILA";
+export const RULES_SUBTITLE2 = "KLUBA";
+export const RULES_TEXT =
+(
+  <>
+    <p>
+      Da bismo obezbedili nesmetano funkcionisanje i kvalitetno vežbanje naših članova,
+    </p>
+    <p>držimo se kućnog reda i poštujemo jedni druge, prostor u kojem vežbamo i ljude sa kojima sarađujemo.</p>
+    <p>Očekujemo da se oni koji nam se pridruže, pridržavaju istih principa.</p>
+  </>
+)
+
 //History.jsx
 export const HISTORY_IMG_ALT = "Club gym with logo";
 export const HISTORY_TITLE = "Preko 50 godina rada";
