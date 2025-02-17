@@ -167,6 +167,8 @@ export const SCHEDULE = "Termini";
 export const GROUP = "Grupa";
 export const SHOW_DETAILS_BUTTON = "Detalji";
 export const HIDE_DETAILS_BUTTON = "Sakrij detalje";
+export const PROFESSOR = "prof."
+export const PROFESSOR_NAME = "Miroslav Milovanović"
 //Location1.jsx
 export const LOCATION1 = "Banovo Brdo";
 export const LOC1_ADDRESS1 = "Ul. Milosava Vlajića br. 1";

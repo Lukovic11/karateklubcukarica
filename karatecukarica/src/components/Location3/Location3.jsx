@@ -1,4 +1,4 @@
-import {LOC3_DESC, LOCATION3, SCHEDULE3, SHOW_DETAILS_BUTTON} from "../../constants";
+import {LOC3_DESC, LOCATION3, PROFESSOR, PROFESSOR_NAME, SCHEDULE3, SHOW_DETAILS_BUTTON} from "../../constants";
 import "../Location3/Location3.scss";
 import {KINDERGARTEN} from "../../KINDERGARTEN";
 import {useState} from "react";
@@ -40,7 +40,7 @@ const Location3 = ({onSelectKg, onSetMap}) => {
           ))}
           <div className="coor">
             <p>Koordinator aktivnosti u vrtićima</p>
-            <div className="coor-title">prof. <p className="coor-name">&nbsp;Miroslav Milovanović</p></div>
+            <div className="coor-title">{PROFESSOR}<p className="coor-name">&nbsp;{PROFESSOR_NAME}</p></div>
             <p>Tel. 069 50 31 843</p>
           </div>
         </div>
