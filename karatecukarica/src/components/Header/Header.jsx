@@ -95,7 +95,7 @@ const Header = () => {
                   onClick={(e) => {
                     if (item === "Kontakt") {
                       e.preventDefault();
-                      smoothScrollTo("footer", 1200);
+                      document.getElementById("footer")?.scrollIntoView({ behavior: "instant" });
                     }
                   }}
                 >
