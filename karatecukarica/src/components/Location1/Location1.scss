@@ -1,0 +1,134 @@
+@use "../../styles/variables" as *;
+@use "../../styles/mixins" as *;
+
+.location-info {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+
+  @include responsive(lg) {
+    margin: 0 10px;
+  }
+  @include responsive(xl) {
+    margin: 0 30px;
+  }
+
+  .location-name {
+    font-family: $font-paragraph-medium;
+    font-size: $text-4xl;
+    padding: 0 20px;
+    border-bottom: 2px solid $color-accent-red;
+    text-align: center;
+
+    @include responsive(lg) {
+      font-size: $text-5xl;
+    }
+  }
+
+  .address1 {
+    font-size: $text-lg;
+    margin-top: 5px;
+
+    @include responsive(lg) {
+      font-size: $text-xl;
+    }
+  }
+
+  .address2 {
+    @include responsive(lg) {
+      margin-bottom: 30px;
+    }
+  }
+
+  .details-button {
+    color: $color-accent-red;
+    border: none;
+    margin: 20px 0;
+    cursor: pointer;
+    background-color: transparent;
+
+    @include responsive(lg) {
+      display: none;
+    }
+  }
+
+  .additional-info {
+    width: 100%;
+    display: none;
+
+    @include responsive(lg) {
+      display: block;
+    }
+
+    &.visible {
+      display: block;
+    }
+  }
+
+  .schedule-days {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+
+    @include responsive(lg) {
+      justify-content: space-between;
+      flex-direction: row;
+    }
+
+    .days {
+      color: $color-accent-red;
+      font-weight: 600;
+    }
+  }
+
+  .schedule {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin: 5px 0;
+
+    @include responsive(lg) {
+      margin: 0;
+    }
+
+    .schedule-item {
+      display: flex;
+      justify-content: space-between;
+      flex-direction: column;
+      margin: 10px 0;
+      align-items: center;
+
+      @include responsive(lg) {
+        flex-direction: row;
+        margin: 0;
+      }
+
+      .groups {
+        display: flex;
+
+        .group-name {
+          color: $color-accent-red;
+          font-weight: 600;
+        }
+      }
+
+      .time {
+        min-width: 40%;
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+
+        @include responsive(lg) {
+          margin: 10px 0;
+          text-align: right;
+        }
+      }
+    }
+  }
+}

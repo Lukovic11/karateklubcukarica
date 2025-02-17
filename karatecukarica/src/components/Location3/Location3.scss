@@ -1,0 +1,94 @@
+@use "../../styles/variables" as *;
+@use "../../styles/mixins" as *;
+
+.desc {
+  margin-top: 10px;
+  text-align: center;
+  width: 90%;
+  @include responsive(lg) {
+    margin: 10px 0 30px 0;
+  }
+}
+
+.kg-groups {
+  &:hover {
+    cursor: pointer;
+    scale: 1.1;
+  }
+}
+
+.schedule-kg {
+  display: flex !important;
+  flex-direction: column !important;
+  justify-content: center !important;
+  align-items: center !important;
+  width: 100% !important;
+
+  .schedule-item {
+    width: 100%;
+    margin-bottom: 15px;
+  }
+
+  @include responsive(sm) {
+    flex-direction: row !important;
+    flex-wrap: wrap !important;
+    gap: 20px;
+
+    .schedule-item {
+      width: 200px;
+      margin-bottom: 0;
+    }
+  }
+
+  @include responsive(md) {
+    .schedule-item {
+      width: 150px;
+    }
+  }
+
+  @include responsive(lg) {
+    .schedule-item {
+      width: 200px;
+    }
+  }
+
+  @include responsive(lg) {
+    width: 90% !important;
+    flex-direction: column !important;
+
+    .schedule-item {
+      width: 100%;
+      margin-bottom: 15px;
+    }
+  }
+}
+
+.coor {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 20px;
+  width: 100%;
+
+  .coor-title {
+    display: flex;
+
+    .coor-name {
+      color: $color-accent-red;
+    }
+  }
+}
+
+.details-icon {
+  transition: transform 0.3s ease;
+  width: 15px;
+
+  &.rotate {
+    transform: rotate(-180deg);
+  }
+}
+
+.details-button {
+  display: flex;
+  align-items: center;
+}
