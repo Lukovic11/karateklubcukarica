@@ -10,7 +10,7 @@ import {
   SCHEDULES_AND_LOCATIONS_URL
 } from "../../constants.jsx";
 
-const Enroll = () => {
+const RulesHeading = () => {
   return (
     <div className="enroll">
       <div className="title-segment">
@@ -29,4 +29,4 @@ const Enroll = () => {
   );
 };
 
-export default Enroll;
+export default RulesHeading;
