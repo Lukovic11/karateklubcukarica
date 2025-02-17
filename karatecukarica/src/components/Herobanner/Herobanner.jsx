@@ -11,6 +11,12 @@ import {
 } from "../../constants.jsx";
 
 const HeroBanner = () => {
+
+  const scrollToFooter = (e) => {
+    e.preventDefault();
+    document.getElementById("footer")?.scrollIntoView({ behavior: "instant" });
+  };
+
   return (
     <div className="herobanner-container">
       <div className="herobanner">
@@ -26,7 +32,7 @@ const HeroBanner = () => {
             <div className="club-name">{HEROBANNER_TEXT_2}</div>
             <Button
               className="button-herobanner"
-              linkURL={`/${SCHEDULES_AND_LOCATIONS_URL}`}
+              handleClick={scrollToFooter}
               text={HEROBANNER_BUTTON_TEXT}
               variation=""
             />
