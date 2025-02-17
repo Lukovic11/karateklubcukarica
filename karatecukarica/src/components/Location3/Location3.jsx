@@ -1,10 +1,12 @@
-import {HIDE_DETAILS_BUTTON, LOC3_DESC, LOCATION3, SCHEDULE3, SHOW_DETAILS_BUTTON} from "../../constants";
+import {LOC3_DESC, LOCATION3, SCHEDULE3, SHOW_DETAILS_BUTTON} from "../../constants";
 import "../Location3/Location3.scss";
 import {KINDERGARTEN} from "../../KINDERGARTEN";
 import {useState} from "react";
+import {ChevronDown} from 'lucide-react';
 
 const Location3 = ({onSelectKg, onSetMap}) => {
   const [showDetails, setShowDetails] = useState(false);
+
 
   const toggleDetails = () => {
     setShowDetails(!showDetails);
@@ -17,7 +19,8 @@ const Location3 = ({onSelectKg, onSetMap}) => {
       <p className="desc">{LOC3_DESC}</p>
 
       <button className="details-button" onClick={toggleDetails}>
-        {showDetails ? HIDE_DETAILS_BUTTON : SHOW_DETAILS_BUTTON}
+        {SHOW_DETAILS_BUTTON}
+        <ChevronDown className={`details-icon ${showDetails ? 'rotate' : ''}`}/>
       </button>
 
       <div className={`additional-info ${showDetails ? "visible" : ""}`}>

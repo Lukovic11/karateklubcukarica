@@ -11,6 +11,7 @@ import {
   SHOW_DETAILS_BUTTON
 } from "../../constants";
 import "./Location1.scss";
+import {ChevronDown} from "lucide-react";
 
 const Location1 = ({onSetMap}) => {
   const [showDetails, setShowDetails] = useState(false);
@@ -27,7 +28,8 @@ const Location1 = ({onSetMap}) => {
       <p className="address2">{LOC1_ADDRESS2}</p>
 
       <button className="details-button" onClick={toggleDetails}>
-        {showDetails ? HIDE_DETAILS_BUTTON : SHOW_DETAILS_BUTTON}
+        {SHOW_DETAILS_BUTTON}
+        <ChevronDown className={`details-icon ${showDetails ? 'rotate' : ''}`}/>
       </button>
 
       <div className={`additional-info ${showDetails ? "visible" : ""}`}>
