@@ -14,7 +14,7 @@ const Enroll = () => {
 
   const scrollToFooter = (e) => {
     e.preventDefault();
-    document.getElementById("footer")?.scrollIntoView({ behavior: "instant" });
+    document.getElementById("footer")?.scrollIntoView({behavior: "instant"});
   };
 
 
@@ -30,8 +30,8 @@ const Enroll = () => {
       <div className="paragraph-segment">
         {ENROLL_TEXT}
       </div>
-      <Button className="button" variation={BUTTON_VARIATION_TRANSPARENT}
-              text={ENROLL_BUTTON_TEXT} handleClick = {scrollToFooter} />
+      <Button className="button" linkURL={SCHEDULES_AND_LOCATIONS_URL} variation={BUTTON_VARIATION_TRANSPARENT}
+              text={ENROLL_BUTTON_TEXT} handleClick={scrollToFooter}/>
     </div>
   );
 };
