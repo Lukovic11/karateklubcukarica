@@ -1,14 +1,18 @@
 @use "../../styles/_variables.scss" as *;
 @use "../../styles/_mixins.scss" as *;
 
-.enroll {
+.rules-heading {
   min-height: 400px;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  margin: 70px 0;
+  margin: 70px 0 50px 0; 
   z-index: 100;
+
+  @include responsive(md){
+    margin: 70px 0;
+  }
 
   .title-segment {
     display: flex;

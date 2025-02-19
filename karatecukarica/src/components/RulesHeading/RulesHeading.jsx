@@ -12,7 +12,7 @@ import {
 
 const RulesHeading = () => {
   return (
-    <div className="enroll">
+    <div className="rules-heading">
       <div className="title-segment">
         <h2>{RULES_TITLE}</h2>
         <div className="title-design subtitle">
