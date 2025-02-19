@@ -9,7 +9,11 @@ import {
   CAMP_2022_TITLE_YEAR,
   CAMP_IMG_ALT,
   CAMP_TITLE1,
-  CAMP_TITLE2
+  CAMP_TITLE2,
+  GROUP_IMAGE_ALT,
+  KOPAONIK_IMAGE1_ALT,
+  KOPAONIK_IMAGE2_ALT,
+  KOPAONIK_IMAGE3_ALT
 } from "../../constants";
 import kop1 from "../../assets/summercamp/kop1.jpg";
 import kop2 from "../../assets/summercamp/kop2.jpg";
@@ -28,13 +32,13 @@ const SummerCamp = () => {
         </div>
         <p className="camp-date">{CAMP_2022_DATE}</p>
         <div className="camp-desc">{CAMP_2022_DESC}</div>
-        <img src={kop1} alt="Team img"/>
+        <img src={kop1} alt={GROUP_IMAGE_ALT}/>
         <p className="camp-text">{CAMP_2022_TEXT}</p>
       </div>
       <div className="camp-gallery">
-        <img src={kop2} alt=""/>
-        <img src={kop3} alt=""/>
-        <img src={kop4} alt=""/>
+        <img src={kop2} alt={KOPAONIK_IMAGE1_ALT}/>
+        <img src={kop3} alt={KOPAONIK_IMAGE2_ALT}/>
+        <img src={kop4} alt={KOPAONIK_IMAGE3_ALT}/>
       </div>
       <p className="camp-ending">{CAMP_2022_ENDING}</p>
     </div>
