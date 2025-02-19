@@ -27,7 +27,7 @@ const SummerCamp = () => {
           <p className="camp-title-year">{CAMP_2022_TITLE_YEAR}</p>
         </div>
         <p className="camp-date">{CAMP_2022_DATE}</p>
-        <p className="camp-desc">{CAMP_2022_DESC}</p>
+        <div className="camp-desc">{CAMP_2022_DESC}</div>
         <img src={kop1} alt="Team img"/>
         <p className="camp-text">{CAMP_2022_TEXT}</p>
       </div>

@@ -9,9 +9,22 @@
   align-items: center;
 
   .summer-camp-content {
-    width: 60%;
-    margin: 100px 0;
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    margin: 70px 0;
     text-align: center;
+    justify-content: center;
+    align-items: center;
+
+    @include responsive(xl) {
+      width: 60%;
+      margin: 100px 0;
+    }
+    @include responsive(2xl) {
+      width: 70%;
+      margin: 100px 0;
+    }
 
     .camp-item {
       display: flex;
@@ -23,8 +36,15 @@
         display: flex;
         align-items: center;
         font-family: $font-paragraph-bold;
-        font-size: $text-5xl;
+        font-size: $text-3xl;
         color: $color-font-dark;
+
+        @include responsive(md) {
+          font-size: $text-4xl;
+        }
+        @include responsive(xl) {
+          font-size: $text-5xl;
+        }
 
         .camp-title-year {
           opacity: 0.5;
@@ -33,24 +53,48 @@
 
       .camp-date {
         color: $color-accent-red;
-        font-size: $text-xl;
+        font-size: $text-base;
         margin-bottom: 30px;
+
+        @include responsive(md) {
+          font-size: $text-lg;
+        }
+        @include responsive(xl) {
+          font-size: $text-xl;
+        }
       }
 
       img {
-        max-width: 80%;
+        max-width: 100%;
         margin: 30px 0;
+        @include responsive(xl) {
+          max-width: 80%;
+        }
       }
     }
 
     .camp-gallery {
       display: flex;
-      width: 100%;
-      height: 60vh;
-      gap: 20px;
+      gap: 10px;
       justify-content: center;
       overflow: hidden;
       margin: 30px 0;
+      flex-wrap: wrap;
+
+      img {
+        width: 30%;
+        @include responsive(xl) {
+          width: 30%;
+          object-fit: cover;
+        }
+      }
+
+      @include responsive(xl) {
+        flex-direction: row;
+        height: 60vh;
+        width: 100%;
+        gap: 20px;
+      }
     }
   }
 }

@@ -261,6 +261,8 @@ export const SCHEDULE3 = {
 export const CAMP_2022_TITLE = "KOPAONIK";
 export const CAMP_2022_TITLE_YEAR = "2022";
 export const CAMP_2022_DATE = "23-29. avgust";
-export const CAMP_2022_DESC = "I ove godine karate klub Čukarica organizuje letnji karate kamp za sve zainteresovane članove kluba. Naša baza biće Kopaonik – hotel „Klub A“.";
+export const CAMP_2022_DESC = (<><p>I ove godine karate klub Čukarica organizuje letnji karate kamp za sve
+  zainteresovane članove kluba. </p>
+  <p>Naša baza biće Kopaonik – hotel „Klub A“.</p></>);
 export const CAMP_2022_TEXT = "Kompletan boravak, program rada i aktivnosti letnjeg karate kampa usklađeni su sa uzrastom i nivoom znanja (pojasom) učesnika kampa. Aranžman obuhvata 7 dana (šest pansiona), autobuski prevoz na relaciji Beograd-Kopaonik-Beograd, zdravstvenu zaštitu 24 časa i korišćenje sportskih sadržaja. Na raspolaganju imamo i unutrašnji bazen.";
 export const CAMP_2022_ENDING = "Prijavljivanje se vrši kod sekretara kluba, dostavljanjem popunjene prijave/saglasnosti potpisane od strane roditelja. Prijava traje do popune mesta. Broj mesta je ograničen. Sve dodatne informacije možete dobiti kod sekretara kluba.";
