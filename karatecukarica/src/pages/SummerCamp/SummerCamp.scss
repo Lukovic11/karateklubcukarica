@@ -16,6 +16,11 @@
     text-align: center;
     justify-content: center;
     align-items: center;
+    font-size: $text-sm;
+
+    @include responsive(md) {
+      font-size: $text-base;
+    }
 
     @include responsive(xl) {
       width: 60%;
