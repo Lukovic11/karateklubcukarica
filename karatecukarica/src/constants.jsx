@@ -179,3 +179,98 @@ export const FOOTER_TXT2 = (
     </div>
   </>
 );
+//Locations
+export const SCHEDULE = "Termini";
+export const GROUP = "Grupa";
+export const SHOW_DETAILS_BUTTON = "Detalji";
+export const HIDE_DETAILS_BUTTON = "Sakrij detalje";
+export const PROFESSOR = "prof."
+export const PROFESSOR_NAME = "Miroslav Milovanović"
+//Location1.jsx
+export const LOCATION1 = "Banovo Brdo";
+export const LOC1_ADDRESS1 = "Ul. Milosava Vlajića br. 1";
+export const LOC1_ADDRESS2 = `OŠ "Miloje Pavlović"`;
+export const LOC1_DAYS = "Ponedeljak, Sreda, Petak";
+export const SCHEDULE1 = {
+  group1: {
+    name: "SPORTIĆ",
+    timeStart: "18:15",
+    timeEnd: "19:00"
+  },
+  group2: {
+    name: "POČETNICI i ŽUTI POJAS",
+    timeStart: "19:00",
+    timeEnd: "19:45"
+  },
+  group3: {
+    name: "ORANŽ, ZELENI i PLAVI POJAS",
+    timeStart: "20:00",
+    timeEnd: "21:00"
+  },
+  group4: {
+    name: "BRAON I CRNI POJAS, KUMITE",
+    timeStart: "21:00",
+    timeEnd: "22:00"
+  }
+};
+//Location2.jsx
+export const LOCATION2 = "Cerak";
+export const LOC2_ADDRESS1 = "Ul. Jablanička 3i";
+export const LOC2_ADDRESS2 = `Preko puta vrtića "Sanjalica"`;
+export const LOC2_DAYS = "Utorak,  četvrtak, subota";
+export const SCHEDULE2 = {
+  group1: {
+    name: "SPORTIĆ",
+    timeStart: "17:30",
+    timeEnd: "18:15"
+  },
+  group2: {
+    name: "POČETNICI",
+    timeStart: "18:15",
+    timeEnd: "19:00",
+    weekendStart: "9:15",
+    weekendEnd: "10:00",
+  },
+  group3: {
+    name: "BELI POJAS",
+    timeStart: "19:00",
+    timeEnd: "20:00",
+    weekendStart: "10:00",
+    weekendEnd: "11:00",
+  },
+  group4: {
+    name: "ŽUTI, ORANŽ i ZELENI POJAS",
+    timeStart: "20:00",
+    timeEnd: "21:00",
+    weekendStart: "11:00",
+    weekendEnd: "12:00",
+  },
+  group5: {
+    name: "KUMITE",
+    timeStart: "21:00",
+    timeEnd: "22:00",
+    weekendStart: "12:00",
+    weekendEnd: "13:00",
+  }
+};
+//Location3.jsx
+export const LOCATION3 = `Vrtići PU "Čukarica"`;
+export const LOC3_DESC = `Treninzi se, u vrtićima Predškolske ustanove "Čukarica", održavaju u vreme boravka dece u vrtiću. Trener dolazi po decu i vraća ih u grupu.`;
+export const SCHEDULE3 = {
+  loc1: {
+    name: `"Sunce"`,
+    days: "utorak i četvrtak"
+  },
+  loc2: {
+    name: `"Bajka"`,
+    days: "utorak i četvrtak"
+  },
+  loc3: {
+    name: `"Dečiji gaj"`,
+    days: "ponedeljak i sreda"
+  },
+  loc4: {
+    name: `"Košuta"`,
+    days: "utorak i četvrtak"
+  },
+}
