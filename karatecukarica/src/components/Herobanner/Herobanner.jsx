@@ -13,7 +13,6 @@ import {
 const HeroBanner = () => {
 
   const scrollToFooter = (e) => {
-    e.preventDefault();
     document.getElementById("footer")?.scrollIntoView({ behavior: "instant" });
   };
 
