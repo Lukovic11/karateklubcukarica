@@ -1,12 +1,12 @@
 import HoverCard from "../../components/HoverCard/HoverCard.jsx";
 import "./Cards.scss";
-import nenad from "../../assets/nenad.jpg";
-import miki from "../../assets/miki.jpg";
-import vesna from "../../assets/vesna.jpg";
-import dusan from "../../assets/dusan.jpg";
-import dunja from "../../assets/dunja.jpg";
-import kaja from "../../assets/kaja.jpg";
-import jasmina from "../../assets/jasmina.jpg";
+import nenad from "../../assets/staff/nenad.jpg";
+import miki from "../../assets/staff/miki.jpg";
+import vesna from "../../assets/staff/vesna.jpg";
+import dusan from "../../assets/staff/dusan.jpg";
+import dunja from "../../assets/staff/dunja.jpg";
+import kaja from "../../assets/staff/kaja.jpg";
+import jasmina from "../../assets/staff/jasmina.jpg";
 import {
   DUNJA,
   DUNJA_TEXT,
