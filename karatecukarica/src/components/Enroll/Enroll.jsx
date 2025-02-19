@@ -9,12 +9,14 @@ import {
   ENROLL_TITLE,
   SCHEDULES_AND_LOCATIONS_URL
 } from "../../constants.jsx";
+import { useNavigate } from "react-router-dom";
 
 const Enroll = () => {
 
-  const scrollToFooter = (e) => {
-    e.preventDefault();
-    document.getElementById("footer")?.scrollIntoView({ behavior: "instant" });
+  const navigate = useNavigate();
+
+  const navigateToSchedulesAndLocations = (e) => {
+    navigate(`${SCHEDULES_AND_LOCATIONS_URL}`)
   };
 
 
@@ -31,7 +33,7 @@ const Enroll = () => {
         {ENROLL_TEXT}
       </div>
       <Button className="button" variation={BUTTON_VARIATION_TRANSPARENT}
-              text={ENROLL_BUTTON_TEXT} handleClick = {scrollToFooter} />
+              text={ENROLL_BUTTON_TEXT} handleClick = {navigateToSchedulesAndLocations}/>
     </div>
   );
 };

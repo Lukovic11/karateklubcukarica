@@ -2,11 +2,13 @@ import { useEffect, useState } from "react";
 import { HEADER_PAGE_LIST } from "../../constants.jsx";
 import "./Header.scss";
 import HamburgerIcon from "./HamburgerIcon/HamburgerIcon";
+import { useLocation } from "react-router-dom"; 
 
 const Header = () => {
   const [menuActive, setMenuActive] = useState(false);
   const [currentPage, setCurrentPage] = useState("");
   const [isScrolled, setIsScrolled] = useState(false);
+  const location = useLocation();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -18,11 +20,16 @@ const Header = () => {
 
   useEffect(() => {
     const setActivePage = () => {
-      const url = window.location.pathname.replace("/", ""); // Remove leading '/'
-      setCurrentPage(url || ""); // Set empty string for homepage
+      const url = window.location.pathname.replace("/", "");
+      setCurrentPage(url || "");
     };
     setActivePage();
   }, []);
+
+  useEffect(() => {
+    const url = location.pathname.replace("/", ""); 
+    setCurrentPage(url || "");
+  }, [location]);
 
   const toggleMenu = () => {
     setMenuActive((prevState) => {

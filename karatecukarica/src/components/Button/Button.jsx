@@ -13,14 +13,14 @@ const Button = (props) => {
       whileTap={{ scale: 0.95 }}
     >
       {props.text}
-    </motion.button>
+    </motion.button>  
   );
 };
 Button.propTypes = {
-  linkURL: PropTypes.string.isRequired,
   variation: PropTypes.string.isRequired,
   className: PropTypes.string,
   text: PropTypes.string.isRequired,
+  handleClick: PropTypes.func.isRequired
 };
 
 export default Button;
