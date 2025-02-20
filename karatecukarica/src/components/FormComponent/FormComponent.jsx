@@ -4,12 +4,14 @@ import {
   FIRSTNAME_NUMBER_ERROR,
   FORM_EMAIL,
   FORM_ERROR,
+  FORM_ERROR_MESSAGE,
   FORM_FIRSTNAME,
   FORM_LASTNAME,
   FORM_QUESTION,
   FORM_SEND,
   FORM_SUBJECT,
   FORM_SUCCESS,
+  FORM_SUCCESS_MESSAGE,
   LASTNAME_EMPTY_ERROR,
   LASTNAME_NUMBER_ERROR,
   QUESTION_EMPTY_ERROR,
@@ -140,7 +142,7 @@ const FormComponent = () => {
           animate={{opacity: 1}}
           transition={{duration: 0.3}}
         >
-          Your message has been sent successfully!
+          {FORM_SUCCESS_MESSAGE}
         </motion.div>
       )}
       {submitStatus === FORM_ERROR && (
@@ -150,7 +152,7 @@ const FormComponent = () => {
           animate={{opacity: 1}}
           transition={{duration: 0.3}}
         >
-          There was an error sending your message. Please try again later.
+          {FORM_ERROR_MESSAGE}
         </motion.div>
       )}
       <form className="form-contact" onSubmit={onSubmit} autoComplete="off">
