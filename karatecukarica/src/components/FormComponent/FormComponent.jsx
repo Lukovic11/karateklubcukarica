@@ -10,6 +10,7 @@ import {
   FORM_QUESTION,
   FORM_SEND,
   FORM_SUBJECT,
+  FORM_SUBMITTING,
   FORM_SUCCESS,
   FORM_SUCCESS_MESSAGE,
   LASTNAME_EMPTY_ERROR,
@@ -27,6 +28,7 @@ const FormComponent = () => {
   const [errors, setErrors] = useState({});
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [submitStatus, setSubmitStatus] = useState("");
+  const key = import.meta.env.VITE_EMAIL_PUBLIC_KEY;
 
   const [formData, setFormData] = useState({
     [FORM_FIRSTNAME]: "",
@@ -111,7 +113,7 @@ const FormComponent = () => {
         subject: formData[FORM_SUBJECT],
         message: formData[FORM_QUESTION]
       }
-      emailjs.send('contact_service', 'contact_form', templateParams, {publicKey: '8GyA5WxWbKQO2e5Bi'})
+      emailjs.send('contact_service', 'contact_form', templateParams, {publicKey: key})
         .then(() => {
           setSubmitStatus(FORM_SUCCESS);
           setFormData(
@@ -201,7 +203,7 @@ const FormComponent = () => {
             )}
           </motion.div>
         ))}
-        <Button variation={""} text={isSubmitting ? "Sending..." : FORM_SEND} disabled={isSubmitting}/>
+        <Button variation={""} text={isSubmitting ? FORM_SUBMITTING : FORM_SEND} disabled={isSubmitting}/>
       </form>
     </div>
   );
