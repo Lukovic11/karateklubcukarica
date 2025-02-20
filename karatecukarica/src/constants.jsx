@@ -164,6 +164,9 @@ export const FOOTER_TXT2 = (
 );
 export const FORM_SUCCESS = "success";
 export const FORM_ERROR = "error";
+export const FORM_SUCCESS_MESSAGE = "Poslato!";
+export const FORM_ERROR_MESSAGE = "Greska!";
+export const FORM_SUBMITTING = "Slanje...";
 //Locations
 export const SCHEDULE = "Termini";
 export const GROUP = "Grupa";

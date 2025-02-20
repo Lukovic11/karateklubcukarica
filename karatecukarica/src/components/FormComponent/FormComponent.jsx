@@ -4,12 +4,15 @@ import {
   FIRSTNAME_NUMBER_ERROR,
   FORM_EMAIL,
   FORM_ERROR,
+  FORM_ERROR_MESSAGE,
   FORM_FIRSTNAME,
   FORM_LASTNAME,
   FORM_QUESTION,
   FORM_SEND,
   FORM_SUBJECT,
+  FORM_SUBMITTING,
   FORM_SUCCESS,
+  FORM_SUCCESS_MESSAGE,
   LASTNAME_EMPTY_ERROR,
   LASTNAME_NUMBER_ERROR,
   QUESTION_EMPTY_ERROR,
@@ -25,6 +28,7 @@ const FormComponent = () => {
   const [errors, setErrors] = useState({});
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [submitStatus, setSubmitStatus] = useState("");
+  const key = import.meta.env.VITE_EMAIL_PUBLIC_KEY;
 
   const [formData, setFormData] = useState({
     [FORM_FIRSTNAME]: "",
@@ -109,7 +113,7 @@ const FormComponent = () => {
         subject: formData[FORM_SUBJECT],
         message: formData[FORM_QUESTION]
       }
-      emailjs.send('contact_service', 'contact_form', templateParams, {publicKey: '8GyA5WxWbKQO2e5Bi'})
+      emailjs.send('contact_service', 'contact_form', templateParams, {publicKey: key})
         .then(() => {
           setSubmitStatus(FORM_SUCCESS);
           setFormData(
@@ -140,7 +144,7 @@ const FormComponent = () => {
           animate={{opacity: 1}}
           transition={{duration: 0.3}}
         >
-          Your message has been sent successfully!
+          {FORM_SUCCESS_MESSAGE}
         </motion.div>
       )}
       {submitStatus === FORM_ERROR && (
@@ -150,7 +154,7 @@ const FormComponent = () => {
           animate={{opacity: 1}}
           transition={{duration: 0.3}}
         >
-          There was an error sending your message. Please try again later.
+          {FORM_ERROR_MESSAGE}
         </motion.div>
       )}
       <form className="form-contact" onSubmit={onSubmit} autoComplete="off">
@@ -199,7 +203,7 @@ const FormComponent = () => {
             )}
           </motion.div>
         ))}
-        <Button variation={""} text={isSubmitting ? "Sending..." : FORM_SEND} disabled={isSubmitting}/>
+        <Button variation={""} text={isSubmitting ? FORM_SUBMITTING : FORM_SEND} disabled={isSubmitting}/>
       </form>
     </div>
   );
