@@ -162,6 +162,8 @@ export const FOOTER_TXT2 = (
     </div>
   </>
 );
+export const FORM_SUCCESS = "success";
+export const FORM_ERROR = "error";
 //Locations
 export const SCHEDULE = "Termini";
 export const GROUP = "Grupa";
