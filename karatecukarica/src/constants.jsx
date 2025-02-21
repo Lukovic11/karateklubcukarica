@@ -104,7 +104,12 @@ export const RULES_TEXT =
     <p>držimo se kućnog reda i poštujemo jedni druge, prostor u kojem vežbamo i ljude sa kojima sarađujemo.</p>
     <p>Očekujemo da se oni koji nam se pridruže, pridržavaju istih principa.</p>
   </>
-)
+);
+export const RULES_BUTTON_TEXT1 = "Kućni red u klubu";
+export const RULES_BUTTON_TEXT2 = "Kućni red u vrtiću";
+
+//Modal.jsx
+export const MODAL_BUTTON_CLOSE = "Close";
 
 //History.jsx
 export const HISTORY_IMG_ALT = "Club gym with logo";
