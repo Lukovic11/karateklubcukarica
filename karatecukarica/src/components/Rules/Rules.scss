@@ -1,6 +1,14 @@
+@use "../../styles/_variables.scss" as *;
+@use "../../styles/_mixins.scss" as *;
+
 .rules {
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
+  margin-bottom: 4rem;
+
+  @include responsive(md) {
+    margin-bottom: 5rem;
+  }
 }

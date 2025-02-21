@@ -7,11 +7,11 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  margin: 50px 0;
+  margin: 70px 0 50px 0; 
   z-index: 100;
 
-  @include responsive($screen-sm) {
-    margin: 60px 0;
+  @include responsive(md){
+    margin: 70px 0;
   }
 
   .title-segment {
@@ -74,11 +74,8 @@
     }
   }
 
-  .button-container {
-    display: flex;
-    .button {
-      font-size: $text-lg;
-      margin: 30px;
-    }
+  .button {
+    font-size: $text-lg;
+    margin: 30px;
   }
 }
