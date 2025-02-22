@@ -11,12 +11,13 @@ import closeIcon from "../../assets/x-symbol.svg";
 
 
 const Modal = ({title, text, onClose}) => {
+
     return (
         <div className="modal-container">
             <div className="modal-content" onClick={(e) => e.stopPropagation()}>
                 <img src={closeIcon} alt="Close" className="close-button" onClick={onClose}/>
                 <h2>{title}</h2>
-                <p>{text}</p>
+                {text}
             </div>
         </div>
     );

@@ -15,35 +15,56 @@
 
   .modal-content {
     background: #fff;
-    width: 50%;
-    padding: 20px;
+    max-height: 80vh;
+    width: 35%;
+    padding: 3rem;
     border-radius: 8px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
     text-align: center;
     position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    overflow-y: auto; 
 
     h2 {
-      margin-bottom: 10px;
-      font-size: 24px;
+      font-size: $text-5xl;
+      border-bottom: 2px solid $color-accent-red;
+      width: 75%;
+      text-align: center;
+      margin-bottom: 2.5rem;
     }
 
-    p {
-      font-size: 16px;
-      color: #555;
+    ul {
+      font-size: $text-lg;
+      color: rgba($color-font-dark, 0.8);
+      text-align: left;
+      padding: 0 3rem;
+      
+      li{
+        margin-bottom: 5px;
+      }
+
+      b{
+        font-weight: bolder !important;
+        color: $color-accent-red;
+      } 
     }
 
     .close-button {
       position: absolute;
-      top: 10px;
-      right: 10px;
+      top: 20px;
+      right: 20px;
       width: 24px;
       height: 24px;
       cursor: pointer;
       color: $color-dark-primary;
+      transition: filter 0.1s ease-in-out;
     }
 
     .close-button:hover {
-      color: $color-accent-red;
+      filter: brightness(10) saturate(100%) invert(25%) sepia(89%) saturate(758%)
+        hue-rotate(350deg) brightness(95%) contrast(95%);
     }
   }
 }

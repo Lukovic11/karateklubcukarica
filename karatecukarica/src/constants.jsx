@@ -95,13 +95,16 @@ export const ITEM8_TEXT =
 export const RULES_TITLE = "Važno je znati";
 export const RULES_SUBTITLE1 = "PRAVILA";
 export const RULES_SUBTITLE2 = "KLUBA";
-export const RULES_TEXT =
-(
+export const RULES_TEXT = (
   <>
     <p>
-      Da bismo obezbedili nesmetano funkcionisanje i kvalitetno vežbanje naših članova,
+      Da bismo obezbedili nesmetano funkcionisanje i kvalitetno vežbanje naših
+      članova,
     </p>
-    <p>držimo se kućnog reda i poštujemo jedni druge, prostor u kojem vežbamo i ljude sa kojima sarađujemo.</p>
+    <p>
+      držimo se kućnog reda i poštujemo jedni druge, prostor u kojem vežbamo i
+      ljude sa kojima sarađujemo.
+    </p>
     <p>Očekujemo da se oni koji nam se pridruže, pridržavaju istih principa.</p>
   </>
 );
@@ -110,6 +113,56 @@ export const RULES_BUTTON_TEXT2 = "Kućni red u vrtiću";
 
 //Modal.jsx
 export const MODAL_BUTTON_CLOSE = "Close";
+export const MODAL_TITLE1 = "KUĆNI RED U KLUBU";
+export const MODAL_TEXT1 = (
+  <ul>
+    <li>
+      Prilikom pristupanja članstvu kluba, potrebno je dostaviti <b>popunjenu
+      pristupnicu</b> već na sledećem treningu nakon dobijanja iste (potrebno je
+      dostaviti sve tražene podatke).
+    </li>
+
+    <li>
+      Svaki vežbač je dužan da dostavi <b>potvrdu lekara</b> da može da se bavi
+      sportom u roku od 10 dana od početka vežbanja. Potvrda važi šest meseci i
+      potrebno ju je obnoviti nakon što istekne rok važenja. Neophodno je da
+      potvrda sadrži zaključak: „sposoban za bavljenje sportom“ ili „sposoban za
+      učestvovanje u sportskim aktivnostima“.
+    </li>
+
+    <li><b>Članarina se plaća do 10. u mesecu</b> za tekući mesec, u punom iznosu.</li>
+
+    <li>
+      <b>Pravo na umanjenje članarine</b> za naredni mesec se ostvaruje ukoliko je
+      vežbač bio na manjem broju treninga od propisanog od strane Upravnog
+      odbora Kluba (za grupu koja vežba dva puta nedeljno to je 1 do 4 treninga,
+      za grupu koja vežba tri puta nedeljno to je 1 do 6 treninga).
+    </li>
+
+    <li>
+      <b>Vežbač koji nije izmirio tekuće obaveze prema klubu, ne može
+      prisustvovati treningu.</b>
+    </li>
+
+    <li>
+      Ukoliko vežbač odsustvuje sa treninga, potrebno je porukom <b>obavestiti
+      trenera ili sekretara kluba.</b>
+    </li>
+
+    <li>
+      <b>U slučaju odsustva u toku jednog kalendarskog meseca</b>, član je dužan da
+      na ime <b>rezervacije mesta</b> u grupi uplati delimični iznos članarine od
+      1.000,00 din. U slučaju odsustva kada se propisani iznos ne uplati, član
+      se briše sa spiska grupe i stavlja na listu čekanja.
+    </li>
+
+    <li><b>Prednost prilikom upisa</b> imaju novi zainteresovani vežbači.</li>
+
+    <li>
+      <b>Ponovni upis izbrisanog člana</b> moguć je ukoliko se mesto u grupi uprazni.
+    </li>
+  </ul>
+);
 
 //History.jsx
 export const HISTORY_IMG_ALT = "Club gym with logo";
@@ -189,8 +242,8 @@ export const SCHEDULE = "Termini";
 export const GROUP = "Grupa";
 export const SHOW_DETAILS_BUTTON = "Detalji";
 export const HIDE_DETAILS_BUTTON = "Sakrij detalje";
-export const PROFESSOR = "prof."
-export const PROFESSOR_NAME = "Miroslav Milovanović"
+export const PROFESSOR = "prof.";
+export const PROFESSOR_NAME = "Miroslav Milovanović";
 //Location1.jsx
 export const LOCATION1 = "Banovo Brdo";
 export const LOC1_ADDRESS1 = "Ul. Milosava Vlajića br. 1";
@@ -200,23 +253,23 @@ export const SCHEDULE1 = {
   group1: {
     name: "SPORTIĆ",
     timeStart: "18:15",
-    timeEnd: "19:00"
+    timeEnd: "19:00",
   },
   group2: {
     name: "POČETNICI i ŽUTI POJAS",
     timeStart: "19:00",
-    timeEnd: "19:45"
+    timeEnd: "19:45",
   },
   group3: {
     name: "ORANŽ, ZELENI i PLAVI POJAS",
     timeStart: "20:00",
-    timeEnd: "21:00"
+    timeEnd: "21:00",
   },
   group4: {
     name: "BRAON I CRNI POJAS, KUMITE",
     timeStart: "21:00",
-    timeEnd: "22:00"
-  }
+    timeEnd: "22:00",
+  },
 };
 //Location2.jsx
 export const LOCATION2 = "Cerak";
@@ -227,7 +280,7 @@ export const SCHEDULE2 = {
   group1: {
     name: "SPORTIĆ",
     timeStart: "17:30",
-    timeEnd: "18:15"
+    timeEnd: "18:15",
   },
   group2: {
     name: "POČETNICI",
@@ -256,7 +309,7 @@ export const SCHEDULE2 = {
     timeEnd: "22:00",
     weekendStart: "12:00",
     weekendEnd: "13:00",
-  }
+  },
 };
 //Location3.jsx
 export const LOCATION3 = `Vrtići PU "Čukarica"`;
@@ -264,18 +317,18 @@ export const LOC3_DESC = `Treninzi se, u vrtićima Predškolske ustanove "Čukar
 export const SCHEDULE3 = {
   loc1: {
     name: `"Sunce"`,
-    days: "utorak i četvrtak"
+    days: "utorak i četvrtak",
   },
   loc2: {
     name: `"Bajka"`,
-    days: "utorak i četvrtak"
+    days: "utorak i četvrtak",
   },
   loc3: {
     name: `"Dečiji gaj"`,
-    days: "ponedeljak i sreda"
+    days: "ponedeljak i sreda",
   },
   loc4: {
     name: `"Košuta"`,
-    days: "utorak i četvrtak"
+    days: "utorak i četvrtak",
   },
-}
+};

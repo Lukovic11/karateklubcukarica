@@ -7,10 +7,38 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  margin: 70px 0 50px 0; 
+  margin: 70px 0 50px 0;
   z-index: 100;
 
-  @include responsive(md){
+  .karatedo-img {
+    overflow-x: hidden;
+    transform: translateX(-20%);
+    position: absolute;
+    opacity: 0.1;
+    top: 150vh;
+    left: 75vw;
+    scale: 4;
+    z-index: 0;
+    @include responsive(sm) {
+      opacity: 0.2;
+      top: 160vh;
+      left: 35vw;
+      scale: 5;
+    }
+    @include responsive(xl) {
+      top: 180vh;
+      left: 35vw;
+      scale: 6;
+    }
+    @include responsive(2xl) {
+      top: 90vh;
+      left: 80vw;
+      scale: 5;
+    }
+
+  }
+
+  @include responsive(md) {
     margin: 70px 0;
   }
 
@@ -74,8 +102,13 @@
     }
   }
 
-  .button {
-    font-size: $text-lg;
-    margin: 30px;
+  .button-container {
+    display: flex;
+    flex-direction: row;
+
+    .button {
+      font-size: $text-lg;
+      margin: 30px;
+    }
   }
 }
