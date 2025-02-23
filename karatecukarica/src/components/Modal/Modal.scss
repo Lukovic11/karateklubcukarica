@@ -60,10 +60,10 @@
         margin-top: 1rem;
         width: 50%;
         margin-bottom: 2.1rem;
+        font-size: 1.35rem;
       }
 
       @include responsive(md-lg) {
-        font-size: 1.35rem;
         width: 70%;
         margin-bottom: 2.5rem;
       }

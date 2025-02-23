@@ -9,6 +9,7 @@
   align-items: center;
   margin: 70px 0 50px 0;
   z-index: 100;
+  overflow: hidden;
 
   .karatedo-img {
     overflow-x: hidden;
@@ -19,6 +20,7 @@
     left: 50vw;
     scale: 4.5;
     z-index: 0;
+    max-width: 100vw; 
 
     @include responsive(sm) {
       opacity: 0.2;
@@ -115,16 +117,17 @@
     flex-direction: row;
 
     .button {
-      font-size: $text-base;
+      font-size: $text-sm;
       margin: 30px;
       z-index: 1000;
-
-      @include responsive(sm) {
-        font-size: $text-sm;
-      }
+      width: 10rem;
+      padding-left: 0.5rem;
+      padding-right: 0.5rem;
 
       @media (min-width: 600px) {
         font-size: $text-lg;
+        width: inherit;
+        padding: 10px 30px;
       }
     }
   }
