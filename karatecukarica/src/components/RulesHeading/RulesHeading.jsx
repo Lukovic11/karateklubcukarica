@@ -11,6 +11,8 @@ import {
   RULES_BUTTON_TEXT2,
   MODAL_TITLE1,
   MODAL_TEXT1,
+  MODAL_TITLE2,
+  MODAL_TEXT2
 } from "../../constants.jsx";
 import Modal from "../Modal/Modal.jsx";
 import { useState } from "react";
@@ -18,6 +20,7 @@ import karatedo from "../../assets/karatedo.svg";
 
 const RulesHeading = () => {
   const [modal1Open, setModal1Open] = useState(false);
+  const [modal2Open, setModal2Open] = useState(false);
 
   const handleOpenModal1 = () => {
     setModal1Open(true);
@@ -26,6 +29,15 @@ const RulesHeading = () => {
   const handleCloseModal1 = () => {
     setModal1Open(false);
   };
+
+  const handleOpenModal2 = () => {
+    setModal2Open(true);
+  };
+
+  const handleCloseModal2 = () => {
+    setModal2Open(false);
+  };
+
 
   return (
     <div className="rules-heading">
@@ -49,6 +61,7 @@ const RulesHeading = () => {
           className="button"
           variation={BUTTON_VARIATION_TRANSPARENT}
           text={RULES_BUTTON_TEXT2}
+          handleClick={() => handleOpenModal2(true)}
         />
       </div>
 
@@ -57,6 +70,14 @@ const RulesHeading = () => {
           title={MODAL_TITLE1}
           text={MODAL_TEXT1}
           onClose={handleCloseModal1}
+        />
+      )}
+
+      {modal2Open && (
+        <Modal
+          title={MODAL_TITLE2}
+          text={MODAL_TEXT2}
+          onClose={handleCloseModal2}
         />
       )}
     </div>

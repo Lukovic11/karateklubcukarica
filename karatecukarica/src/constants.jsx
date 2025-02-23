@@ -114,6 +114,7 @@ export const RULES_BUTTON_TEXT2 = "Kućni red u vrtiću";
 //Modal.jsx
 export const MODAL_BUTTON_CLOSE = "Close";
 export const MODAL_TITLE1 = "KUĆNI RED U KLUBU";
+export const MODAL_TITLE2 = "KUĆNI RED U VRTIĆU";
 export const MODAL_TEXT1 = (
   <ul>
     <li>
@@ -163,6 +164,33 @@ export const MODAL_TEXT1 = (
     </li>
   </ul>
 );
+
+export const MODAL_TEXT2 = (
+  <ul>
+    <li>
+      Prilikom pristupanja članstvu kluba, potrebno je dostaviti <b>popunjenu
+      pristupnicu</b> već na sledećem treningu nakon dobijanja iste (potrebno je
+      dostaviti sve tražene podatke).
+    </li>
+
+    <li>
+      <b>Članarina se plaća do 10. u mesecu</b> za tekući mesec, u punom iznosu, definisanom Ugovorom sa Predškolskom ustanovom Čukarica, a to je <b>1.500,00 dinara.</b>
+    </li>
+
+    <li>
+      <b>Pravo na umanjenje članarine</b> za naredni mesec se ostvaruje ukoliko je vežbač bio na manjem broju treninga od propisanog od strane Upravnog odbora Kluba (1 do 4 treninga). Umanjen iznos članarine je <b>1.000,00 dinara.</b>
+    </li>
+
+    <li>
+      <b>Ukoliko se upiše dvoje dece iz iste porodice</b> odobravamo popust, ukupan iznos članarine je <b>2.500,00 dinara</b>, a umanjen je <b>1.000,00 dinara</b> po detetu.
+    </li>
+
+    <li>
+      <b>Vežbač koji nije izmirio tekuće obaveze prema klubu, ne može prisustvovati treningu.</b>
+    </li>
+  </ul>
+);
+
 
 //History.jsx
 export const HISTORY_IMG_ALT = "Club gym with logo";
