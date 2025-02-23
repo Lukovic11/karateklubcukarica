@@ -1,26 +1,34 @@
-import { useState } from "react";
+import {useState} from "react";
 import {
+  FIRSTNAME_EMPTY_ERROR,
+  FIRSTNAME_NUMBER_ERROR,
+  FORM_EMAIL,
+  FORM_ERROR,
+  FORM_ERROR_MESSAGE,
   FORM_FIRSTNAME,
   FORM_LASTNAME,
-  FORM_EMAIL,
-  FORM_SUBJECT,
   FORM_QUESTION,
   FORM_SEND,
-  FIRSTNAME_NUMBER_ERROR,
-  FIRSTNAME_EMPTY_ERROR,
-  LASTNAME_NUMBER_ERROR,
+  FORM_SUBJECT,
+  FORM_SUBMITTING,
+  FORM_SUCCESS,
+  FORM_SUCCESS_MESSAGE,
   LASTNAME_EMPTY_ERROR,
-  SUBJECT_EMPTY_ERROR,
+  LASTNAME_NUMBER_ERROR,
   QUESTION_EMPTY_ERROR,
+  SUBJECT_EMPTY_ERROR,
 } from "../../constants";
 import Button from "../Button/Button";
-import { motion } from "framer-motion";
+import {motion} from "framer-motion";
 import "./FormComponent.scss";
-import PropTypes from "prop-types";
+import emailjs from '@emailjs/browser'
 
-const FormComponent = ({ handleSubmit }) => {
+const FormComponent = () => {
   const [focusedField, setFocusedField] = useState("");
   const [errors, setErrors] = useState({});
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [submitStatus, setSubmitStatus] = useState("");
+  const key = import.meta.env.VITE_EMAIL_PUBLIC_KEY;
 
   const [formData, setFormData] = useState({
     [FORM_FIRSTNAME]: "",
@@ -31,7 +39,7 @@ const FormComponent = ({ handleSubmit }) => {
   });
 
   const handleChange = (e) => {
-    const { name, value } = e.target;
+    const {name, value} = e.target;
 
     setFormData((prevData) => ({
       ...prevData,
@@ -87,25 +95,70 @@ const FormComponent = ({ handleSubmit }) => {
   };
 
   const fields = [
-    { label: FORM_FIRSTNAME, name: FORM_FIRSTNAME, type: "text" },
-    { label: FORM_LASTNAME, name: FORM_LASTNAME, type: "text" },
-    { label: FORM_EMAIL, name: FORM_EMAIL, type: "email" },
-    { label: FORM_SUBJECT, name: FORM_SUBJECT, type: "text" },
-    { label: FORM_QUESTION, name: FORM_QUESTION, type: "textarea" },
+    {label: FORM_FIRSTNAME, name: FORM_FIRSTNAME, type: "text"},
+    {label: FORM_LASTNAME, name: FORM_LASTNAME, type: "text"},
+    {label: FORM_EMAIL, name: FORM_EMAIL, type: "email"},
+    {label: FORM_SUBJECT, name: FORM_SUBJECT, type: "text"},
+    {label: FORM_QUESTION, name: FORM_QUESTION, type: "textarea"},
   ];
 
   const onSubmit = (e) => {
     e.preventDefault();
     const isValid = validateForm();
     if (isValid) {
-      handleSubmit(formData);
+      setIsSubmitting(true);
+      const templateParams = {
+        user_name: `${formData[FORM_FIRSTNAME]} ${formData[FORM_LASTNAME]}`,
+        user_email: formData[FORM_EMAIL],
+        subject: formData[FORM_SUBJECT],
+        message: formData[FORM_QUESTION]
+      }
+      emailjs.send('contact_service', 'contact_form', templateParams, {publicKey: key})
+        .then(() => {
+          setSubmitStatus(FORM_SUCCESS);
+          setFormData(
+            {
+              [FORM_FIRSTNAME]: "",
+              [FORM_LASTNAME]: "",
+              [FORM_EMAIL]: "",
+              [FORM_SUBJECT]: "",
+              [FORM_QUESTION]: "",
+            })
+        })
+        .catch((error) => {
+          console.error('EmailJS Error:', error);
+          setSubmitStatus(FORM_ERROR);
+        })
+        .finally(() => {
+          setIsSubmitting(false);
+        });
     }
   };
 
   return (
     <div className="form-container">
+      {submitStatus === FORM_SUCCESS && (
+        <motion.div
+          className="form-success-message"
+          initial={{opacity: 0}}
+          animate={{opacity: 1}}
+          transition={{duration: 0.3}}
+        >
+          {FORM_SUCCESS_MESSAGE}
+        </motion.div>
+      )}
+      {submitStatus === FORM_ERROR && (
+        <motion.div
+          className="form-error-message"
+          initial={{opacity: 0}}
+          animate={{opacity: 1}}
+          transition={{duration: 0.3}}
+        >
+          {FORM_ERROR_MESSAGE}
+        </motion.div>
+      )}
       <form className="form-contact" onSubmit={onSubmit} autoComplete="off">
-        {fields.map(({ label, name, type }) => (
+        {fields.map(({label, name, type}) => (
           <motion.div className="form-field" key={name}>
             <label className="form-label">{label}:</label>
             {type === "textarea" ? (
@@ -141,23 +194,19 @@ const FormComponent = ({ handleSubmit }) => {
             {errors[name] && (
               <motion.span
                 className="form-error"
-                initial={{ opacity: 0 }}
-                animate={{ opacity: 1 }}
-                transition={{ duration: 0.3 }}
+                initial={{opacity: 0}}
+                animate={{opacity: 1}}
+                transition={{duration: 0.3}}
               >
                 {errors[name]}
               </motion.span>
             )}
           </motion.div>
         ))}
-        <Button linkURL={"/"} variation={""} text={FORM_SEND} />
+        <Button variation={""} text={isSubmitting ? FORM_SUBMITTING : FORM_SEND} disabled={isSubmitting}/>
       </form>
     </div>
   );
-};
-
-FormComponent.propTypes = {
-  handleSubmit: PropTypes.func.isRequired,
 };
 
 export default FormComponent;
