@@ -1,6 +1,10 @@
 @use "../../styles/variables" as *;
 @use "../../styles/mixins" as *;
 
+.rules {
+  margin-bottom: 5rem;
+}
+
 .accordion-container {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
@@ -18,6 +22,7 @@
   border: 2px solid transparent;
   width: 90%;
   box-shadow: 2px 5px 5px rgba(0, 0, 0, 0.2);
+
   @include responsive(md) {
     width: 80%;
   }
@@ -55,6 +60,7 @@
   color: $color-font-dark;
   background-color: $color-light-primary;
   position: relative;
+  opacity: 0.8;
   @include responsive(md) {
     font-size: $text-lg;
 
@@ -126,6 +132,8 @@
 
 .accordion-content {
   padding: 0.75rem;
-  background-color: transparent;
   color: $color-font-dark;
+  background-color: $color-light-primary;
+  position: relative;
+  opacity: 0.8;
 }
