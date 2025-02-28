@@ -1,6 +1,7 @@
 @use "../../styles/variables.scss" as *;
 @use "../../styles/mixins.scss" as *;
 
+
 .form-container {
   width: 60vw;
   height: auto;
@@ -10,6 +11,7 @@
   justify-content: center;
   justify-self: center;
   background-color: $color-dark-primary;
+  position: relative;
 
   @include responsive(sm) {
     width: fit-content;
@@ -191,6 +193,97 @@
         -webkit-text-fill-color: $color-font-light;
         font-size: $text-sm;
       }
+    }
+  }
+
+  .p-message {
+    border-radius: 6px;
+    width: 25rem;
+    height: 4rem;
+    position: absolute;
+    left: 70%;
+    max-width: 90%;
+    z-index: 10;
+    bottom: -30%;
+
+    &-error {
+      background: rgba($color-accent-red, 0.25);
+      border: solid $color-accent-red;
+      border-width: 0 0 0 8px;
+      color: #c51010;
+      opacity: 1;
+
+      .p-message-icon {
+        color: #c51010;
+        opacity: 0.9;
+      }
+
+      .p-message-close {
+        color: #c51010;
+        opacity: 0.7;
+      }
+
+      .p-message-close:hover {
+        opacity: 1;
+      }
+    }
+
+    &-success {
+      background: rgba(25, 116, 80, 0.3);
+      border: solid #1ea97c;
+      border-width: 0 0 0 8px;
+      color: #1ea97c;
+      opacity: 1;
+
+      .p-message-icon {
+        color: #1ea97c;
+        opacity: 0.9;
+      }
+
+      .p-message-close {
+        color: #1ea97c;
+        opacity: 0.7;
+      }
+
+      .p-message-close:hover {
+        color: #1ea97c;
+        opacity: 1;
+      }
+    }
+
+    .p-message-wrapper {
+      padding: 1.25rem 1rem;
+    }
+
+    .p-message-icon {
+      font-size: 1.5rem;
+      margin-right: 1rem;
+    }
+
+    .p-message-detail {
+      margin-left: 0.5rem;
+    }
+
+    .p-message-close.p-link {
+      margin-left: auto;
+      overflow: hidden;
+      position: relative;
+    }
+
+    .p-message-close {
+      width: 2rem;
+      height: 1rem;
+      border-radius: 50%;
+      background: transparent;
+      transition: background-color 0.2s, color 0.2s, box-shadow 0.2s;
+
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    svg.p-icon {
+      pointer-events: auto;
     }
   }
 
