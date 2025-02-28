@@ -1,7 +1,7 @@
 @use "../../styles/variables" as *;
 @use "../../styles/mixins" as *;
 
-.rules{
+.rules {
   margin-bottom: 5rem;
 }
 
@@ -60,6 +60,7 @@
   color: $color-font-dark;
   background-color: $color-light-primary;
   position: relative;
+  opacity: 0.8;
   @include responsive(md) {
     font-size: $text-lg;
 
@@ -131,6 +132,8 @@
 
 .accordion-content {
   padding: 0.75rem;
-  background-color: transparent;
   color: $color-font-dark;
+  background-color: $color-light-primary;
+  position: relative;
+  opacity: 0.8;
 }

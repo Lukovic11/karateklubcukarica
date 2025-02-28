@@ -142,7 +142,7 @@ export const MODAL_TEXT1 = (
 
     <li>
       <b>Vežbač koji nije izmirio tekuće obaveze prema klubu, ne može
-      prisustvovati treningu.</b>
+        prisustvovati treningu.</b>
     </li>
 
     <li>
@@ -174,15 +174,19 @@ export const MODAL_TEXT2 = (
     </li>
 
     <li>
-      <b>Članarina se plaća do 10. u mesecu</b> za tekući mesec, u punom iznosu, definisanom Ugovorom sa Predškolskom ustanovom Čukarica, a to je <b>1.500,00 dinara.</b>
+      <b>Članarina se plaća do 10. u mesecu</b> za tekući mesec, u punom iznosu, definisanom Ugovorom sa Predškolskom
+      ustanovom Čukarica, a to je <b>1.500,00 dinara.</b>
     </li>
 
     <li>
-      <b>Pravo na umanjenje članarine</b> za naredni mesec se ostvaruje ukoliko je vežbač bio na manjem broju treninga od propisanog od strane Upravnog odbora Kluba (1 do 4 treninga). Umanjen iznos članarine je <b>1.000,00 dinara.</b>
+      <b>Pravo na umanjenje članarine</b> za naredni mesec se ostvaruje ukoliko je vežbač bio na manjem broju treninga
+      od propisanog od strane Upravnog odbora Kluba (1 do 4 treninga). Umanjen iznos članarine je <b>1.000,00
+      dinara.</b>
     </li>
 
     <li>
-      <b>Ukoliko se upiše dvoje dece iz iste porodice</b> odobravamo popust, ukupan iznos članarine je <b>2.500,00 dinara</b>, a umanjen je <b>1.000,00 dinara</b> po detetu.
+      <b>Ukoliko se upiše dvoje dece iz iste porodice</b> odobravamo popust, ukupan iznos članarine je <b>2.500,00
+      dinara</b>, a umanjen je <b>1.000,00 dinara</b> po detetu.
     </li>
 
     <li>
@@ -209,7 +213,7 @@ export const HISTORY_TEXT =
 export const HISTORY_BUTTON = "UPOZNAJ TIM";
 //Staff
 export const NENAD = "Nenad Koropanovski";
-export const NENAD_TITLE = "Trener i vođa kluba";
+export const NENAD_TITLE = "Trener";
 export const NENAD_TEXT = "Lorem ipsum";
 export const VESNA = "Vesna Vuković";
 export const VESNA_TITLE = "Trener";

@@ -18,7 +18,6 @@
     max-height: 80vh;
     width: 70%;
     padding: 1.7rem;
-    border-radius: 8px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
     text-align: center;
     position: relative;
@@ -31,6 +30,10 @@
       width: 60%;
     }
 
+    @include responsive(sm) {
+      width: 70%;
+    }
+
     @include responsive(md-lg) {
       padding: 2.3rem;
       width: 60%;
@@ -38,38 +41,44 @@
 
     @include responsive(lg) {
       padding: 3rem;
-      width: 35%;
+      width: 50%;
+    }
+
+    @include responsive(xl) {
+      padding: 3rem;
+      width: 45%;
     }
 
     h2 {
-      font-size: $text-base;
+      font-size: $text-lg;
       border-bottom: 2px solid $color-accent-red;
-      width: 60%;
+      width: 75%;
       text-align: center;
       margin-bottom: 1.5rem;
       margin-top: 0.5rem;
-      font-family: $font-title-regular;
+      font-family: $font-paragraph-medium;
 
       @include responsive(sm) {
-        width: 55%;
+        width: 75%;
         margin-bottom: 1.7rem;
-        font-size: $text-lg;
+        font-size: $text-2xl;
       }
 
       @include responsive(md) {
         margin-top: 1rem;
         width: 50%;
         margin-bottom: 2.1rem;
-        font-size: 1.35rem;
+        font-size: $text-2xl;
       }
 
       @include responsive(md-lg) {
         width: 70%;
         margin-bottom: 2.5rem;
+        font-size: $text-3xl;
       }
 
       @include responsive(lg) {
-        font-size: $text-2xl;
+        font-size: $text-3xl;
       }
 
       @include responsive(xl) {
@@ -137,8 +146,7 @@
     }
 
     .close-button:hover {
-      filter: brightness(10) saturate(100%) invert(25%) sepia(89%)
-        saturate(758%) hue-rotate(350deg) brightness(95%) contrast(95%);
+      filter: brightness(10) saturate(100%) invert(25%) sepia(89%) saturate(758%) hue-rotate(350deg) brightness(95%) contrast(95%);
     }
   }
 }

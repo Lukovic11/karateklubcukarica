@@ -54,19 +54,11 @@
         }
 
         @media (min-width: 600px) {
-          font-size: $text-base;
+          font-size: $text-lg;
           margin-top: 0;
         }
 
-        @include responsive(md-lg) {
-          font-size: $text-sm;
-        }
-
         @include responsive(lg) {
-          font-size: $text-base;
-        }
-
-        @include responsive(xl) {
           font-size: $text-lg;
         }
 
@@ -76,7 +68,7 @@
 
         align-self: flex-start;
         font-family: $font-paragraph-light;
-        font-size: $text-sm;
+        font-size: $text-base;
         color: $color-font-light;
       }
 
@@ -84,7 +76,7 @@
       .form-textarea {
         width: 20em;
         padding: 2px;
-        font-size: $text-sm;
+        font-size: $text-base;
         background-color: transparent;
         color: $color-font-light;
         border: none;
@@ -97,30 +89,23 @@
           border-bottom-color: $color-accent-red;
         }
 
-        @include responsive(sm) {
-          font-size: $text-sm;
-        }
-
         @media (min-width: 600px) {
-          font-size: $text-sm;
           width: 16em;
           margin-bottom: 0;
         }
 
         @include responsive(md-lg) {
-          font-size: $text-xs;
           width: 18em;
           margin-bottom: 0;
         }
 
         @include responsive(lg) {
-          font-size: $text-sm;
           width: 16em;
           margin-bottom: 1em;
         }
 
         @include responsive(xl) {
-          font-size: $text-base;
+          //font-size: $text-base;
           width: 15em;
         }
 
@@ -129,7 +114,6 @@
           width: 18em;
         }
       }
-
 
       .form-textarea {
         resize: vertical;
@@ -142,7 +126,7 @@
         &::-webkit-scrollbar {
           width: 8px !important;
         }
-      
+
         &::-webkit-scrollbar-track {
           background: $color-light-primary;
           border-radius: 10px;

@@ -108,7 +108,8 @@ const FormComponent = () => {
     if (isValid) {
       setIsSubmitting(true);
       const templateParams = {
-        user_name: `${formData[FORM_FIRSTNAME]} ${formData[FORM_LASTNAME]}`,
+        firstname: `${formData[FORM_FIRSTNAME]}`,
+        lastname: `${formData[FORM_LASTNAME]}`,
         user_email: formData[FORM_EMAIL],
         subject: formData[FORM_SUBJECT],
         message: formData[FORM_QUESTION]

@@ -2,7 +2,6 @@ import "./RulesHeading.scss";
 import Button from "../../components/Button/Button.jsx";
 import {
   BUTTON_VARIATION_TRANSPARENT,
-  ENROLL_BUTTON_TEXT,
   RULES_SUBTITLE1,
   RULES_SUBTITLE2,
   RULES_TEXT,
