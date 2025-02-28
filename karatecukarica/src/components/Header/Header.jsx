@@ -1,8 +1,8 @@
-import { useEffect, useState } from "react";
-import { HEADER_PAGE_LIST } from "../../constants.jsx";
+import {useEffect, useState} from "react";
+import {HEADER_PAGE_LIST} from "../../constants.jsx";
 import "./Header.scss";
 import HamburgerIcon from "./HamburgerIcon/HamburgerIcon";
-import { useLocation } from "react-router-dom"; 
+import {useLocation} from "react-router-dom";
 
 const Header = () => {
   const [menuActive, setMenuActive] = useState(false);
@@ -27,11 +27,12 @@ const Header = () => {
   }, []);
 
   useEffect(() => {
-    const url = location.pathname.replace("/", ""); 
+    const url = location.pathname.replace("/", "");
     setCurrentPage(url || "");
   }, [location]);
 
-  const toggleMenu = () => {
+  const toggleMenu = (e) => {
+    e.preventDefault();
     setMenuActive((prevState) => {
       const body = document.body;
       if (!prevState) {
@@ -43,37 +44,13 @@ const Header = () => {
     });
   };
 
-  const smoothScrollTo = (elementId, duration = 1000) => {
-    const element = document.getElementById(elementId);
-    if (!element) return;
-
-    const targetPosition = element.getBoundingClientRect().top + window.scrollY;
-    const startPosition = window.scrollY;
-    const distance = targetPosition - startPosition;
-    let startTime = null;
-
-    function animation(currentTime) {
-      if (startTime === null) startTime = currentTime;
-      const timeElapsed = currentTime - startTime;
-      const scrollProgress = Math.min(timeElapsed / duration, 1);
-
-      window.scrollTo(0, startPosition + distance * scrollProgress);
-
-      if (timeElapsed < duration) {
-        requestAnimationFrame(animation);
-      }
-    }
-
-    requestAnimationFrame(animation);
-  };
-
   return (
     <div className="top-navigation">
       <div
         className={`top-navigation-container ${isScrolled ? "scrolled" : ""}`}
       >
         <div className="hamburger-wrapper">
-          <HamburgerIcon isActive={menuActive} toggleMenu={toggleMenu} />
+          <HamburgerIcon isActive={menuActive} toggleMenu={toggleMenu}/>
         </div>
         <div
           className={`top-navigation-list-container ${
@@ -93,16 +70,23 @@ const Header = () => {
                   className={
                     item !== "Kontakt" &&
                     currentPage ===
-                      (item === "Početna"
-                        ? ""
-                        : item.toLowerCase().replace(/\s/g, ""))
+                    (item === "Početna"
+                      ? ""
+                      : item.toLowerCase().replace(/\s/g, ""))
                       ? "active-link"
                       : ""
                   }
                   onClick={(e) => {
                     if (item === "Kontakt") {
                       e.preventDefault();
-                      document.getElementById("footer")?.scrollIntoView({ behavior: "instant" });
+                      if (menuActive) {
+                        toggleMenu(e);
+                        setTimeout(() => {
+                          document.getElementById("footer")?.scrollIntoView({behavior: "instant"});
+                        }, 50);
+                      } else {
+                        document.getElementById("footer")?.scrollIntoView({behavior: "instant"});
+                      }
                     }
                   }}
                 >
