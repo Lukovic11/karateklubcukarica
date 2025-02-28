@@ -14,6 +14,9 @@ const SchedulesAndLocations = () => {
   const [map1, setMap1] = useState(false);
   const [map2, setMap2] = useState(false);
   const [map3, setMap3] = useState(false);
+  const [loading1, setLoading1] = useState(true);
+  const [loading2, setLoading2] = useState(true);
+  const [loading3, setLoading3] = useState(true);
 
   return <div>
     <HerobannerV2 image={locations} alt={LOCATIONS_IMG_ALT} title1={LOCATIONS_TITLE1}
@@ -22,17 +25,25 @@ const SchedulesAndLocations = () => {
       <div className="location-wrapper">
         <Location1 onSetMap={(item) => setMap1(item)}/>
         <div className={map1 ? "map-container" : "hidden map-container"}>
-          <iframe className="map"
-                  src="https://maps.google.com/maps?width=30%25&amp;height=200&amp;hl=en&amp;q=Milosava%20Vlajica%201+(Banovo%20Brdo)&amp;t=&amp;z=16&amp;ie=UTF8&amp;iwloc=B&amp;output=embed">
-          </iframe>
+          {loading1 && <div className="spinner"/>}
+          <iframe
+            className="map"
+            src="https://maps.google.com/maps?width=30%25&amp;height=200&amp;hl=en&amp;q=Milosava%20Vlajica%201+(Banovo%20Brdo)&amp;t=&amp;z=16&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"
+            onLoad={() => setLoading1(false)}
+            style={{display: loading1 ? "none" : "block"}}
+          />
         </div>
       </div>
       <div className="location-wrapper">
         <Location2 onSetMap={(item) => setMap2(item)}/>
         <div className={map2 ? "map-container" : "hidden map-container"}>
-          <iframe className="map"
-                  src="https://maps.google.com/maps?width=30%25&amp;height=200&amp;hl=en&amp;q=Jablanicka%203i+(Cerak)&amp;t=&amp;z=16&amp;ie=UTF8&amp;iwloc=B&amp;output=embed">
-          </iframe>
+          {loading2 && <div className="spinner"/>}
+          <iframe
+            className="map"
+            src="https://maps.google.com/maps?width=30%25&amp;height=200&amp;hl=en&amp;q=Jablanicka%203i+(Cerak)&amp;t=&amp;z=16&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"
+            onLoad={() => setLoading2(false)}
+            style={{display: loading2 ? "none" : "block"}}
+          />
         </div>
       </div>
       <div className="location-wrapper">
@@ -40,7 +51,10 @@ const SchedulesAndLocations = () => {
         {kindergarten === SCHEDULE3.loc1.name &&
           <div className={map3 ? "map-container" : "hidden map-container"}>
             <p>{KINDERGARTEN} {SCHEDULE3.loc1.name}</p>
+            {loading3 && <div className="spinner"/>}
             <iframe className="map"
+                    onLoad={() => setLoading3(false)}
+                    style={{display: loading3 ? "none" : "block"}}
                     src="https://maps.google.com/maps?width=100%25&amp;height=400&amp;hl=en&amp;q=Radivoja%20Rakonjca%204A+(Vrtic%20Sunce)&amp;t=&amp;z=16&amp;ie=UTF8&amp;iwloc=B&amp;output=embed">
             </iframe>
           </div>
@@ -48,21 +62,30 @@ const SchedulesAndLocations = () => {
         {kindergarten === SCHEDULE3.loc2.name &&
           <div className={map3 ? "map-container" : "hidden map-container"}>
             <p>{KINDERGARTEN} {SCHEDULE3.loc2.name}</p>
+            {loading3 && <div className="spinner"/>}
             <iframe className="map"
+                    onLoad={() => setLoading3(false)}
+                    style={{display: loading3 ? "none" : "block"}}
                     src="https://maps.google.com/maps?width=100%25&amp;height=400&amp;hl=en&amp;q=Trebevic%CC%81ka%2028,%20Beograd+(Vrtic%20Sunce)&amp;t=&amp;z=16&amp;ie=UTF8&amp;iwloc=B&amp;output=embed">
             </iframe>
           </div>}
         {kindergarten === SCHEDULE3.loc3.name &&
           <div className={map3 ? "map-container" : "hidden map-container"}>
             <p>{KINDERGARTEN} {SCHEDULE3.loc3.name}</p>
+            {loading3 && <div className="spinner"/>}
             <iframe className="map"
+                    onLoad={() => setLoading3(false)}
+                    style={{display: loading3 ? "none" : "block"}}
                     src="https://maps.google.com/maps?width=100%25&amp;height=400&amp;hl=en&amp;q=Platana%208,%20Beograd+(Vrtic%20Sunce)&amp;t=&amp;z=16&amp;ie=UTF8&amp;iwloc=B&amp;output=embed">
             </iframe>
           </div>}
         {kindergarten === SCHEDULE3.loc4.name &&
           <div className={map3 ? "map-container" : "hidden map-container"}>
             <p>{KINDERGARTEN} {SCHEDULE3.loc4.name}</p>
+            {loading3 && <div className="spinner"/>}
             <iframe className="map"
+                    onLoad={() => setLoading3(false)}
+                    style={{display: loading3 ? "none" : "block"}}
                     src="https://maps.google.com/maps?width=100%25&amp;height=400&amp;hl=en&amp;q=Dimitrija%20Avramovica%2017,%20Beograd+(Vrtic%20Sunce)&amp;t=&amp;z=16&amp;ie=UTF8&amp;iwloc=B&amp;output=embed">
             </iframe>
           </div>}
