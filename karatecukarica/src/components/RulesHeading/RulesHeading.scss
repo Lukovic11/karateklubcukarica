@@ -20,10 +20,9 @@
     left: 50vw;
     scale: 4.5;
     z-index: 0;
-    max-width: 100vw; 
+    max-width: 100vw;
 
     @include responsive(sm) {
-      opacity: 0.2;
       top: 80vh;
       left: 50vw;
       scale: 4.5;
@@ -36,8 +35,7 @@
     }
 
     @include responsive(md-lg) {
-      top: 85vh;
-      left: 80vw;
+      left: 85vw;
       scale: 4.6;
     }
 
@@ -48,13 +46,12 @@
     }
 
     @include responsive(xl) {
-      top: 95vh;
+      top: 100vh;
       left: 80vw;
       scale: 4.8;
     }
 
     @include responsive(2xl) {
-      top: 100vh;
       left: 80vw;
       scale: 5;
     }
@@ -127,11 +124,11 @@
   .button-container {
     display: flex;
     flex-direction: row;
-    width:100%;
+    width: 100%;
     justify-content: space-evenly;
     margin-top: 10px;
 
-    @media (min-width: 600px){
+    @media (min-width: 600px) {
       justify-content: center;
     }
 
@@ -144,7 +141,7 @@
       padding-right: 0.5rem;
       max-width: none;
 
-      @include responsive(sm){
+      @include responsive(sm) {
         padding: 10px 10px;
         font-size: $text-base;
         margin: 20px;
