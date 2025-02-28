@@ -81,6 +81,7 @@
           color: $color-light-primary;
           opacity: 0.8;
           justify-self: center;
+          text-align: left;
 
           @media (min-width: 600px) {
             font-size: $text-lg;
@@ -89,10 +90,6 @@
 
           @include responsive(md-lg) {
             justify-self: left;
-          }
-
-          @include responsive(lg) {
-            font-size: $text-base;
           }
 
           @include responsive(xl) {

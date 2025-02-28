@@ -17,10 +17,13 @@
     align-items: center;
 
     h2 {
-      font-size: $text-3xl;
+      font-size: $text-2xl;
       color: $color-accent-red;
       font-family: $font-paragraph-bold;
       @include responsive(sm) {
+        font-size: $text-3xl;
+      }
+      @include responsive(md) {
         font-size: $text-4xl;
       }
       @include responsive(2xl) {
@@ -34,13 +37,15 @@
       color: $color-font-dark;
       text-align: center;
       font-size: $text-4xl;
-      margin: 20px 0;
+      margin: 10px 0;
       letter-spacing: 8px;
       @include responsive(sm) {
+        margin: 15px 0;
         font-size: $text-5xl;
         letter-spacing: 10px;
       }
       @include responsive(md) {
+        margin: 20px 0;
         font-size: $text-6xl;
         letter-spacing: 25px;
       }

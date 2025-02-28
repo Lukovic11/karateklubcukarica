@@ -47,11 +47,11 @@
           font-size: $text-2xl;
           color: $color-font-light;
           text-shadow: 4px 4px 4px rgba(0, 0, 0, 0.5);
-          margin-bottom: 30px;
           letter-spacing: 5px;
           @include responsive(sm) {
             font-size: $text-3xl;
             letter-spacing: 7px;
+            margin-bottom: 10px;
           }
           @include responsive(lg) {
             font-size: $text-4xl;
