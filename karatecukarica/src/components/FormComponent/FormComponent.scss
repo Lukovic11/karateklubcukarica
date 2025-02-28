@@ -13,6 +13,63 @@
   background-color: $color-dark-primary;
   position: relative;
 
+  .p-message {
+    margin: 1rem 0;
+    border-radius: 6px;
+    width: 25rem;
+    height: 4rem;
+
+    &-error {
+      background: rgba($color-accent-red, 0.3);
+      border: solid $color-accent-red;
+      border-width: 0 0 0 6px;
+      color: $color-accent-red;
+
+      .p-message-icon {
+        color: $color-accent-red;
+      }
+
+      .p-message-close {
+        color: $color-accent-red;
+      }
+    }
+
+    .p-message-wrapper {
+      padding: 1.25rem 1rem;
+    }
+
+    .p-message-icon {
+      font-size: 1.5rem;
+      margin-right: 0.5rem;
+    }
+
+    .p-message-detail {
+      margin-left: 0.5rem;
+    }
+
+    .p-message-close.p-link {
+      margin-left: auto;
+      overflow: hidden;
+      position: relative;
+    }
+
+    .p-message-close {
+      width: 2rem;
+      height: 1rem;
+      border-radius: 50%;
+      background: transparent;
+      transition: background-color 0.2s, color 0.2s, box-shadow 0.2s;
+
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    svg.p-icon {
+      pointer-events: auto;
+    }
+  }
+
   @include responsive(sm) {
     width: fit-content;
     height: auto;
