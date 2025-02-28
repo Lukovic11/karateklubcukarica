@@ -6,8 +6,6 @@ import SummerCamp from "./pages/SummerCamp/SummerCamp";
 import {SCHEDULES_AND_LOCATIONS_URL, SUMMER_CAMP_URL, TERMS_URL} from "./constants.jsx";
 import Terms from "./pages/Terms/Terms.jsx";
 import PageNotFound from "./pages/PageNotFound/PageNotFound.jsx";
-import { useLocation} from "react-router-dom";
-import { useEffect } from "react";
 
 const router = createBrowserRouter([
   {
