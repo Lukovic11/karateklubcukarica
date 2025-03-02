@@ -255,13 +255,66 @@
 
   .p-message {
     border-radius: 6px;
-    width: 25rem;
+    width: 20rem;
     height: 4rem;
     position: absolute;
-    left: 70%;
-    max-width: 90%;
     z-index: 10;
-    bottom: -30%;
+    bottom: -23%;
+    left: 50%;
+    transform: translateX(-50%);
+
+    @include responsive(sm){
+      width: 20rem;
+      height: 4rem;
+      left: calc(32vw - 5rem);
+      transform: none;
+    }
+
+    @media (min-width: 600px){
+      width: 20rem;
+      height: 4rem;
+      left: calc(50vw - 2rem);
+      bottom: -45%;
+      max-width: 90%;
+    }
+
+    @include responsive(md) {
+      width: 20rem;
+      height: 4rem;
+      left: calc(50vw - 2rem);
+      bottom: -45%;
+    }
+
+    @include responsive(md-lg) {
+      width: 20rem;
+      height: 4rem;
+      left: calc(43vw - 3rem);
+      bottom: -45%;
+    }
+
+    @include responsive(lg) {
+      width: 22rem;
+      height: 4rem;
+      //left: 48%;
+      left: calc(35vw - 5rem);
+      bottom: -30%;
+    }
+
+    @include responsive(xl) {
+      width: 24rem;
+      height: 4rem;
+      //left: 50%;
+      left: calc(30vw - 6rem);
+      bottom: -30%;
+    }
+
+    @include responsive(2xl) {
+      width: 25rem;
+      height: 4rem;
+      //left: 60%;
+      bottom: -30%;
+      left: calc(30vw - 2rem);
+    }
 
     &-error {
       background: rgba($color-accent-red, 0.25);

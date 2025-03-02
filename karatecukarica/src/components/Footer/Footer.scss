@@ -9,7 +9,7 @@
   flex-direction: column;
   color: white;
   z-index: 1001;
-  padding-bottom: 5em;
+  padding-bottom: 8em;
   width: 100%;
   height: 100%;
   justify-content: center;
@@ -17,6 +17,7 @@
 
   @media (min-width: 600px) {
     height: 80%;
+    padding-bottom: 7em;
   }
 
   @include responsive(md-lg) {

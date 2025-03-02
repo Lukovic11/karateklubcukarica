@@ -14,7 +14,7 @@ import {
     FORM_SUCCESS,
     FORM_SUCCESS_MESSAGE,
     LASTNAME_EMPTY_ERROR,
-    LASTNAME_NUMBER_ERROR,
+    LASTNAME_NUMBER_ERROR, MESSAGE_FAIL, MESSAGE_SENT,
     QUESTION_EMPTY_ERROR,
     SUBJECT_EMPTY_ERROR,
 } from "../../constants";
@@ -132,11 +132,11 @@ const FormComponent = () => {
                     if (msgs.current) {
                         msgs.current.clear();
                         msgs.current.show([{
-                            sticky: true,
+                            sticky: false,
                             life: 4000,
                             severity: 'success',
-                            summary: 'Success',
-                            detail: 'Message Content',
+                            summary: MESSAGE_SENT,
+                            // detail: 'Message Content',
                             closable: true,
                         }
                         ]);
@@ -151,8 +151,8 @@ const FormComponent = () => {
                             sticky: false,
                             life: 4000,
                             severity: 'error',
-                            summary: 'Error',
-                            detail: 'Message Content',
+                            summary: MESSAGE_FAIL,
+                            // detail: 'Message Content',
                             closable: true
                         });
                     }
