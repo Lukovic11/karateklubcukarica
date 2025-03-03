@@ -11,6 +11,7 @@
   justify-content: center;
   justify-self: center;
   background-color: $color-dark-primary;
+  min-width: fit-content;
   position: relative;
 
   .p-message {
@@ -98,6 +99,10 @@
       gap: 1em 3em;
     }
 
+    @include responsive(2xl) {
+      gap: 2em 7em;
+    }
+
     .form-field {
       display: flex;
       flex-direction: column;
@@ -164,7 +169,6 @@
         }
 
         @include responsive(xl) {
-          //font-size: $text-base;
           width: 15em;
         }
 
@@ -289,31 +293,44 @@
       width: 20rem;
       height: 4rem;
       left: calc(43vw - 3rem);
-      bottom: -45%;
+      bottom: -50%;
     }
 
     @include responsive(lg) {
       width: 22rem;
       height: 4rem;
-      //left: 48%;
       left: calc(35vw - 5rem);
-      bottom: -30%;
+      bottom: -40%;
     }
 
     @include responsive(xl) {
       width: 24rem;
       height: 4rem;
-      //left: 50%;
       left: calc(30vw - 6rem);
-      bottom: -30%;
+      bottom: -50%;
     }
 
     @include responsive(2xl) {
       width: 25rem;
       height: 4rem;
-      //left: 60%;
+      left: 70%;
+      bottom: -40%;
+      //left: calc(30vw - 1rem);
+    }
+
+    @media (min-width: 2000px){
+      bottom: -40%;
+      left: calc(33vw - 5rem);
+    }
+
+    @media (min-width: 3000px){
       bottom: -30%;
-      left: calc(30vw - 2rem);
+      left: calc(30vw - 5rem);
+    }
+
+    @media (min-width: 5000px){
+      bottom: -30%;
+      left: calc(29vw - 5rem);
     }
 
     &-error {

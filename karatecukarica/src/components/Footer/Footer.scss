@@ -21,8 +21,20 @@
   }
 
   @include responsive(md-lg) {
-    height: 60vh;
+    height: 35rem;
     padding: 0 2rem 0 1rem;
+  }
+
+  @include responsive(lg){
+    height: 35rem;
+  }
+
+  @include responsive(xl){
+    height: 40rem;
+  }
+
+  @include responsive(2xl) {
+    height: 40rem;
   }
 
   .footer-content {

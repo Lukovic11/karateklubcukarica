@@ -12,7 +12,6 @@ import {
     FORM_SUBJECT,
     FORM_SUBMITTING,
     FORM_SUCCESS,
-    FORM_SUCCESS_MESSAGE,
     LASTNAME_EMPTY_ERROR,
     LASTNAME_NUMBER_ERROR, MESSAGE_FAIL, MESSAGE_SENT,
     QUESTION_EMPTY_ERROR,
@@ -136,7 +135,6 @@ const FormComponent = () => {
                             life: 4000,
                             severity: 'success',
                             summary: MESSAGE_SENT,
-                            // detail: 'Message Content',
                             closable: true,
                         }
                         ]);
@@ -152,7 +150,6 @@ const FormComponent = () => {
                             life: 4000,
                             severity: 'error',
                             summary: MESSAGE_FAIL,
-                            // detail: 'Message Content',
                             closable: true
                         });
                     }
