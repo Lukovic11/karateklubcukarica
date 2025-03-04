@@ -268,6 +268,8 @@ export const FORM_ERROR = "error";
 export const FORM_SUCCESS_MESSAGE = "Poslato!";
 export const FORM_ERROR_MESSAGE = "Greska!";
 export const FORM_SUBMITTING = "Slanje...";
+export const MESSAGE_SENT = "Poruka je poslata";
+export const MESSAGE_FAIL = "Došlo je do greške";
 //Locations
 export const SCHEDULE = "Termini";
 export const GROUP = "Grupa";
