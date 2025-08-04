@@ -1,9 +1,7 @@
 import PropTypes from "prop-types";
 import {motion} from "framer-motion";
-import {useNavigate} from "react-router-dom";
 
 const Button = (props) => {
-  const navigate = useNavigate();
 
   return (
     <motion.button

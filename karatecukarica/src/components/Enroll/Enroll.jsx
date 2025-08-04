@@ -15,7 +15,7 @@ const Enroll = () => {
 
   const navigate = useNavigate();
 
-  const navigateToSchedulesAndLocations = (e) => {
+  const navigateToSchedulesAndLocations = () => {
     navigate(`${SCHEDULES_AND_LOCATIONS_URL}`)
   };
 

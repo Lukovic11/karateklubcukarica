@@ -2,6 +2,7 @@
 @use "../../styles/mixins.scss" as *;
 
 
+
 .form-container {
   width: 60vw;
   height: auto;
@@ -180,7 +181,7 @@
 
       .form-textarea {
         resize: vertical;
-        height: 4cqmin;
+        height: 8cqmin;
 
         @include responsive(md) {
           height: 3cqmin;

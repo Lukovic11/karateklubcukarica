@@ -36,11 +36,6 @@ export const FIRSTNAME_EMPTY_ERROR = "Ime ne sme da bude prazno";
 export const LASTNAME_EMPTY_ERROR = "Prezime ne sme da bude prazno";
 export const SUBJECT_EMPTY_ERROR = "Predmet ne sme da bude prazan";
 export const QUESTION_EMPTY_ERROR = "Pitanje ne sme da bude prazno";
-//Split.jsx
-export const SPLIT_IMG_ALT = "Image for split component";
-export const SPLIT_TITLE = "Title";
-export const SPLIT_TEXT =
-  "Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam alias nesciunt possimus, ipsum nobis eos dolorum, est adipisci numquam libero architecto esse explicabo deserunt illo! Architecto repudiandae adipisci eveniet amet pariatur vel quidem incidunt accusamus iure dolores laborum doloribus consequatur nostrum, possimus sunt quae ducimus optio quam odio non! Eligendi?";
 //Enroll.jsx
 export const ENROLL_TITLE = "Upis je u toku!";
 export const ENROLL_SUBTITLE1 = "POSTANI";
@@ -210,7 +205,6 @@ export const HISTORY_TEXT =
   "        u\n" +
   "        svetu karatea, i izrasli u vredne i dobre Ljude.\n" +
   "        To je ono čemu težimo.";
-export const HISTORY_BUTTON = "UPOZNAJ TIM";
 //Staff
 export const NENAD = "Nenad Koropanovski";
 export const NENAD_TITLE = "Trener";
