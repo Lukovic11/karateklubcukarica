@@ -7,6 +7,7 @@ import Location2 from "../../components/Location2/Location2";
 import Location3 from "../../components/Location3/Location3";
 import {useState} from "react";
 import {KINDERGARTEN} from "../../KINDERGARTEN";
+import { Helmet } from "react-helmet-async";
 
 const SchedulesAndLocations = () => {
 
@@ -19,6 +20,21 @@ const SchedulesAndLocations = () => {
   const [loading3, setLoading3] = useState(true);
 
   return <div>
+  <Helmet>
+        <title>Rasporedi i lokacije - Karate klub Čukarica</title>
+        <meta
+          name="description"
+          content="Proverite rasporede treninga i lokacije Karate kluba Čukarica. Pronađite najbliži trening centru i kontakt informacije."
+        />
+        <meta property="og:title" content="Rasporedi i lokacije - Karate klub Čukarica" />
+        <meta
+          property="og:description"
+          content="Saznajte gde i kada treniramo u Karate klubu Čukarica. Lokacije Banovo Brdo, Cerak, Vrtic Sunce i drugi."
+        />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://karatecukarica.rs/terminiilokacije" />
+      </Helmet>
+
     <HerobannerV2 image={locations} alt={LOCATIONS_IMG_ALT} title1={LOCATIONS_TITLE1}
                   title2={LOCATIONS_TITLE2}/>
     <div className="schedules-and-locations">
