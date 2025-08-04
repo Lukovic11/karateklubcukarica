@@ -3,9 +3,12 @@ import Root from "./pages/Root";
 import Homepage from "./pages/Homepage/Homepage";
 import SchedulesAndLocations from "./pages/SchedulesAndLocations/SchedulesAndLocations";
 import SummerCamp from "./pages/SummerCamp/SummerCamp";
-import {SCHEDULES_AND_LOCATIONS_URL, SUMMER_CAMP_URL, TERMS_URL} from "./constants.jsx";
+import {SCHEDULES_AND_LOCATIONS_URL, NEWS_URL, TERMS_URL} from "./constants.jsx";
 import Terms from "./pages/Terms/Terms.jsx";
 import PageNotFound from "./pages/PageNotFound/PageNotFound.jsx";
+import { useLocation} from "react-router-dom";
+import { useEffect } from "react";
+import { HelmetProvider } from 'react-helmet-async';
 
 const router = createBrowserRouter([
   {
@@ -20,7 +23,7 @@ const router = createBrowserRouter([
         path: `${SCHEDULES_AND_LOCATIONS_URL}`,
         element: <SchedulesAndLocations/>,
       },
-      {path: `${SUMMER_CAMP_URL}`, element: <SummerCamp/>},
+      {path: `${NEWS_URL}`, element: <SummerCamp/>},
       {path: `${TERMS_URL}`, element: <Terms/>},
 
     ],
@@ -29,7 +32,7 @@ const router = createBrowserRouter([
 ]);
 
 function App() {
-  return <RouterProvider router={router}/>;
+  return <HelmetProvider><RouterProvider router={router}/></HelmetProvider>;
 }
 
 export default App;

@@ -9,7 +9,7 @@ import {
   CAMP_2022_TITLE_YEAR,
   CAMP_IMG_ALT,
   CAMP_TITLE1,
-  CAMP_TITLE2,
+  // CAMP_TITLE2,
   GROUP_IMAGE_ALT,
   KOPAONIK_IMAGE1_ALT,
   KOPAONIK_IMAGE2_ALT,
@@ -20,10 +20,22 @@ import kop2 from "../../assets/summercamp/kop2.jpg";
 import kop3 from "../../assets/summercamp/kop3.jpg";
 import kop4 from "../../assets/summercamp/kop4.jpg";
 import "./SummerCamp.scss"
+import { Helmet } from "react-helmet-async";
+
 
 const SummerCamp = () => {
   return <div className="summer-camp">
-    <HerobannerV2 image={summercamp} title1={CAMP_TITLE1} title2={CAMP_TITLE2} alt={CAMP_IMG_ALT}/>
+          <Helmet>
+        <title> Vesti Karate kluba Čukarica {CAMP_2022_TITLE_YEAR}</title>
+        <meta
+          name="description"
+          content='Vesti Karate kluba Čukarica'
+        />
+        <meta property="og:title" content={'Vesti Karate kluba Čukarica'} />
+        <meta property="og:url" content="https://karatecukarica.rs/vesti" />
+        <meta property="og:type" content="article" />
+      </Helmet>
+    <HerobannerV2 image={summercamp} title1={CAMP_TITLE1} alt={CAMP_IMG_ALT}/>
     <div className="summer-camp-content">
       <div className="camp-item">
         <div className="camp-item-heading">
