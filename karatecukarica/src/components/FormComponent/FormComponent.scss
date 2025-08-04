@@ -268,14 +268,14 @@
     left: 50%;
     transform: translateX(-50%);
 
-    @include responsive(sm){
+    @include responsive(sm) {
       width: 20rem;
       height: 4rem;
       left: calc(32vw - 5rem);
       transform: none;
     }
 
-    @media (min-width: 600px){
+    @media (min-width: 600px) {
       width: 20rem;
       height: 4rem;
       left: calc(50vw - 2rem);
@@ -316,20 +316,19 @@
       height: 4rem;
       left: 70%;
       bottom: -40%;
-      //left: calc(30vw - 1rem);
     }
 
-    @media (min-width: 2000px){
+    @media (min-width: 2000px) {
       bottom: -40%;
       left: calc(33vw - 5rem);
     }
 
-    @media (min-width: 3000px){
+    @media (min-width: 3000px) {
       bottom: -30%;
       left: calc(30vw - 5rem);
     }
 
-    @media (min-width: 5000px){
+    @media (min-width: 5000px) {
       bottom: -30%;
       left: calc(29vw - 5rem);
     }
