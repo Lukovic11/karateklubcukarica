@@ -16,6 +16,7 @@ import {
 import Modal from "../Modal/Modal.jsx";
 import { useState } from "react";
 import karatedo from "../../assets/karatedo.svg";
+import { PNF_IMG_ALT } from "../../constants.jsx";
 
 const RulesHeading = () => {
   const [modal1Open, setModal1Open] = useState(false);
@@ -40,7 +41,7 @@ const RulesHeading = () => {
 
   return (
     <div className="rules-heading">
-      <img className="karatedo-img" src={karatedo} alt="" />
+      <img className="karatedo-img" src={karatedo} alt={PNF_IMG_ALT} />
       <div className="title-segment">
         <h2>{RULES_TITLE}</h2>
         <div className="title-design subtitle">
