@@ -113,9 +113,9 @@ export const MODAL_TITLE2 = "KUĆNI RED U VRTIĆU";
 export const MODAL_TEXT1 = (
   <ul>
     <li>
-      Prilikom pristupanja članstvu kluba, potrebno je dostaviti <b>popunjenu
-      pristupnicu</b> već na sledećem treningu nakon dobijanja iste (potrebno je
-      dostaviti sve tražene podatke).
+      Prilikom pristupanja članstvu kluba, potrebno je dostaviti{" "}
+      <b>popunjenu pristupnicu</b> već na sledećem treningu nakon dobijanja iste
+      (potrebno je dostaviti sve tražene podatke).
     </li>
 
     <li>
@@ -126,36 +126,43 @@ export const MODAL_TEXT1 = (
       učestvovanje u sportskim aktivnostima“.
     </li>
 
-    <li><b>Članarina se plaća do 10. u mesecu</b> za tekući mesec, u punom iznosu.</li>
+    <li>
+      <b>Članarina se plaća do 10. u mesecu</b> za tekući mesec, u punom iznosu.
+    </li>
 
     <li>
-      <b>Pravo na umanjenje članarine</b> za naredni mesec se ostvaruje ukoliko je
-      vežbač bio na manjem broju treninga od propisanog od strane Upravnog
+      <b>Pravo na umanjenje članarine</b> za naredni mesec se ostvaruje ukoliko
+      je vežbač bio na manjem broju treninga od propisanog od strane Upravnog
       odbora Kluba (za grupu koja vežba dva puta nedeljno to je 1 do 4 treninga,
       za grupu koja vežba tri puta nedeljno to je 1 do 6 treninga).
     </li>
 
     <li>
-      <b>Vežbač koji nije izmirio tekuće obaveze prema klubu, ne može
-        prisustvovati treningu.</b>
+      <b>
+        Vežbač koji nije izmirio tekuće obaveze prema klubu, ne može
+        prisustvovati treningu.
+      </b>
     </li>
 
     <li>
-      Ukoliko vežbač odsustvuje sa treninga, potrebno je porukom <b>obavestiti
-      trenera ili sekretara kluba.</b>
+      Ukoliko vežbač odsustvuje sa treninga, potrebno je porukom{" "}
+      <b>obavestiti trenera ili sekretara kluba.</b>
     </li>
 
     <li>
-      <b>U slučaju odsustva u toku jednog kalendarskog meseca</b>, član je dužan da
-      na ime <b>rezervacije mesta</b> u grupi uplati delimični iznos članarine od
-      1.000,00 din. U slučaju odsustva kada se propisani iznos ne uplati, član
-      se briše sa spiska grupe i stavlja na listu čekanja.
+      <b>U slučaju odsustva u toku jednog kalendarskog meseca</b>, član je dužan
+      da na ime <b>rezervacije mesta</b> u grupi uplati delimični iznos
+      članarine od 1.000,00 din. U slučaju odsustva kada se propisani iznos ne
+      uplati, član se briše sa spiska grupe i stavlja na listu čekanja.
     </li>
 
-    <li><b>Prednost prilikom upisa</b> imaju novi zainteresovani vežbači.</li>
+    <li>
+      <b>Prednost prilikom upisa</b> imaju novi zainteresovani vežbači.
+    </li>
 
     <li>
-      <b>Ponovni upis izbrisanog člana</b> moguć je ukoliko se mesto u grupi uprazni.
+      <b>Ponovni upis izbrisanog člana</b> moguć je ukoliko se mesto u grupi
+      uprazni.
     </li>
   </ul>
 );
@@ -163,33 +170,38 @@ export const MODAL_TEXT1 = (
 export const MODAL_TEXT2 = (
   <ul>
     <li>
-      Prilikom pristupanja članstvu kluba, potrebno je dostaviti <b>popunjenu
-      pristupnicu</b> već na sledećem treningu nakon dobijanja iste (potrebno je
-      dostaviti sve tražene podatke).
+      Prilikom pristupanja članstvu kluba, potrebno je dostaviti{" "}
+      <b>popunjenu pristupnicu</b> već na sledećem treningu nakon dobijanja iste
+      (potrebno je dostaviti sve tražene podatke).
     </li>
 
     <li>
-      <b>Članarina se plaća do 10. u mesecu</b> za tekući mesec, u punom iznosu, definisanom Ugovorom sa Predškolskom
-      ustanovom Čukarica, a to je <b>1.500,00 dinara.</b>
+      <b>Članarina se plaća do 10. u mesecu</b> za tekući mesec, u punom iznosu,
+      definisanom Ugovorom sa Predškolskom ustanovom Čukarica, a to je{" "}
+      <b>1.500,00 dinara.</b>
     </li>
 
     <li>
-      <b>Pravo na umanjenje članarine</b> za naredni mesec se ostvaruje ukoliko je vežbač bio na manjem broju treninga
-      od propisanog od strane Upravnog odbora Kluba (1 do 4 treninga). Umanjen iznos članarine je <b>1.000,00
-      dinara.</b>
+      <b>Pravo na umanjenje članarine</b> za naredni mesec se ostvaruje ukoliko
+      je vežbač bio na manjem broju treninga od propisanog od strane Upravnog
+      odbora Kluba (1 do 4 treninga). Umanjen iznos članarine je{" "}
+      <b>1.000,00 dinara.</b>
     </li>
 
     <li>
-      <b>Ukoliko se upiše dvoje dece iz iste porodice</b> odobravamo popust, ukupan iznos članarine je <b>2.500,00
-      dinara</b>, a umanjen je <b>1.000,00 dinara</b> po detetu.
+      <b>Ukoliko se upiše dvoje dece iz iste porodice</b> odobravamo popust,
+      ukupan iznos članarine je <b>2.500,00 dinara</b>, a umanjen je{" "}
+      <b>1.000,00 dinara</b> po detetu.
     </li>
 
     <li>
-      <b>Vežbač koji nije izmirio tekuće obaveze prema klubu, ne može prisustvovati treningu.</b>
+      <b>
+        Vežbač koji nije izmirio tekuće obaveze prema klubu, ne može
+        prisustvovati treningu.
+      </b>
     </li>
   </ul>
 );
-
 
 //History.jsx
 export const HISTORY_IMG_ALT = "Club gym with logo";
@@ -208,22 +220,59 @@ export const HISTORY_TEXT =
 //Staff
 export const NENAD = "Nenad Koropanovski";
 export const NENAD_TITLE = "Trener";
-export const NENAD_TEXT = "Lorem ipsum";
+export const NENAD_TEXT = (
+  <>
+    <p>prof. dr Nenad Koropanovski</p>
+    <p>nosilac crnog pojasa IV DAN</p>
+    <p>sportski direktor i trener</p>
+    <p>sekcija Banovo Brdo</p>
+  </>
+);
 export const VESNA = "Vesna Vuković";
 export const VESNA_TITLE = "Trener";
-export const VESNA_TEXT = "Lorem ipsum";
+export const VESNA_TEXT = (
+  <>
+    <p>Vesna Vuković</p>
+    <p>nosilac crnog pojasa IV DAN</p>
+    <p>prof. sporta i fizičkog vaspitanja</p>
+    <p>trener, sekcija Cerak</p>
+  </>
+);
 export const MIROSLAV = "Miroslav Milovanović";
 export const MIROSLAV_TITLE = "Trener";
-export const MIROSLAV_TEXT = "Lorem ipsum";
+export const MIROSLAV_TEXT = (
+    <>
+      <p>Miroslav Milovanović</p>
+      <p>nosilac crnog pojasa II DAN</p>
+      <p>master prof. sporta i fizičkog vaspitanja</p>
+      <p>trener, sekcija Banovo Brdo</p>
+      <p>vrtići PU „Čukarica“</p>
+    </>
+  );
 export const DUSAN = "Dušan Jelovac";
 export const DUSAN_TITLE = "Trener";
-export const DUSAN_TEXT = "Lorem ipsum";
+export const DUSAN_TEXT = (
+    <>
+      <p>Dušan Jelovac</p>
+      <p>nosilac crnog pojasa II DAN</p>
+      <p>prof. sporta i fizičkog vaspitanja</p>
+      <p>trener, sekcije Cerak i Banovo Brdo</p>
+      <p>vrtići PU „Čukarica“</p>
+    </>
+  );
 export const KATARINA = "Katarina Koropanovski";
 export const KATARINA_TITLE = "Trener";
-export const KATARINA_TEXT = "Lorem ipsum";
+export const KATARINA_TEXT =  (
+    <>
+      <p>Katarina Koropanovski</p>
+      <p>nosilac crnog pojasa I DAN</p>
+      <p>trener, sekcije Cerak i Banovo Brdo</p>
+      <p>vrtići PU „Čukarica“</p>
+    </>
+  );
 export const JASMINA = "Jasmina Jelić";
 export const JASMINA_TITLE = "Sekretar kluba";
-export const JASMINA_TEXT = "Lorem ipsum";
+export const JASMINA_TEXT = "Sekretar kluba";
 //PageNotFound.jsx
 export const PNF_IMG_ALT = "Karate Do in Japanese letters";
 export const PNF_TITLE = "Tražena stranica ne postoji";
@@ -360,16 +409,24 @@ export const SCHEDULE3 = {
     name: `"Košuta"`,
     days: "utorak i četvrtak",
   },
-}
+};
 //SummerCamp.jsx
 export const CAMP_2022_TITLE = "KOPAONIK";
 export const CAMP_2022_TITLE_YEAR = "2022";
 export const CAMP_2022_DATE = "23-29. avgust";
-export const CAMP_2022_DESC = (<><p>I ove godine karate klub Čukarica organizuje letnji karate kamp za sve
-  zainteresovane članove kluba. </p>
-  <p>Naša baza biće Kopaonik – hotel „Klub A“.</p></>);
-export const CAMP_2022_TEXT = "Kompletan boravak, program rada i aktivnosti letnjeg karate kampa usklađeni su sa uzrastom i nivoom znanja (pojasom) učesnika kampa. Aranžman obuhvata 7 dana (šest pansiona), autobuski prevoz na relaciji Beograd-Kopaonik-Beograd, zdravstvenu zaštitu 24 časa i korišćenje sportskih sadržaja. Na raspolaganju imamo i unutrašnji bazen.";
-export const CAMP_2022_ENDING = "Prijavljivanje se vrši kod sekretara kluba, dostavljanjem popunjene prijave/saglasnosti potpisane od strane roditelja. Prijava traje do popune mesta. Broj mesta je ograničen. Sve dodatne informacije možete dobiti kod sekretara kluba.";
+export const CAMP_2022_DESC = (
+  <>
+    <p>
+      I ove godine karate klub Čukarica organizuje letnji karate kamp za sve
+      zainteresovane članove kluba.{" "}
+    </p>
+    <p>Naša baza biće Kopaonik – hotel „Klub A“.</p>
+  </>
+);
+export const CAMP_2022_TEXT =
+  "Kompletan boravak, program rada i aktivnosti letnjeg karate kampa usklađeni su sa uzrastom i nivoom znanja (pojasom) učesnika kampa. Aranžman obuhvata 7 dana (šest pansiona), autobuski prevoz na relaciji Beograd-Kopaonik-Beograd, zdravstvenu zaštitu 24 časa i korišćenje sportskih sadržaja. Na raspolaganju imamo i unutrašnji bazen.";
+export const CAMP_2022_ENDING =
+  "Prijavljivanje se vrši kod sekretara kluba, dostavljanjem popunjene prijave/saglasnosti potpisane od strane roditelja. Prijava traje do popune mesta. Broj mesta je ograničen. Sve dodatne informacije možete dobiti kod sekretara kluba.";
 export const GROUP_IMAGE_ALT = "Team image from Kopaonik summer camp";
 export const KOPAONIK_IMAGE1_ALT = "Coach and kids heading to practise";
 export const KOPAONIK_IMAGE2_ALT = "Kids having fun";
