@@ -8,6 +8,7 @@ body {
   background-color: $color-light-grey-primary;
   max-width: 100%;
   overflow-x: hidden;
+  -webkit-appearance: none;
 }
 
 * {
